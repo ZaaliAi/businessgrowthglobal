@@ -1,8 +1,8 @@
+
 'use client';
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { supabase } from '@/lib/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import {
   AlertDialog,
@@ -16,6 +16,7 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import { DropdownMenuItem } from '@/components/ui/dropdown-menu';
+import { deletePost } from './actions';
 
 export default function DeletePostButton({ postId }: { postId: number }) {
   const router = useRouter();
@@ -24,13 +25,14 @@ export default function DeletePostButton({ postId }: { postId: number }) {
 
   const handleDelete = async () => {
     setIsDeleting(true);
-    const { error } = await supabase.from('posts').delete().eq('id', postId);
+    
+    const result = await deletePost(postId);
 
-    if (error) {
+    if (!result.success) {
       toast({
         variant: 'destructive',
         title: 'Error deleting post',
-        description: error.message,
+        description: result.message,
       });
       setIsDeleting(false);
     } else {
@@ -38,9 +40,9 @@ export default function DeletePostButton({ postId }: { postId: number }) {
         title: 'Post Deleted',
         description: 'The blog post has been successfully deleted.',
       });
-      // Force a hard refresh to ensure UI is updated.
-      router.refresh();
-      window.location.reload();
+      // The revalidatePath in the server action will handle refreshing the data.
+      // We don't need router.refresh() or window.location.reload() here anymore.
+      setIsDeleting(false);
     }
   };
 
