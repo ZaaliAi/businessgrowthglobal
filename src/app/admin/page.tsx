@@ -2,7 +2,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { supabase } from '@/lib/supabase';
+import { createSupabaseServerClient } from '@/lib/supabase/server';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { format } from 'date-fns';
 import { MoreVertical, PlusCircle } from 'lucide-react';
@@ -12,6 +12,7 @@ import DeletePostButton from './delete-post-button';
 
 
 async function getPosts() {
+  const supabase = createSupabaseServerClient();
   const { data, error } = await supabase
     .from('posts')
     .select('*')

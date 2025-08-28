@@ -37,8 +37,8 @@ export default function AnimatedSection({ children }: AnimatedSectionProps) {
   return (
     <div
       ref={sectionRef}
-      className={`transition-opacity duration-1000 ease-in ${
-        isVisible ? 'opacity-100' : 'opacity-0'
+      className={`transform transition-all duration-1000 ease-in ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}
     >
       {children}

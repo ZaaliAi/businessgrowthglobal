@@ -7,12 +7,11 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from 'lucide-react';
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
-import { cookies } from 'next/headers';
+import { createSupabaseServerClient } from '@/lib/supabase/server';
 import SignOutButton from './sign-out-button';
 
 export default async function Header() {
-  const supabase = createServerComponentClient({ cookies });
+  const supabase = createSupabaseServerClient();
   const { data: { session } } = await supabase.auth.getSession();
   
   return (
