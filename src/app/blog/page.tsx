@@ -20,6 +20,17 @@ async function getPosts() {
   return data;
 }
 
+function createExcerpt(markdown: string) {
+    if (!markdown) return '';
+    // Remove markdown images, headings, bold, italics etc. and collapse whitespace
+    const plainText = markdown
+      .replace(/!\[.*?\]\(.*?\)/g, '') // Remove images
+      .replace(/[#*_`>]/g, '')        // Remove other markdown symbols
+      .replace(/\s+/g, ' ')           // Collapse whitespace
+      .trim();
+    return plainText.substring(0, 150) + (plainText.length > 150 ? '...' : '');
+}
+
 export default async function BlogPage() {
   const posts = await getPosts();
 
@@ -48,7 +59,7 @@ export default async function BlogPage() {
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground line-clamp-3">{post.content.substring(0, 150)}...</p>
+                      <p className="text-muted-foreground line-clamp-3">{createExcerpt(post.content)}</p>
                     </CardContent>
                   </Card>
                 </Link>
