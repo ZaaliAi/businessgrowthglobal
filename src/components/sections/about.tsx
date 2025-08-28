@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { MoveRight } from 'lucide-react';
@@ -26,15 +25,14 @@ export default function About() {
             </Button>
           </div>
         </div>
-        <div className="order-1 md:order-2">
-          <Image
-            src="https://picsum.photos/600/600"
-            alt="Team collaborating on a business strategy"
-            width={600}
-            height={600}
-            className="rounded-lg shadow-xl"
-            data-ai-hint="team strategy"
-          />
+        <div className="order-1 aspect-video w-full overflow-hidden rounded-lg shadow-xl md:order-2">
+          <iframe
+            className="h-full w-full"
+            src="https://www.youtube.com/embed/ModFEvmGbw0"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </section>
