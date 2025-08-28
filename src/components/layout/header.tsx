@@ -24,14 +24,14 @@ export default function Header() {
           />
         </Link>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-          <Link href="#packages" className="transition-colors hover:text-primary/80">Packages</Link>
-          <Link href="#testimonials" className="transition-colors hover:text-primary/80">Testimonials</Link>
+          <Link href="/#packages" className="transition-colors hover:text-primary/80">Packages</Link>
+          <Link href="/#testimonials" className="transition-colors hover:text-primary/80">Testimonials</Link>
           <Link href="/about-lee-broders" className="transition-colors hover:text-primary/80">About</Link>
-          <Link href="#contact" className="transition-colors hover:text-primary/80">Contact</Link>
+          <Link href="/contact" className="transition-colors hover:text-primary/80">Contact</Link>
         </nav>
         <div className="flex items-center justify-end gap-4">
            <Button asChild className="hidden sm:inline-flex bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="#">
+            <Link href="/contact">
                 Book a Discovery Call
             </Link>
            </Button>
@@ -54,13 +54,13 @@ export default function Header() {
                   />
                 </Link>
                   <nav className="grid gap-2 text-lg font-medium">
-                    <Link href="#packages" className="block px-2 py-1 transition-colors hover:text-primary/80">Packages</Link>
-                    <Link href="#testimonials" className="block px-2 py-1 transition-colors hover:text-primary/80">Testimonials</Link>
+                    <Link href="/#packages" className="block px-2 py-1 transition-colors hover:text-primary/80">Packages</Link>
+                    <Link href="/#testimonials" className="block px-2 py-1 transition-colors hover:text-primary/80">Testimonials</Link>
                     <Link href="/about-lee-broders" className="block px-2 py-1 transition-colors hover:text-primary/80">About</Link>
-                    <Link href="#contact" className="block px-2 py-1 transition-colors hover:text-primary/80">Contact</Link>
+                    <Link href="/contact" className="block px-2 py-1 transition-colors hover:text-primary/80">Contact</Link>
                   </nav>
                   <Button asChild>
-                    <Link href="#">
+                    <Link href="/contact">
                         Book a Discovery Call
                     </Link>
                   </Button>

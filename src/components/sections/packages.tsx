@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 const packages = [
   {
@@ -67,22 +68,6 @@ const packages = [
       ]
     }
   },
-  {
-    name: "Boardroom",
-    price: "Custom",
-    description: "For executives and enterprises requiring high-level advisory and strategic partnership.",
-    features: [
-      "On-demand advisory sessions",
-      "Quarterly strategic reviews",
-      "Direct access to partners",
-      "Bespoke growth solutions",
-    ],
-    cta: "Contact Us",
-    details: {
-      intro: "The Boardroom package offers elite, on-demand advisory for enterprises and executives. Contact us for a bespoke solution.",
-      sections: []
-    }
-  },
 ];
 
 export default function Packages() {
@@ -97,7 +82,7 @@ export default function Packages() {
             Choose the right level of support to fuel your business journey.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {packages.map((pkg) => (
             <Card key={pkg.name} className={`flex flex-col ${pkg.popular ? 'border-accent shadow-accent/20 shadow-lg' : ''}`}>
               {pkg.popular && (
@@ -135,7 +120,9 @@ export default function Packages() {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button className="w-full" variant={pkg.popular ? 'default': 'outline'}>{pkg.cta}</Button>
+                <Button asChild className="w-full" variant={pkg.popular ? 'default': 'outline'}>
+                  <Link href="/contact">{pkg.cta}</Link>
+                </Button>
               </CardFooter>
             </Card>
           ))}

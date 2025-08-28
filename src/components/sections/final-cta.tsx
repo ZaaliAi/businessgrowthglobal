@@ -14,7 +14,7 @@ export default function FinalCTA() {
         </p>
         <div className="mt-10">
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="#">
+            <Link href="/contact">
               Book a Free Discovery Call
               <MoveRight className="ml-2 h-5 w-5" />
             </Link>
