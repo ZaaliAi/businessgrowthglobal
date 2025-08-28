@@ -12,7 +12,7 @@ export default function AboutLeeBrodersPage() {
             <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-3">
               <div className="md:col-span-1">
                 <Image
-                  src="https://picsum.photos/400/600"
+                  src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/LPB-Business-Portrait-1-pnjknamjv5kzc4d2l63fwb7d7hzhuxlx0z4ce3j2no.webp"
                   alt="Lee Broders"
                   width={400}
                   height={600}
