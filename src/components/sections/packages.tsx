@@ -68,6 +68,37 @@ const packages = [
       ]
     }
   },
+   {
+    name: "Boardroom",
+    price: "Contact for Pricing",
+    description: "Elite boardroom-level advisory for established enterprises seeking strategic market leadership and global expansion.",
+    features: [
+      "Bespoke Annual Retainer",
+      "Direct Line to Lee Broders",
+      "Quarterly On-Site Strategy Days",
+      "Full Team & Board Access",
+      "Crisis Management & PR Advisory",
+      "Global Network Access",
+    ],
+    cta: "Enquire Now",
+    details: {
+      intro: "The Boardroom Package is our most exclusive offering, providing unparalleled access to Lee Broders and our global network. This bespoke retainer is designed for established enterprises and corporate boards requiring the highest level of strategic counsel, M&A advisory, and crisis management. It is a true strategic partnership aimed at securing market leadership and navigating complex challenges.",
+      sections: [
+        {
+          title: "Who is the Boardroom Package For?",
+          content: "The Boardroom Package is exclusively for: C-Suite executives and corporate boards of established, multi-million-pound enterprises. Companies navigating mergers, acquisitions, or significant market pivots. Organisations seeking to establish a dominant global presence. Businesses requiring confidential, high-stakes crisis management and strategic public relations advisory."
+        },
+        {
+          title: "Why Choose the Boardroom Package?",
+          content: "Unprecedented Access: You have a direct, prioritised line to Lee Broders for immediate, high-level counsel whenever it's needed. Strategic Immersion: Quarterly on-site sessions ensure deep integration with your leadership team and a comprehensive understanding of your organisation's dynamics. Full-Scale Integration: The advisory extends beyond the CEO to your entire board and key team members, ensuring strategic alignment across the company. Global Leverage: Gain access to our extensive global network of investors, partners, and industry leaders to create unparalleled opportunities."
+        },
+        {
+          title: "What Can You Expect?",
+          content: "Enrolling in the Boardroom Package means forging a powerful strategic alliance. You will be equipped to: Navigate your industry's most complex challenges with confidence. Execute high-stakes decisions with expert, discreet advisory. Unlock exponential growth through strategic acquisitions and global expansion. Protect and enhance your company's reputation at the highest level."
+        }
+      ]
+    }
+  },
 ];
 
 export default function Packages() {
@@ -82,7 +113,7 @@ export default function Packages() {
             Choose the right level of support to fuel your business journey.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {packages.map((pkg) => (
             <Card key={pkg.name} className={`flex flex-col ${pkg.popular ? 'border-accent shadow-accent/20 shadow-lg' : ''}`}>
               {pkg.popular && (
