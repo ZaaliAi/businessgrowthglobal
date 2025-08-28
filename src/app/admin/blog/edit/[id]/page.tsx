@@ -4,7 +4,7 @@ import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/lib/supabase/client';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { PostForm, PostFormValues } from '../../post-form';
+import { PostForm, PostFormValues } from '../../../post-form';
 
 export default function EditPostPage({ params }: { params: { id: string } }) {
   const { toast } = useToast();
