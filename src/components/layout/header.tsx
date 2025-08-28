@@ -7,8 +7,13 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from 'lucide-react';
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
+import { cookies } from 'next/headers';
+import SignOutButton from './sign-out-button';
 
-export default function Header() {
+export default async function Header() {
+  const supabase = createServerComponentClient({ cookies });
+  const { data: { session } } = await supabase.auth.getSession();
   
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -29,13 +34,20 @@ export default function Header() {
           <Link href="/about-lee-broders" className="transition-colors hover:text-primary/80">About</Link>
           <Link href="/blog" className="transition-colors hover:text-primary/80">Blog</Link>
           <Link href="/contact" className="transition-colors hover:text-primary/80">Contact</Link>
+          {session && (
+             <Link href="/admin" className="transition-colors hover:text-primary/80">Admin</Link>
+          )}
         </nav>
         <div className="flex items-center justify-end gap-4">
-           <Button asChild className="hidden sm:inline-flex bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="/contact">
-                Book a Discovery Call
-            </Link>
-           </Button>
+           {session ? (
+            <SignOutButton />
+           ) : (
+            <Button asChild className="hidden sm:inline-flex bg-accent text-accent-foreground hover:bg-accent/90">
+              <Link href="/contact">
+                  Book a Discovery Call
+              </Link>
+            </Button>
+           )}
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
@@ -60,12 +72,19 @@ export default function Header() {
                     <Link href="/about-lee-broders" className="block px-2 py-1 transition-colors hover:text-primary/80">About</Link>
                     <Link href="/blog" className="block px-2 py-1 transition-colors hover:text-primary/80">Blog</Link>
                     <Link href="/contact" className="block px-2 py-1 transition-colors hover:text-primary/80">Contact</Link>
+                    {session && (
+                      <Link href="/admin" className="block px-2 py-1 transition-colors hover:text-primary/80">Admin</Link>
+                    )}
                   </nav>
-                  <Button asChild>
-                    <Link href="/contact">
-                        Book a Discovery Call
-                    </Link>
-                  </Button>
+                  {session ? (
+                    <SignOutButton />
+                  ) : (
+                    <Button asChild>
+                      <Link href="/contact">
+                          Book a Discovery Call
+                      </Link>
+                    </Button>
+                  )}
                 </div>
               </SheetContent>
             </Sheet>

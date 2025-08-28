@@ -6,7 +6,10 @@ import { supabase } from '@/lib/supabase';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { format } from 'date-fns';
 import { MoreVertical, PlusCircle } from 'lucide-react';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import DeletePostButton from './delete-post-button';
+
 
 async function getPosts() {
   const { data, error } = await supabase
@@ -69,7 +72,8 @@ export default async function AdminPage() {
                               <DropdownMenuItem asChild>
                                 <Link href={`/admin/blog/edit/${post.id}`}>Edit</Link>
                               </DropdownMenuItem>
-                              <DropdownMenuItem className="text-destructive">Delete</DropdownMenuItem>
+                               <DropdownMenuSeparator />
+                              <DeletePostButton postId={post.id} />
                             </DropdownMenuContent>
                           </DropdownMenu>
                         </TableCell>
@@ -86,5 +90,3 @@ export default async function AdminPage() {
     </div>
   );
 }
-
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
