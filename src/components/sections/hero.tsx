@@ -20,12 +20,12 @@ export default function Hero() {
   return (
     <section className="relative h-[80vh] min-h-[600px] w-full">
       <Image
-        src="https://picsum.photos/1800/1200"
-        alt="Business meeting"
+        src="https://picsum.photos/id/1074/1800/1200"
+        alt="Skyscrapers"
         fill
         className="object-cover"
         priority
-        data-ai-hint="business meeting"
+        data-ai-hint="skyscrapers city"
       />
       <div className="absolute inset-0 bg-primary/80" />
       <div className="relative z-10 flex h-full items-center justify-center text-center">
