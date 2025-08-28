@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, Mail, Phone } from 'lucide-react';
+import { Linkedin, Twitter, Mail, Phone, LogIn } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -23,6 +23,12 @@ export default function Footer() {
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <Phone className="h-4 w-4" />
             <span>+44 1234 567890</span>
+          </div>
+           <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <LogIn className="h-4 w-4" />
+            <Link href="/login" className="hover:text-primary">
+              Admin Login
+            </Link>
           </div>
         </div>
         <div className="flex items-center space-x-2">
