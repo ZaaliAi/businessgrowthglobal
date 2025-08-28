@@ -17,12 +17,14 @@ import { Textarea } from '@/components/ui/textarea';
 import { useState, useRef, ChangeEvent } from 'react';
 import { supabase } from '@/lib/supabase/client';
 import { useToast } from '@/hooks/use-toast';
-import { Bold, Italic, Heading1, Heading2, Heading3, List, ListOrdered, Image as ImageIcon, Quote } from 'lucide-react';
+import { Bold, Italic, Heading1, Heading2, Heading3, List, ListOrdered, Image as ImageIcon, Quote, Upload } from 'lucide-react';
+import Image from 'next/image';
 
 const formSchema = z.object({
   title: z.string().min(2, 'Title must be at least 2 characters.'),
   slug: z.string().min(2, 'Slug must be at least 2 characters.').regex(/^[a-z0-9-]+$/, 'Slug can only contain lowercase letters, numbers, and hyphens.'),
   content: z.string().min(10, 'Content must be at least 10 characters.'),
+  image_url: z.string().url('Must be a valid URL.').optional().or(z.literal('')),
 });
 
 export type PostFormValues = z.infer<typeof formSchema>;
@@ -36,8 +38,10 @@ interface PostFormProps {
 
 export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Submit' }: PostFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  const contentImageInputRef = useRef<HTMLInputElement>(null);
+  const featuredImageInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
 
 
@@ -47,8 +51,11 @@ export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Sub
       title: '',
       slug: '',
       content: '',
+      image_url: '',
     },
   });
+  
+  const featuredImageUrl = form.watch('image_url');
 
   const handleFormSubmit = async (values: PostFormValues) => {
     setIsSubmitting(true);
@@ -68,7 +75,8 @@ export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Sub
     const textToInsert = selectedText ? `${syntax}${selectedText}${syntax}` : `${syntax}${placeholder}${syntax}`;
     
     form.setValue('content', 
-      textarea.value.substring(0, start) + textToInsert + textarea.value.substring(end)
+      textarea.value.substring(0, start) + textToInsert + textarea.value.substring(end),
+      { shouldValidate: true }
     );
     textarea.focus();
     setTimeout(() => {
@@ -84,7 +92,8 @@ export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Sub
     const start = textarea.selectionStart;
     
     form.setValue('content',
-      textarea.value.substring(0, start) + prefix + textarea.value.substring(start)
+      textarea.value.substring(0, start) + prefix + textarea.value.substring(start),
+      { shouldValidate: true }
     );
     textarea.focus();
     setTimeout(() => {
@@ -99,7 +108,8 @@ export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Sub
     const start = textarea.selectionStart;
     const textToInsert = ordered ? '1. ' : '- ';
      form.setValue('content', 
-      textarea.value.substring(0, start) + textToInsert + textarea.value.substring(start)
+      textarea.value.substring(0, start) + textToInsert + textarea.value.substring(start),
+      { shouldValidate: true }
     );
     textarea.focus();
     setTimeout(() => {
@@ -115,7 +125,8 @@ export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Sub
     const start = textarea.selectionStart;
     const textToInsert = '> ';
      form.setValue('content', 
-      textarea.value.substring(0, start) + textToInsert + textarea.value.substring(start)
+      textarea.value.substring(0, start) + textToInsert + textarea.value.substring(start),
+      { shouldValidate: true }
     );
     textarea.focus();
     setTimeout(() => {
@@ -124,17 +135,17 @@ export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Sub
     }, 0);
   }
 
-  const handleImageUpload = async (e: ChangeEvent<HTMLInputElement>) => {
+  const handleImageUpload = async (e: ChangeEvent<HTMLInputElement>, isFeatured: boolean) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    setIsSubmitting(true);
+    setIsUploading(true);
     const fileName = `${Date.now()}-${file.name}`;
     const { data, error } = await supabase.storage
       .from('posts-images')
       .upload(fileName, file);
 
-    setIsSubmitting(false);
+    setIsUploading(false);
 
     if (error) {
       toast({ variant: 'destructive', title: 'Image Upload Failed', description: error.message });
@@ -145,19 +156,24 @@ export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Sub
       .from('posts-images')
       .getPublicUrl(data.path);
     
-    const textarea = textareaRef.current;
-    if(!textarea) return;
+    if (isFeatured) {
+        form.setValue('image_url', publicUrl, { shouldValidate: true });
+    } else {
+        const textarea = textareaRef.current;
+        if(!textarea) return;
 
-    const start = textarea.selectionStart;
-    const textToInsert = `\n![${file.name}](${publicUrl})\n`;
-    form.setValue('content', 
-      textarea.value.substring(0, start) + textToInsert + textarea.value.substring(start)
-    );
-     textarea.focus();
-    setTimeout(() => {
-        const newPos = start + textToInsert.length;
-        textarea.setSelectionRange(newPos, newPos);
-    }, 0);
+        const start = textarea.selectionStart;
+        const textToInsert = `\n![${file.name}](${publicUrl})\n`;
+        form.setValue('content', 
+        textarea.value.substring(0, start) + textToInsert + textarea.value.substring(start),
+        { shouldValidate: true }
+        );
+        textarea.focus();
+        setTimeout(() => {
+            const newPos = start + textToInsert.length;
+            textarea.setSelectionRange(newPos, newPos);
+        }, 0);
+    }
   };
 
 
@@ -193,13 +209,37 @@ export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Sub
                   </FormItem>
                 )}
               />
+               <FormField
+                control={form.control}
+                name="image_url"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Featured Image</FormLabel>
+                    <FormControl>
+                        <div className="w-full">
+                            <Button type="button" variant="outline" onClick={() => featuredImageInputRef.current?.click()} disabled={isUploading}>
+                                <Upload className="mr-2" />
+                                {isUploading ? 'Uploading...' : 'Upload Featured Image'}
+                            </Button>
+                            <input type="file" ref={featuredImageInputRef} onChange={(e) => handleImageUpload(e, true)} className="hidden" accept="image/*" />
+                            {featuredImageUrl && (
+                                <div className="mt-4 relative aspect-video w-full max-w-sm rounded-lg overflow-hidden border">
+                                    <Image src={featuredImageUrl} alt="Featured image preview" fill className="object-cover" />
+                                </div>
+                            )}
+                        </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
               <FormField
                 control={form.control}
                 name="content"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Content (Markdown)</FormLabel>
-                     <div className="flex items-center gap-1 border border-input rounded-t-md p-2 bg-secondary">
+                     <div className="flex items-center gap-1 border border-input rounded-t-md p-2 bg-secondary flex-wrap">
                         <Button type="button" variant="outline" size="icon" onClick={() => insertText('**', 'bold text')}><Bold className="h-4 w-4" /></Button>
                         <Button type="button" variant="outline" size="icon" onClick={() => insertText('*', 'italic text')}><Italic className="h-4 w-4" /></Button>
                         <Button type="button" variant="outline" size="icon" onClick={() => insertHeading(1)}><Heading1 className="h-4 w-4" /></Button>
@@ -208,12 +248,12 @@ export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Sub
                         <Button type="button" variant="outline" size="icon" onClick={() => insertList(false)}><List className="h-4 w-4" /></Button>
                         <Button type="button" variant="outline" size="icon" onClick={() => insertList(true)}><ListOrdered className="h-4 w-4" /></Button>
                         <Button type="button" variant="outline" size="icon" onClick={() => insertBlockquote()}><Quote className="h-4 w-4" /></Button>
-                        <Button type="button" variant="outline" size="icon" onClick={() => fileInputRef.current?.click()}><ImageIcon className="h-4 w-4" /></Button>
-                        <input type="file" ref={fileInputRef} onChange={handleImageUpload} className="hidden" accept="image/*" />
+                        <Button type="button" variant="outline" size="icon" onClick={() => contentImageInputRef.current?.click()} disabled={isUploading}><ImageIcon className="h-4 w-4" /></Button>
+                        <input type="file" ref={contentImageInputRef} onChange={(e) => handleImageUpload(e, false)} className="hidden" accept="image/*" />
                     </div>
                     <FormControl>
                       <Textarea
-                        placeholder="Write your blog post here..."
+                        placeholder="Write your blog post here... You can also paste YouTube video links directly."
                         className="min-h-[400px] rounded-t-none focus-visible:ring-offset-0"
                         {...field}
                         ref={textareaRef}
@@ -223,7 +263,7 @@ export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Sub
                   </FormItem>
                 )}
               />
-              <Button type="submit" disabled={isSubmitting}>
+              <Button type="submit" disabled={isSubmitting || isUploading}>
                 {isSubmitting ? 'Saving...' : submitButtonText}
               </Button>
             </form>

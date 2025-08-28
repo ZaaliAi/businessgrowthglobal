@@ -15,6 +15,7 @@ export default function NewPostPage() {
         title: values.title, 
         slug: values.slug, 
         content: values.content,
+        image_url: values.image_url,
         author: 'Lee Broders' // Or dynamically set author
       }
     ]);

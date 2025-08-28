@@ -21,6 +21,25 @@ async function getPost(slug: string) {
   return data;
 }
 
+const YouTubeEmbed = ({ url }: { url: string }) => {
+    const videoId = url.split('v=')[1]?.split('&')[0];
+    if(!videoId) return <a href={url}>{url}</a>;
+
+    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    
+    return (
+        <div className="aspect-video w-full my-8">
+            <iframe
+                className="h-full w-full rounded-lg"
+                src={embedUrl}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+            ></iframe>
+        </div>
+    )
+}
+
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = await getPost(params.slug);
 
@@ -35,14 +54,33 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         <article className="prose prose-lg mx-auto py-16 sm:py-24 px-4">
           <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl">{post.title}</h1>
           <p className="text-muted-foreground">{format(new Date(post.created_at), 'MMMM d, yyyy')}</p>
+          
+          {post.image_url && (
+            <div className="relative aspect-video not-prose my-8">
+              <Image 
+                src={post.image_url} 
+                alt={post.title} 
+                fill 
+                className="object-cover rounded-lg"
+                priority
+              />
+            </div>
+          )}
+
           <ReactMarkdown
              components={{
+                p: ({ node, ...props }) => {
+                    // Check if the paragraph contains just a YouTube link
+                    const child = node?.children[0];
+                    if (child?.type === 'text' && child.value.startsWith('https://www.youtube.com/watch?v=')) {
+                        return <YouTubeEmbed url={child.value} />;
+                    }
+                    return <p {...props} />;
+                },
                 img: ({ node, ...props }) => {
                   const { src, alt } = props;
                   if (!src) return null;
                   
-                  // For Supabase URLs, we don't know the dimensions beforehand, so we use fill and give it a container.
-                  // This is a simple approach. For more advanced cases, you might store image dimensions in the DB.
                   if(src.includes('supabase.co')) {
                     return (
                         <div className="relative aspect-video">
@@ -51,15 +89,11 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                                 alt={alt || 'Blog post image'}
                                 fill
                                 className="object-cover rounded-lg"
-                                unoptimized // if you can't get width and height, or trust the source, this might be needed.
-                                             // Let's try without it first. The user can add it if needed.
                              />
                         </div>
                     )
                   }
                   
-                  // Fallback for external images where we can't use next/image optimization easily without width/height
-                  // or without adding the domain to next.config.js
                   // eslint-disable-next-line @next/next/no-img-element
                   return <img src={src} alt={alt || ''} className="rounded-lg" />;
                 },
