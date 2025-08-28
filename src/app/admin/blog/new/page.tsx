@@ -3,7 +3,7 @@
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/lib/supabase/client';
 import { useRouter } from 'next/navigation';
-import { PostForm, PostFormValues } from '../post-form';
+import { PostForm, PostFormValues } from '../../post-form';
 
 export default function NewPostPage() {
   const { toast } = useToast();
