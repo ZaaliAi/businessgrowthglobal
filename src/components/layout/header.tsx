@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { OptimizedCTAButton } from '@/components/optimized-cta-button';
 import {
   Sheet,
   SheetContent,
@@ -10,7 +9,6 @@ import {
 import { Menu } from 'lucide-react';
 
 export default function Header() {
-  const pageContent = "A business growth mentorship website offering packages for entrepreneurs.";
   
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -31,12 +29,11 @@ export default function Header() {
           <Link href="/about-lee-broders" className="transition-colors hover:text-primary/80">About</Link>
         </nav>
         <div className="flex items-center justify-end gap-4">
-           <OptimizedCTAButton
-            initialText="Book a Discovery Call"
-            pageContent={pageContent}
-            ctaIdentifier="header-cta"
-            className="hidden sm:inline-flex"
-          />
+           <Button asChild className="hidden sm:inline-flex bg-accent text-accent-foreground hover:bg-accent/90">
+            <Link href="#">
+                Book a Discovery Call
+            </Link>
+           </Button>
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
@@ -60,11 +57,11 @@ export default function Header() {
                     <Link href="#testimonials" className="block px-2 py-1 transition-colors hover:text-primary/80">Testimonials</Link>
                     <Link href="/about-lee-broders" className="block px-2 py-1 transition-colors hover:text-primary/80">About</Link>
                   </nav>
-                  <OptimizedCTAButton
-                    initialText="Book a Discovery Call"
-                    pageContent={pageContent}
-                    ctaIdentifier="mobile-header-cta"
-                  />
+                  <Button asChild>
+                    <Link href="#">
+                        Book a Discovery Call
+                    </Link>
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>
