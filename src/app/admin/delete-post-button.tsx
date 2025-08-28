@@ -38,7 +38,9 @@ export default function DeletePostButton({ postId }: { postId: number }) {
         title: 'Post Deleted',
         description: 'The blog post has been successfully deleted.',
       });
+      // Force a hard refresh to ensure UI is updated.
       router.refresh();
+      window.location.reload();
     }
   };
 
