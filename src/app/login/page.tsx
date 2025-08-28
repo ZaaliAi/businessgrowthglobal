@@ -7,9 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { supabase } from '@/lib/supabase';
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
+import { supabase } from '@/lib/supabase/client';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -45,8 +43,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-background">
-      <Header />
+    <div className="flex min-h-screen flex-col items-center justify-center bg-background">
       <main className="flex flex-1 items-center justify-center">
         <Card className="mx-auto max-w-sm">
           <CardHeader>
@@ -83,7 +80,6 @@ export default function LoginPage() {
           </CardContent>
         </Card>
       </main>
-      <Footer />
     </div>
   );
 }

@@ -1,11 +1,12 @@
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import { supabase } from '@/lib/supabase';
+import { createSupabaseServerClient } from '@/lib/supabase/server';
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import { format } from 'date-fns';
 
 async function getPost(slug: string) {
+  const supabase = createSupabaseServerClient();
   const { data, error } = await supabase
     .from('posts')
     .select('*')

@@ -15,9 +15,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
-import { supabase } from '@/lib/supabase';
+import { supabase } from '@/lib/supabase/client';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -87,19 +85,16 @@ export default function EditPostPage({ params }: { params: { id: string } }) {
 
   if (isLoading) {
     return (
-      <div className="flex min-h-screen flex-col bg-background">
-        <Header />
+      <div className="flex min-h-screen flex-col items-center justify-center bg-background">
         <main className="flex-1 flex items-center justify-center">
           <p>Loading...</p>
         </main>
-        <Footer />
       </div>
     );
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-background">
-      <Header />
+    <div className="flex min-h-screen flex-col items-center justify-center bg-background">
       <main className="flex-1">
         <section className="w-full py-16 sm:py-24">
           <div className="container mx-auto px-4">
@@ -159,7 +154,6 @@ export default function EditPostPage({ params }: { params: { id: string } }) {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }
