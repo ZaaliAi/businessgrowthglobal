@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 const packages = [
   {
     name: "Regular",
-    price: "Custom",
+    price: "£1500/month",
     description: "Your Gateway to Sustainable Business Growth. Crafted for business owners and entrepreneurs ready to take control of their growth journey.",
     features: [
       "1-Year Enrolment",
