@@ -6,6 +6,7 @@ import Packages from '@/components/sections/packages';
 import Testimonials from '@/components/sections/testimonials';
 import About from '@/components/sections/about';
 import FinalCTA from '@/components/sections/final-cta';
+import AnimatedSection from '@/components/animated-section';
 
 export default function Home() {
   return (
@@ -13,11 +14,21 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Intro />
-        <Packages />
-        <Testimonials />
-        <About />
-        <FinalCTA />
+        <AnimatedSection>
+          <Intro />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Packages />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Testimonials />
+        </AnimatedSection>
+        <AnimatedSection>
+          <About />
+        </AnimatedSection>
+        <AnimatedSection>
+          <FinalCTA />
+        </AnimatedSection>
       </main>
       <Footer />
     </div>

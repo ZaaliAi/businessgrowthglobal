@@ -6,7 +6,7 @@ export default function Intro() {
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             You Are the Expert in Your Business
           </h2>
-          <div className="mt-6 space-y-6 text-lg text-muted-foreground">
+          <div className="mt-6 space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
               At Business Growth Global, we believe our clients are the only genuine experts in their businesses. That is why we recognise and respect the deep understanding and insightful knowledge gained by years of effort and dedication in a particular area.
             </p>
@@ -24,6 +24,9 @@ export default function Intro() {
             </p>
             <p>
               Our deep knowledge of business development mentoring enables us to develop practical strategies which help you develop your business, grow your customer base, enhance revenue streams and improve operations. Our tested mentoring methods for expansion guarantee enduring positive growth for every client.
+            </p>
+            <p>
+             Our mission is to use specific business mentorship programs and executive mentoring sessions to help your business achieve greater success by utilising your expertise. Join us and experience the transformative power of strategic growth planning designed specifically for your business.
             </p>
           </div>
         </div>

@@ -27,6 +27,7 @@ export default function Header() {
           <Link href="#packages" className="transition-colors hover:text-primary/80">Packages</Link>
           <Link href="#testimonials" className="transition-colors hover:text-primary/80">Testimonials</Link>
           <Link href="/about-lee-broders" className="transition-colors hover:text-primary/80">About</Link>
+          <Link href="#contact" className="transition-colors hover:text-primary/80">Contact</Link>
         </nav>
         <div className="flex items-center justify-end gap-4">
            <Button asChild className="hidden sm:inline-flex bg-accent text-accent-foreground hover:bg-accent/90">
@@ -56,6 +57,7 @@ export default function Header() {
                     <Link href="#packages" className="block px-2 py-1 transition-colors hover:text-primary/80">Packages</Link>
                     <Link href="#testimonials" className="block px-2 py-1 transition-colors hover:text-primary/80">Testimonials</Link>
                     <Link href="/about-lee-broders" className="block px-2 py-1 transition-colors hover:text-primary/80">About</Link>
+                    <Link href="#contact" className="block px-2 py-1 transition-colors hover:text-primary/80">Contact</Link>
                   </nav>
                   <Button asChild>
                     <Link href="#">
