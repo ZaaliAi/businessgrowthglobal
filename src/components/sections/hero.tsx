@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section className="relative h-[80vh] min-h-[600px] w-full">
       <Image
-        src="https://picsum.photos/id/1074/1800/1200"
+        src="https://picsum.photos/id/1076/1800/1200"
         alt="Skyscrapers"
         fill
         className="object-cover"
