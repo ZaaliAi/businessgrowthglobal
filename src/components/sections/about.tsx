@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { MoveRight } from 'lucide-react';
 
 export default function About() {
   return (
@@ -6,19 +9,27 @@ export default function About() {
       <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 md:grid-cols-2">
         <div className="order-2 md:order-1">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            Your Partner in Strategic Growth
+            About Business Growth Global
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            At Business Growth Global, we are more than consultants; we are your dedicated partners in success. Our mission is to empower businesses with the strategic insights, leadership skills, and operational excellence required to thrive in today's competitive landscape.
+            At Business Growth Global, we dedicate ourselves to empowering business owners, entrepreneurs, and executives to achieve strategic business growth and unlock their full potential. Founded by Lee Broders, an experienced business mentor, our mission is to provide tailored business mentoring programs that help you focus on scaling your business, improving operations, and achieving sustainable success.
           </p>
           <p className="mt-4 text-lg leading-8 text-muted-foreground">
-            Our team consists of seasoned industry veterans who have built, scaled, and led successful companies. We bring this firsthand experience to every mentorship engagement, offering practical, actionable advice tailored to your unique challenges and goals.
+            Through our signature framework, The Business Growth Blueprint, we deliver bespoke solutions to transform businesses. We specialise in helping clients increase profitability, build high-performance teams, and develop actionable plans for long-term growth. Whether you’re a startup founder, small business owner, or corporate executive, we create strategies designed to meet your unique challenges and goals.
           </p>
+          <div className="mt-8">
+            <Button asChild>
+              <Link href="/about-lee-broders">
+                More About Lee Broders
+                <MoveRight className="ml-2" />
+              </Link>
+            </Button>
+          </div>
         </div>
         <div className="order-1 md:order-2">
           <Image
             src="https://picsum.photos/600/600"
-            alt="Strategic planning session"
+            alt="Team collaborating on a business strategy"
             width={600}
             height={600}
             className="rounded-lg shadow-xl"
