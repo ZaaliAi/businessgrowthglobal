@@ -1,34 +1,60 @@
+import { Target, Lightbulb, Briefcase, TrendingUp, Users, Goal } from 'lucide-react';
+
+const features = [
+  {
+    icon: <Target className="h-10 w-10 text-accent" />,
+    title: 'Your Expertise, Our Strategy',
+    description: 'We respect your deep knowledge of your business. Our role is to be your trusted mentor, applying our strategic expertise to your unique challenges and insights to unlock growth.',
+  },
+  {
+    icon: <Briefcase className="h-10 w-10 text-accent" />,
+    title: 'Focus on Strategic Growth',
+    description: 'Our goal is to help you delegate daily tasks and shift your focus to strategic development. This change allows you to drive growth, maximise efficiency, and achieve long-term success.',
+  },
+  {
+    icon: <Lightbulb className="h-10 w-10 text-accent" />,
+    title: 'The Business Growth Blueprint',
+    description: 'We utilise our proven framework to offer customised mentoring solutions. Whether for entrepreneurs, startups, or corporations, we empower you to realise your business’s full potential.',
+  },
+  {
+    icon: <TrendingUp className="h-10 w-10 text-accent" />,
+    title: 'Actionable & Profitable Strategies',
+    description: 'We craft personalised strategies to help you scale your business, increase profitability, and build high-performance teams. Our deep knowledge enables us to develop practical plans that deliver results.',
+  },
+  {
+    icon: <Users className="h-10 w-10 text-accent" />,
+    title: 'Grow Your Customer Base',
+    description: 'Our mentoring helps you develop your business, expand your customer base, and enhance revenue streams through tested methods that guarantee enduring positive growth.',
+  },
+  {
+    icon: <Goal className="h-10 w-10 text-accent" />,
+    title: 'Achieve Greater Success',
+    description: 'Our mission is to help your business achieve greater success through specific mentorship programs and executive sessions. Experience the transformative power of strategic growth planning.',
+  },
+];
+
 export default function Intro() {
   return (
     <section id="intro" className="w-full bg-secondary py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            You Are the Expert in Your Business
+            You Are the Expert in Your Business. We Provide the Blueprint for Growth.
           </h2>
-          <div className="mt-6 space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              At Business Growth Global, we believe our clients are the only genuine experts in their businesses. That is why we recognise and respect the deep understanding and insightful knowledge gained by years of effort and dedication in a particular area.
-            </p>
-            <p>
-              We recognise that every business is distinct with its own particular set of problems and challenges. This is where our role as a trusted business mentor comes in – to help you use your expertise in strategic business growth through customised business mentoring programs.
-            </p>
-            <p>
-              Our goal during the business growth process is to assist business owners in delegating daily responsibilities so they can direct their efforts toward strategic development. This change enables them to drive their business growth faster while maximising operational efficiency and attaining long-term success.
-            </p>
-            <p>
-              We at Business Growth Global utilise the knowledge, skills, and expertise encapsulated in The Business Growth Blueprint to offer customised business growth mentoring solutions. These include entrepreneur mentoring, startup business mentoring & coaching, and corporate mentoring solutions to empower you to realise your business’s full potential.
-            </p>
-             <p>
-              Our approach is to work with you as we use our strategic business mentoring expertise and your business acumen to achieve exceptional results. Whether you’re looking for leadership development coaching, mentorship for entrepreneurs, or executive coaching for businesses, we craft personalised strategies designed to help you scale your business, increase business profitability, and build high-performance teams.
-            </p>
-            <p>
-              Our deep knowledge of business development mentoring enables us to develop practical strategies which help you develop your business, grow your customer base, enhance revenue streams and improve operations. Our tested mentoring methods for expansion guarantee enduring positive growth for every client.
-            </p>
-            <p>
-             Our mission is to use specific business mentorship programs and executive mentoring sessions to help your business achieve greater success by utilising your expertise. Join us and experience the transformative power of strategic growth planning designed specifically for your business.
-            </p>
-          </div>
+          <p className="mt-4 text-lg text-muted-foreground">
+            At Business Growth Global, we combine your expertise with our strategic mentoring to achieve exceptional results.
+          </p>
+        </div>
+        <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => (
+            <div key={feature.title} className="flex flex-col items-center text-center sm:items-start sm:text-left">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                {feature.icon}
+              </div>
+              <h3 className="mt-6 text-xl font-bold text-primary">{feature.title}</h3>
+              <p className="mt-2 text-base text-muted-foreground">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
