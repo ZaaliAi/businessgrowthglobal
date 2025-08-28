@@ -21,8 +21,8 @@ export default async function Header() {
           <Image 
             src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/Business-Global-Growth-logo.png" 
             alt="Business Growth Global Logo"
-            width={200}
-            height={40}
+            width={180}
+            height={36}
             className="h-auto"
             priority
           />
@@ -61,8 +61,8 @@ export default async function Header() {
                   <Image 
                     src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/Business-Global-Growth-logo.png" 
                     alt="Business Growth Global Logo"
-                    width={200}
-                    height={40}
+                    width={180}
+                    height={36}
                   />
                 </Link>
                   <nav className="grid gap-2 text-lg font-medium">
