@@ -6,6 +6,7 @@ import Testimonials from '@/components/sections/testimonials';
 import About from '@/components/sections/about';
 import FinalCTA from '@/components/sections/final-cta';
 import AnimatedSection from '@/components/animated-section';
+import AeropsBlueprint from '@/components/sections/aerops-blueprint';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <AnimatedSection>
           <About />
         </AnimatedSection>
+        <AeropsBlueprint />
         <AnimatedSection>
           <FinalCTA />
         </AnimatedSection>
