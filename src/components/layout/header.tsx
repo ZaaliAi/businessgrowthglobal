@@ -28,9 +28,9 @@ export default async function Header() {
           />
         </Link>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-          <Link href="/packages" className="transition-colors hover:text-primary/80">Packages</Link>
+          <Link href="/programs" className="transition-colors hover:text-primary/80">Programs</Link>
           <Link href="/#testimonials" className="transition-colors hover:text-primary/80">Testimonials</Link>
-          <Link href="/about-lee-broders" className="transition-colors hover:text-primary/80">About</Link>
+          <Link href="/our-founder" className="transition-colors hover:text-primary/80">Our Founder</Link>
           <Link href="/blog" className="transition-colors hover:text-primary/80">Blog</Link>
           <Link href="/contact" className="transition-colors hover:text-primary/80">Contact</Link>
           {session && (
@@ -66,9 +66,9 @@ export default async function Header() {
                   />
                 </Link>
                   <nav className="grid gap-2 text-lg font-medium">
-                    <Link href="/packages" className="block px-2 py-1 transition-colors hover:text-primary/80">Packages</Link>
+                    <Link href="/programs" className="block px-2 py-1 transition-colors hover:text-primary/80">Programs</Link>
                     <Link href="/#testimonials" className="block px-2 py-1 transition-colors hover:text-primary/80">Testimonials</Link>
-                    <Link href="/about-lee-broders" className="block px-2 py-1 transition-colors hover:text-primary/80">About</Link>
+                    <Link href="/our-founder" className="block px-2 py-1 transition-colors hover:text-primary/80">Our Founder</Link>
                     <Link href="/blog" className="block px-2 py-1 transition-colors hover:text-primary/80">Blog</Link>
                     <Link href="/contact" className="block px-2 py-1 transition-colors hover:text-primary/80">Contact</Link>
                     {session && (
