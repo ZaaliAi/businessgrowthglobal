@@ -30,6 +30,7 @@ export default async function Header() {
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
           <Link href="/programs" className="transition-colors hover:text-primary/80">Programs</Link>
           <Link href="/case-studies" className="transition-colors hover:text-primary/80">Case Studies</Link>
+          <Link href="/media" className="transition-colors hover:text-primary/80">Media</Link>
           <Link href="/our-founder" className="transition-colors hover:text-primary/80">Our Founder</Link>
           <Link href="/blog" className="transition-colors hover:text-primary/80">Blog</Link>
           <Link href="/contact" className="transition-colors hover:text-primary/80">Contact</Link>
@@ -68,6 +69,7 @@ export default async function Header() {
                   <nav className="grid gap-2 text-lg font-medium">
                     <Link href="/programs" className="block px-2 py-1 transition-colors hover:text-primary/80">Programs</Link>
                     <Link href="/case-studies" className="block px-2 py-1 transition-colors hover:text-primary/80">Case Studies</Link>
+                    <Link href="/media" className="block px-2 py-1 transition-colors hover:text-primary/80">Media</Link>
                     <Link href="/our-founder" className="block px-2 py-1 transition-colors hover:text-primary/80">Our Founder</Link>
                     <Link href="/blog" className="block px-2 py-1 transition-colors hover:text-primary/80">Blog</Link>
                     <Link href="/contact" className="block px-2 py-1 transition-colors hover:text-primary/80">Contact</Link>
