@@ -2,7 +2,6 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Hero from '@/components/sections/hero';
 import Intro from '@/components/sections/intro';
-import Packages from '@/components/sections/packages';
 import Testimonials from '@/components/sections/testimonials';
 import About from '@/components/sections/about';
 import FinalCTA from '@/components/sections/final-cta';
@@ -16,9 +15,6 @@ export default function Home() {
         <Hero />
         <AnimatedSection>
           <Intro />
-        </AnimatedSection>
-        <AnimatedSection>
-          <Packages />
         </AnimatedSection>
         <AnimatedSection>
           <Testimonials />

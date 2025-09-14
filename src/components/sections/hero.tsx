@@ -48,7 +48,7 @@ export default function Hero() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-              <Link href="#packages">
+              <Link href="/packages">
                 Our Packages
                 <MoveRight className="ml-2 h-5 w-5" />
               </Link>
