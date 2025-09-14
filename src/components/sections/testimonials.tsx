@@ -1,36 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const testimonials = [
   {
-    quote: "Working with them was a game-changer. Our revenue tripled in just one year. Their insights are unparalleled.",
-    name: "Jane Doe",
-    title: "CEO, Tech Innovators",
-    avatar: "JD",
-    img: "https://picsum.photos/100/100?random=1"
+    quote: "Joining Business Growth Global’s mentoring program is easily one of the best decisions I’ve made as a CEO. Their expertise, paired with a genuine commitment to our success, has revolutionized how we approach challenges and capitalize on opportunities. Our profit margins have seen a consistent upward trend, all thanks to the invaluable guidance we received.",
+    name: "Matt D",
+    title: "Orsa Housing",
   },
   {
-    quote: "The strategic guidance we received helped us navigate a complex market merger successfully. Highly recommended.",
-    name: "John Smith",
-    title: "Founder, MarketStream",
-    avatar: "JS",
-    img: "https://picsum.photos/100/100?random=2"
+    quote: "After joining the Business Growth Global Coaching program, my company has experienced a paradigm shift in its operations and growth trajectory. The hands-on mentoring and actionable strategies provided have not only sharpened our business acumen but also paved the way for unprecedented growth. A heartfelt thank you to the entire team!",
+    name: "Joe G",
+    title: "KCJ Executive Talent",
   },
   {
-    quote: "Their boardroom-level advice was critical for our global expansion. An invaluable partner for any serious enterprise.",
-    name: "Samantha Ray",
-    title: "COO, Global Logistics",
-    avatar: "SR",
-    img: "https://picsum.photos/100/100?random=3"
+    quote: "The mentoring I received at Business Growth Global was transformative. Every session was a deep dive into areas of my business I’d overlooked. Their holistic approach ensured we optimized every aspect of our business model. I can confidently say we’ve grown more in the last six months than we had in the previous two years!",
+    name: "Carla C",
+    title: "Paperock Creative",
   },
-  {
-    quote: "The intensive program transformed our team's approach to sales and marketing, leading to a 200% increase in leads.",
-    name: "Mike Chen",
-    title: "VP of Sales, Creative Solutions",
-    avatar: "MC",
-    img: "https://picsum.photos/100/100?random=4"
-  }
 ];
 
 export default function Testimonials() {
@@ -48,26 +34,19 @@ export default function Testimonials() {
         <Carousel
           opts={{
             align: "start",
-            loop: true,
           }}
           className="w-full max-w-4xl mx-auto"
         >
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis-1/2">
+              <CarouselItem key={index}>
                 <div className="p-1">
                   <Card>
-                    <CardContent className="flex flex-col items-center justify-center p-6 text-center">
+                    <CardContent className="flex flex-col items-center justify-center p-8 text-center">
                        <p className="text-lg italic text-foreground mb-6">"{testimonial.quote}"</p>
-                      <div className="flex items-center">
-                        <Avatar className="h-12 w-12 mr-4">
-                           <AvatarImage src={testimonial.img} alt={testimonial.name} data-ai-hint="person" />
-                           <AvatarFallback>{testimonial.avatar}</AvatarFallback>
-                        </Avatar>
-                        <div>
-                           <p className="font-semibold text-primary">{testimonial.name}</p>
-                           <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                        </div>
+                      <div>
+                         <p className="font-semibold text-primary">{testimonial.name}</p>
+                         <p className="text-sm text-muted-foreground">{testimonial.title}</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -75,8 +54,12 @@ export default function Testimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          {testimonials.length > 1 && (
+            <>
+              <CarouselPrevious />
+              <CarouselNext />
+            </>
+          )}
         </Carousel>
       </div>
     </section>

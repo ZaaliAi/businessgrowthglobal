@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -11,52 +11,65 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import { MoveRight } from "lucide-react";
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/lib/supabase/client';
+import { useState } from 'react';
+import { MoveRight } from 'lucide-react';
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
-  }),
+  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
+  email: z.string().email({ message: 'Please enter a valid email address.' }),
+  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
 });
 
 export default function ContactForm() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
-      email: "",
-      message: "",
+      name: '',
+      email: '',
+      message: '',
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. We'll be in touch soon.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase.functions.invoke('contact-form', {
+        body: values,
+      });
+
+      if (error) {
+        throw new Error(error.message);
+      }
+
+      toast({
+        title: 'Message Sent!',
+        description: "Thanks for reaching out. We'll be in touch soon.",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        variant: 'destructive',
+        title: 'Something went wrong.',
+        description: (error as Error).message,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
     <section id="contact" className="w-full py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            Get in Touch
-          </h2>
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">Get in Touch</h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Have a question or want to work together? Fill out the form below.
           </p>
@@ -107,8 +120,8 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
-              <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                Send Message
+              <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Send Message'}
                 <MoveRight className="ml-2 h-5 w-5" />
               </Button>
             </form>
