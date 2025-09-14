@@ -1,5 +1,6 @@
 import { Linkedin, Twitter, Mail, Phone, LogIn } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
 export default function Footer() {
@@ -7,10 +8,43 @@ export default function Footer() {
     <footer id="contact" className="border-t border-border/40 bg-background">
       <div className="container mx-auto flex flex-col items-center justify-between gap-8 py-12 md:flex-row md:items-start">
         <div className="text-center sm:text-left">
-          <p className="text-lg font-bold text-primary">Business Growth Global</p>
+          <p className="text-lg font-bold text-primary">Business Growth Global LTD</p>
           <p className="mt-2 text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Business Growth Global. All rights reserved.
+            © {new Date().getFullYear()} Business Growth Global LTD. All rights reserved.
           </p>
+          <div className="mt-4 flex items-center justify-center sm:justify-start gap-6">
+            <a href="https://associationofbusinessmentors.org/find-a-mentor/user/15588/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+              <div className="relative h-12 w-24">
+                <Image
+                  src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/abm.png"
+                  alt="Association of Business Mentors Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </a>
+            <a href="https://www.emccglobal.org/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+              <div className="relative h-12 w-24">
+                <Image
+                  src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/cropped-emcc-uk-member-logo-transparent.png"
+                  alt="EMCC UK Member Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div className="flex-shrink-0">
+          <a href="https://www.armedforcescovenant.gov.uk/" target="_blank" rel="noopener noreferrer">
+            <Image 
+              src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/Armed-Forced-Covenant.jpg"
+              alt="Armed Forces Covenant"
+              width={200}
+              height={100}
+              className="h-auto"
+            />
+          </a>
         </div>
         <div className="flex flex-col items-center gap-4 md:items-start">
           <h3 className="text-md font-semibold text-primary">Contact Us</h3>

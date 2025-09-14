@@ -1,6 +1,7 @@
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AboutLeeBrodersPage() {
   return (
@@ -42,6 +43,37 @@ export default function AboutLeeBrodersPage() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Accreditations Section */}
+        <section className="w-full pb-16 sm:pb-24">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold tracking-tight text-primary text-center mb-12">
+              Our Accreditations
+            </h2>
+            <div className="flex justify-center items-center gap-12 flex-wrap">
+              <Link href="https://associationofbusinessmentors.org/find-a-mentor/user/15588/" target="_blank" rel="noopener noreferrer" className="transition-transform transform hover:scale-105">
+                <div className="relative h-32 w-64">
+                  <Image
+                    src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/abm.png"
+                    alt="Association of Business Mentors Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </Link>
+              <Link href="https://www.emccglobal.org/" target="_blank" rel="noopener noreferrer" className="transition-transform transform hover:scale-105">
+                <div className="relative h-32 w-64">
+                  <Image
+                    src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/cropped-emcc-uk-member-logo-transparent.png"
+                    alt="EMCC UK Member Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </Link>
             </div>
           </div>
         </section>
