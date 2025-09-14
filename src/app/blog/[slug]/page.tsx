@@ -40,7 +40,8 @@ const YouTubeEmbed = ({ url }: { url: string }) => {
     )
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
+  const params = await paramsPromise;
   const post = await getPost(params.slug);
 
   if (!post) {

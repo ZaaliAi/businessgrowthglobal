@@ -141,20 +141,31 @@ export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Sub
 
     setIsUploading(true);
     const fileName = `${Date.now()}-${file.name}`;
-    const { data, error } = await supabase.storage
+    
+    // Upload the file
+    const { data: uploadData, error: uploadError } = await supabase.storage
       .from('posts-images')
       .upload(fileName, file);
 
-    setIsUploading(false);
-
-    if (error) {
-      toast({ variant: 'destructive', title: 'Image Upload Failed', description: error.message });
+    if (uploadError) {
+      setIsUploading(false);
+      toast({ variant: 'destructive', title: 'Image Upload Failed', description: uploadError.message });
       return;
     }
 
-    const { data: { publicUrl } } = supabase.storage
+    // Get the public URL
+    const { data: publicUrlData } = supabase.storage
       .from('posts-images')
-      .getPublicUrl(data.path);
+      .getPublicUrl(uploadData.path);
+
+    setIsUploading(false);
+
+    if (!publicUrlData?.publicUrl) {
+        toast({ variant: 'destructive', title: 'Failed to get public URL', description: 'The image was uploaded, but we could not retrieve its public URL. Please check your bucket permissions.' });
+        return;
+    }
+
+    const publicUrl = publicUrlData.publicUrl;
     
     if (isFeatured) {
         form.setValue('image_url', publicUrl, { shouldValidate: true });
@@ -163,7 +174,9 @@ export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Sub
         if(!textarea) return;
 
         const start = textarea.selectionStart;
-        const textToInsert = `\n![${file.name}](${publicUrl})\n`;
+        const textToInsert = `
+![${file.name}](${publicUrl})
+`;
         form.setValue('content', 
         textarea.value.substring(0, start) + textToInsert + textarea.value.substring(start),
         { shouldValidate: true }

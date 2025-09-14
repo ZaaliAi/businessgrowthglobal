@@ -34,7 +34,12 @@ export default function EditPostPage({ params }: { params: { id: string } }) {
   const handleSubmit = async (values: PostFormValues) => {
     const { error } = await supabase
       .from('posts')
-      .update(values)
+      .update({ 
+        title: values.title, 
+        slug: values.slug, 
+        content: values.content,
+        image_url: values.image_url,
+      })
       .eq('id', params.id);
 
     if (error) {

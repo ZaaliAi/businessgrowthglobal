@@ -14,12 +14,12 @@ export default function About() {
             At Business Growth Global, we dedicate ourselves to empowering business owners, entrepreneurs, and executives to achieve strategic business growth and unlock their full potential. Founded by Lee Broders, an experienced business mentor, our mission is to provide tailored business mentoring programs that help you focus on scaling your business, improving operations, and achieving sustainable success.
           </p>
           <p className="mt-4 text-lg leading-8 text-muted-foreground">
-            Through our signature framework, The Business Growth Blueprint, we deliver bespoke solutions to transform businesses. We specialise in helping clients increase profitability, build high-performance teams, and develop actionable plans for long-term growth. Whether you’re a startup founder, small business owner, or corporate executive, we create strategies designed to meet your unique challenges and goals.
+            Through our signature framework, AEROPS, we deliver bespoke solutions to transform businesses. We specialise in helping clients increase profitability, build high-performance teams, and develop actionable plans for long-term growth. Whether you’re a startup founder, small business owner, or corporate executive, we create strategies designed to meet your unique challenges and goals.
           </p>
           <div className="mt-8">
             <Button asChild>
-              <Link href="/about-lee-broders">
-                More About Lee Broders
+              <Link href="/our-founder">
+                Our Founder
                 <MoveRight className="ml-2" />
               </Link>
             </Button>
