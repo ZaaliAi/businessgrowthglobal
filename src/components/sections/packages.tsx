@@ -1,7 +1,6 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check } from "lucide-react";
 import Link from "next/link";
 
@@ -65,28 +64,6 @@ const packages = [
         {
           title: "What Can You Expect?",
           content: "When you enrol in the Intensive Package, you’ll embark on a transformative journey that enables you to: Scale your business with confidence and clarity. Focus on strategic growth, stepping away from daily operations. Build a sustainable, scalable business that aligns with your vision and goals. Develop actionable plans with the support of a trusted business mentor."
-        }
-      ],
-      interactiveFeatures: [
-        {
-          id: "sessions",
-          title: "48 Sessions",
-          content: "Receive nearly weekly, one-on-one personalised mentoring sessions. These deep dives are dedicated to tackling your specific challenges, refining your strategy, and ensuring you are consistently moving towards your most ambitious goals. This high-frequency engagement ensures momentum is never lost."
-        },
-        {
-          id: "calls",
-          title: "Crisis Calls",
-          content: "Gain peace of mind with two weekly 15-minute crisis calls. Use these for urgent issues, quick questions, or immediate guidance when you can't wait for your next full session. It's your direct line for real-time support, ensuring you're never stuck."
-        },
-        {
-          id: "support",
-          title: "Priority Support",
-          content: "Enjoy priority email and text support with a guaranteed 24-hour response time. This continuous line of communication ensures that your questions and concerns are addressed promptly, keeping your progress on track between scheduled sessions."
-        },
-        {
-          id: "reviews",
-          title: "Strategy Reviews",
-          content: "With 12 comprehensive Strategy & Action Reviews throughout the year, we'll regularly assess your progress, pivot strategies as needed, and set clear, actionable goals for the next phase. This ensures your growth is not just rapid, but also strategic and sustainable."
         }
       ]
     }
@@ -157,35 +134,20 @@ export default function Packages() {
                   ))}
                 </ul>
                 <div className="mt-auto">
-                    {pkg.details.interactiveFeatures ? (
-                      <Tabs defaultValue={pkg.details.interactiveFeatures[0].id} className="w-full">
-                        <TabsList className="grid w-full grid-cols-2 h-auto">
-                           {pkg.details.interactiveFeatures.slice(0, 4).map(feature => (
-                              <TabsTrigger key={feature.id} value={feature.id} className="text-xs sm:text-sm">{feature.title}</TabsTrigger>
-                           ))}
-                        </TabsList>
-                        {pkg.details.interactiveFeatures.slice(0, 4).map(feature => (
-                          <TabsContent key={feature.id} value={feature.id} className="mt-4 p-4 bg-secondary rounded-md min-h-[120px]">
-                            <p className="text-sm text-secondary-foreground">{feature.content}</p>
-                          </TabsContent>
-                        ))}
-                      </Tabs>
-                    ) : (
-                      <Accordion type="single" collapsible className="w-full">
-                          <AccordionItem value="item-1">
-                              <AccordionTrigger>More Information</AccordionTrigger>
-                              <AccordionContent>
-                                  <p className="mb-4">{pkg.details.intro}</p>
-                                  {pkg.details.sections.map(section => (
-                                      <div key={section.title} className="mb-4">
-                                          <h4 className="font-semibold mb-2">{section.title}</h4>
-                                          <p>{section.content}</p>
-                                      </div>
-                                  ))}
-                              </AccordionContent>
-                          </AccordionItem>
-                      </Accordion>
-                    )}
+                    <Accordion type="single" collapsible className="w-full">
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger>More Information</AccordionTrigger>
+                            <AccordionContent>
+                                <p className="mb-4">{pkg.details.intro}</p>
+                                {pkg.details.sections.map(section => (
+                                    <div key={section.title} className="mb-4">
+                                        <h4 className="font-semibold mb-2">{section.title}</h4>
+                                        <p>{section.content}</p>
+                                    </div>
+                                ))}
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
                 </div>
               </CardContent>
               <CardFooter>
