@@ -56,8 +56,8 @@ export default function Testimonials() {
           </CarouselContent>
           {testimonials.length > 1 && (
             <>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="left-[-1rem] sm:left-[-3rem]" />
+              <CarouselNext className="right-[-1rem] sm:right-[-3rem]" />
             </>
           )}
         </Carousel>
