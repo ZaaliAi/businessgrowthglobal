@@ -43,17 +43,17 @@ export default function Hero() {
             Scale strategically, lead effectively, and build a business that thrives. We provide the blueprint and mentorship to get you there.
           </p>
           <div
-            className={`mt-10 flex items-center justify-center gap-x-6 transition-all duration-700 ease-in-out delay-300 ${
+            className={`mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 transition-all duration-700 ease-in-out delay-300 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 w-full sm:w-auto">
               <Link href="/contact">
                 Book a Free Discovery Call
                 <MoveRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            <Button asChild size="lg" variant="outline" className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary w-full sm:w-auto">
               <Link href="/case-studies">
                 View Case Studies
               </Link>
