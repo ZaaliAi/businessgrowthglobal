@@ -45,9 +45,9 @@ export default function ProgramFinder() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [scores, setScores] = useState({ elevate: 0, intensive: 0, boardroom: 0 });
   const [isFinished, setIsFinished] = useState(false);
-  const [recommendation, setRecommendation] = useState(null);
+  const [recommendation, setRecommendation] = useState<{ name: string; description: string; } | null>(null);
 
-  const handleAnswer = (selectedScores) => {
+  const handleAnswer = (selectedScores: { elevate: number; intensive: number; boardroom: number; }) => {
     const newScores = {
       elevate: scores.elevate + selectedScores.elevate,
       intensive: scores.intensive + selectedScores.intensive,
@@ -63,10 +63,12 @@ export default function ProgramFinder() {
     }
   };
 
-  const calculateRecommendation = (finalScores) => {
+  const calculateRecommendation = (finalScores: { elevate: number; intensive: number; boardroom: number; }) => {
     const highestScore = Math.max(finalScores.elevate, finalScores.intensive, finalScores.boardroom);
-    const recommendedProgram = Object.keys(finalScores).find(key => finalScores[key] === highestScore);
-    setRecommendation(programDetails[recommendedProgram]);
+    const recommendedProgramKey = Object.keys(finalScores).find(key => finalScores[key as keyof typeof finalScores] === highestScore) as keyof typeof programDetails | undefined;
+    if (recommendedProgramKey) {
+      setRecommendation(programDetails[recommendedProgramKey]);
+    }
   };
   
   const restartQuiz = () => {
@@ -98,7 +100,7 @@ export default function ProgramFinder() {
                     key={index} 
                     variant="outline" 
                     size="lg" 
-                    className="w-full justify-start h-auto py-4"
+                    className="w-full justify-start h-auto py-4 whitespace-normal text-left"
                     onClick={() => handleAnswer(option.scores)}
                   >
                     <span className="text-lg">{option.text}</span>
