@@ -9,10 +9,10 @@ import CaseStudiesHero from '@/components/sections/case-studies-hero';
 
 const caseStudies = [
   {
-    slug: 'tech-startup-growth',
-    industry: 'Tech Startup',
-    title: 'From Stagnation to 300% Growth in 18 Months',
-    imageUrl: 'https://picsum.photos/seed/tech/800/600',
+    slug: 'food-production-growth',
+    industry: 'Food Production',
+    title: 'Breaking £1 Million Turnover: A Food Production Success Story',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/pexels-shvetsa-5953714.jpg',
   },
   {
     slug: 'manufacturing-efficiency',

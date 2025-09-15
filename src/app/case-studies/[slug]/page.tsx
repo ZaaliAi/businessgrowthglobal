@@ -8,32 +8,33 @@ import Footer from '@/components/layout/footer';
 
 // Mock data - in a real application, this would be fetched from a CMS or database
 const caseStudyData = {
-  'tech-startup-growth': {
-    industry: 'Tech Startup',
-    title: 'From Stagnation to 300% Growth in 18 Months',
-    imageUrl: 'https://picsum.photos/seed/tech/1200/800',
+  'food-production-growth': {
+    industry: 'UK Food Producer',
+    title: '£468k → £1.248m in 12 months (+167%); founder halves time in ops',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/pexels-shvetsa-5953714.jpg',
     overview: {
-      challenge: 'A promising tech startup was struggling with market penetration and stagnant revenue growth despite having a solid product.',
-      solution: 'Implemented the AEROPS framework, focusing on expanding the customer base (Expand) and optimizing revenue streams (Revenue).',
+      challenge: 'Thin margins (14% gross, 3% net) were limiting reinvestment, and the founder was a bottleneck, spending 60 hours per week in day-to-day operations.',
+      solution: 'Implemented the AEROPS framework to formalise pricing and operations. This included a cost-to-serve pricing model, SKU rationalisation, and a weekly S&OP cadence.',
       results: [
-        '+300% Revenue Growth in 18 months',
-        'Market share increased by 25%',
-        'Secured Series A funding',
-        'Team efficiency improved by 40%',
+        'Revenue increased from £468k to £1.248m (+167%)',
+        'Gross margin lifted from 14% to 21%',
+        'Founder\'s time in operations cut from 60 to 30 hours/week',
+        'Unit throughput grew from 300 to 800 units/day',
       ],
     },
     narrative: {
-      challenge: 'The company had a brilliant product but lacked a strategic go-to-market plan. Their sales team was underperforming, and marketing efforts were not generating a positive ROI. The leadership team was stuck in day-to-day operations, unable to focus on strategic growth.',
-      solution: 'We began with a deep-dive analysis (Analyse) to identify key market segments and competitive advantages. A new sales process was implemented, and the marketing strategy was completely overhauled to focus on high-value channels (Expand). We also restructured their pricing model to better capture value (Revenue) and introduced agile methodologies to improve operational efficiency (Operation).',
-      results: 'The results were transformative. Within 18 months, the company saw a 300% increase in annual recurring revenue. They successfully penetrated new market segments, leading to a 25% increase in market share. This growth and clear strategic direction were instrumental in securing their Series A funding round, setting them up for long-term success.',
+      challenge: 'Demand was growing, but profit wasn’t. With a gross margin of only 14%, every increase in volume amplified operational strain without generating enough cash to hire or invest. The founder was managing everything, leading to long hours and reactive firefighting. Key operational metrics weren\'t being tracked, making it difficult to identify the root causes of inefficiency.',
+      solution: 'We focused on a few high-leverage moves. First, we rebuilt the pricing architecture around the true cost-to-serve and rationalised the product line to focus on high-margin items. We introduced a weekly Sales & Operations Planning (S&OP) cadence and daily huddles to stabilise workflow. Core processes were systemised using an LPAD approach (document, perfect, automate, delegate), and a simple B2B sales pipeline was established to smooth demand.',
+      results: 'The transformation was significant. Revenue grew by 167% to £1.248m in just twelve months. Gross margin improved by 7 percentage points, and net margin doubled. Most importantly, the founder’s operational hours were halved, creating the headspace to lead the business strategically. The team doubled in size, and daily unit throughput increased by over 167%, creating a stable platform for future growth.',
     },
     testimonial: {
-      quote: 'The mentorship we received was the catalyst for our breakthrough. Their strategic insights helped us see the bigger picture and execute with precision. We wouldn’t be where we are today without their guidance.',
-      author: 'Jane Doe, CEO of Tech Innovators',
+      quote: 'Mentoring with Business Growth Global gave me clarity and a cadence. We finally priced to our true cost, tightened changeovers, and built a team I could trust. We’ve gone from 300 to 800 units a day, revenue has leapt, and for the first time I’m leading the business instead of firefighting.',
+      author: 'Founder, Anonymised UK Food Producer',
     },
   },
   // Add other case studies here...
 };
+
 
 export default function CaseStudyDetailPage({ params }: { params: { slug: string } }) {
   const study = caseStudyData[params.slug as keyof typeof caseStudyData];

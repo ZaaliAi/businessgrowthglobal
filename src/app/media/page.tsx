@@ -42,6 +42,13 @@ const articles = [
     description: 'Many people believe that if they just had more money, they would be happier...',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/msnnn.jfif',
     publication: 'MSN'
+  },
+  {
+    url: 'https://www.telegraph.co.uk/money/jobs/career-advice/does-money-buy-you-happiness/',
+    title: 'Does money buy you happiness?',
+    description: 'Find out what the experts have to say.',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/the%20telegraph.jpg',
+    publication: 'The Telegraph'
   }
 ];
 

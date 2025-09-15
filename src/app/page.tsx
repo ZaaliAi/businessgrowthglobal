@@ -7,6 +7,7 @@ import About from '@/components/sections/about';
 import FinalCTA from '@/components/sections/final-cta';
 import AnimatedSection from '@/components/animated-section';
 import AeropsBlueprint from '@/components/sections/aerops-blueprint';
+import LogoCarousel from '@/components/sections/logo-carousel';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <LogoCarousel />
         <AnimatedSection>
           <Intro />
         </AnimatedSection>
