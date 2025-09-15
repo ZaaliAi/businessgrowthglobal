@@ -14,24 +14,6 @@ const caseStudies = [
     title: 'Breaking £1 Million Turnover: A Food Production Success Story',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/pexels-shvetsa-5953714.jpg',
   },
-  {
-    slug: 'manufacturing-efficiency',
-    industry: 'Manufacturing Firm',
-    title: 'Boosting Operational Efficiency by 50%',
-    imageUrl: 'https://picsum.photos/seed/manufacturing/800/600',
-  },
-  {
-    slug: 'retail-expansion',
-    industry: 'Retail Chain',
-    title: 'Scaling to 10 New Locations in One Year',
-    imageUrl: 'https://picsum.photos/seed/retail/800/600',
-  },
-  {
-    slug: 'service-profitability',
-    industry: 'Service Provider',
-    title: 'Doubling Profitability Through Strategic Realignment',
-    imageUrl: 'https://picsum.photos/seed/service/800/600',
-  },
 ];
 
 export default function CaseStudiesPage() {
