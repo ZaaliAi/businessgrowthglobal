@@ -199,3 +199,5 @@ export default function CaseStudyDetailPage({ params }: { params: { slug: string
     </div>
   );
 }
+
+    

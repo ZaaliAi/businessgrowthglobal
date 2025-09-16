@@ -30,7 +30,7 @@ const caseStudies = [
   {
     slug: 'executive-coaching-confidence',
     industry: 'Executive Coaching',
-    title: 'From Imposter Syndrome to Confident Leadership in Six Months',
+    title: 'Imposter Syndrome to Confident Leadership in Six Months',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/executive.jpg',
     aiHint: 'confident executive presentation',
   },
@@ -117,3 +117,5 @@ export default function CaseStudiesPage() {
     </div>
   );
 }
+
+    
