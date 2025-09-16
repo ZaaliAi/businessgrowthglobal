@@ -7,6 +7,12 @@ import AnimatedSection from '@/components/animated-section';
 import Link from 'next/link';
 import { Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+
 
 const founder = {
   name: 'Lee Broders',
@@ -82,64 +88,76 @@ export default function MeetTheTeamPage() {
             <AnimatedSection>
                <div className="max-w-4xl mx-auto space-y-8">
                 {/* Founder Card */}
-                <div className="bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden border border-accent flex items-center p-6">
-                    <div className="group relative flex-grow flex items-center space-x-6">
-                      <div className="relative flex-shrink-0 h-32 w-32">
-                        <Image
-                          src={founder.imageUrl}
-                          alt={`Portrait of ${founder.name}`}
-                          fill
-                          className="object-cover rounded-full"
-                          data-ai-hint={founder.aiHint}
-                        />
-                      </div>
-                      <div className="flex-1 text-left">
-                        <h3 className="text-2xl font-bold text-primary">{founder.name}</h3>
-                        <p className="text-md font-semibold text-accent">{founder.title}</p>
-                        <p className="mt-2 text-muted-foreground">{founder.shortBio}</p>
-                         <Link href="/our-founder" className="mt-4 inline-block text-sm text-accent font-semibold hover:underline">
-                            Learn more about Lee &rarr;
-                        </Link>
-                      </div>
-                      <div className="absolute inset-0 bg-primary/95 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer rounded-lg">
-                        <p className="text-primary-foreground text-lg">{founder.bio}</p>
-                      </div>
+                <Collapsible asChild>
+                <div className="bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden border border-accent flex flex-col p-6">
+                    <div className="flex items-center w-full">
+                        <div className="flex-grow flex items-center space-x-6">
+                            <div className="relative flex-shrink-0 h-32 w-32">
+                                <Image
+                                src={founder.imageUrl}
+                                alt={`Portrait of ${founder.name}`}
+                                fill
+                                className="object-cover rounded-full"
+                                data-ai-hint={founder.aiHint}
+                                />
+                            </div>
+                            <div className="flex-1 text-left">
+                                <h3 className="text-2xl font-bold text-primary">{founder.name}</h3>
+                                <p className="text-md font-semibold text-accent">{founder.title}</p>
+                                <p className="mt-2 text-muted-foreground">{founder.shortBio}</p>
+                                <Link href="/our-founder" className="mt-4 inline-block text-sm text-accent font-semibold hover:underline">
+                                    Learn more about Lee &rarr;
+                                </Link>
+                            </div>
+                        </div>
+                        <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary ml-4 flex-shrink-0">
+                            <Link href={founder.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label={`${founder.name}'s LinkedIn`}>
+                                <Linkedin className="h-5 w-5" />
+                            </Link>
+                        </Button>
                     </div>
-                    <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary ml-4 flex-shrink-0">
-                        <Link href={founder.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label={`${founder.name}'s LinkedIn`}>
-                            <Linkedin className="h-5 w-5" />
-                        </Link>
-                    </Button>
                 </div>
+                </Collapsible>
 
                 {/* Other Team Members */}
                 {teamMembers.map((member) => (
-                  <div key={member.name} className="bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden border border-border flex items-center p-6">
-                    <div className="group relative flex-grow flex items-center space-x-6">
-                      <div className="relative flex-shrink-0 h-32 w-32">
-                        <Image
-                          src={member.imageUrl}
-                          alt={`Portrait of ${member.name}`}
-                          fill
-                          className="object-cover rounded-full"
-                          data-ai-hint={member.aiHint}
-                        />
-                      </div>
-                      <div className="flex-1 text-left">
-                        <h3 className="text-2xl font-bold text-primary">{member.name}</h3>
-                        <p className="text-md font-semibold text-accent">{member.title}</p>
-                        <p className="mt-2 text-muted-foreground">{member.shortBio}</p>
-                      </div>
-                      <div className="absolute inset-0 bg-primary/95 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer rounded-lg">
-                        <p className="text-primary-foreground text-lg">{member.bio}</p>
-                      </div>
-                    </div>
-                     <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary ml-4 flex-shrink-0">
-                        <Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label={`${member.name}'s LinkedIn`}>
-                            <Linkedin className="h-5 w-5" />
-                        </Link>
-                    </Button>
-                  </div>
+                    <Collapsible asChild key={member.name}>
+                        <div className="bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden border border-border flex flex-col p-6">
+                            <div className="flex items-center w-full">
+                                <div className="flex-grow flex items-center space-x-6">
+                                <div className="relative flex-shrink-0 h-32 w-32">
+                                    <Image
+                                    src={member.imageUrl}
+                                    alt={`Portrait of ${member.name}`}
+                                    fill
+                                    className="object-cover rounded-full"
+                                    data-ai-hint={member.aiHint}
+                                    />
+                                </div>
+                                <div className="flex-1 text-left">
+                                    <h3 className="text-2xl font-bold text-primary">{member.name}</h3>
+                                    <p className="text-md font-semibold text-accent">{member.title}</p>
+                                    <p className="mt-2 text-muted-foreground">{member.shortBio}</p>
+                                    <CollapsibleTrigger asChild>
+                                        <button className="mt-4 text-sm text-accent font-semibold hover:underline">
+                                            Learn more about {member.name.split(' ')[0]} &rarr;
+                                        </button>
+                                    </CollapsibleTrigger>
+                                </div>
+                                </div>
+                                <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary ml-4 flex-shrink-0">
+                                    <Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label={`${member.name}'s LinkedIn`}>
+                                        <Linkedin className="h-5 w-5" />
+                                    </Link>
+                                </Button>
+                            </div>
+                             <CollapsibleContent>
+                                <div className="pt-4 mt-4 border-t">
+                                    <p className="text-muted-foreground">{member.bio}</p>
+                                </div>
+                            </CollapsibleContent>
+                        </div>
+                    </Collapsible>
                 ))}
               </div>
             </AnimatedSection>
