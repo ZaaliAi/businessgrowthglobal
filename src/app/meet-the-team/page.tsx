@@ -41,7 +41,7 @@ const teamMembers = [
     bio: 'Olga is focused on expanding our reach across the UK and Europe, building relationships with clients and partners to drive regional growth.',
     shortBio: 'Expands our reach across the UK and Europe, building key client relationships.',
     aiHint: 'professional portrait',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/olga-bak-88295235/',
   },
   {
     name: 'Jason Maxwell',
