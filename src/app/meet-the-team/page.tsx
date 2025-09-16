@@ -54,7 +54,7 @@ aiHint: 'professional portrait',
   {
     name: 'Ben Edge',
     title: 'Business Development Manager (USA West)',
-    imageUrl: 'https://picsum.photos/seed/104/400/400',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/benn.jpg',
     bio: 'Based on the West Coast, Ben is dedicated to introducing our transformative business growth strategies to a new wave of entrepreneurs and leaders.',
     shortBio: 'Introduces our transformative growth strategies to entrepreneurs on the USA West Coast.',
     aiHint: 'professional portrait',
@@ -139,7 +139,7 @@ export default function MeetTheTeamPage() {
                                     fill
                                     className="object-cover rounded-full"
                                     data-ai-hint={member.aiHint}
-                                    style={ member.name === 'Olga Bak' ? { objectPosition: 'top' } : {} }
+                                    style={ (member.name === 'Olga Bak' || member.name === 'Ben Edge') ? { objectPosition: 'top' } : {} }
                                     />
                                 </div>
                                 <div className="flex-1 text-left">
