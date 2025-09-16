@@ -22,7 +22,7 @@ export default function ContactPage() {
                         hello@businessgrowth.global
                     </a>
                 </div>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-x-12 gap-y-4 text-lg">
+                <div className="flex flex-col items-center justify-center gap-y-4 text-lg">
                     <div className="flex items-center gap-4">
                         <Phone className="h-6 w-6 text-accent" />
                         <span className="font-semibold text-primary">UK: +44 1630 411313</span>
