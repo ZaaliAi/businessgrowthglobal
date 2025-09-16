@@ -28,8 +28,8 @@ const teamMembers = [
     name: 'Darrel Alison',
     title: 'Sales and Marketing Director',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/daz.jfif',
-    bio: 'Darrel leads our sales and marketing efforts, developing strategies that connect our mentoring services with businesses ready to scale and succeed.',
-    shortBio: 'Leads sales and marketing strategies to connect with businesses ready to scale.',
+    bio: 'Darrel leads our sales, marketing, and operations worldwide, developing strategies that connect our mentoring services with businesses ready to scale and succeed.',
+    shortBio: 'Leads sales, marketing, and operations worldwide to connect with businesses ready to scale.',
     aiHint: 'professional portrait',
     linkedinUrl: 'https://www.linkedin.com/in/darrel-alison-3919962a5/',
   },
@@ -139,7 +139,7 @@ export default function MeetTheTeamPage() {
                                     fill
                                     className="object-cover rounded-full"
                                     data-ai-hint={member.aiHint}
-                                    style={{ objectPosition: 'top' }}
+                                    style={ member.name === 'Olga Bak' ? { objectPosition: 'top' } : {} }
                                     />
                                 </div>
                                 <div className="flex-1 text-left">
