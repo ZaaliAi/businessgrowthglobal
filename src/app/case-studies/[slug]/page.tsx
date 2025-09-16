@@ -10,7 +10,7 @@ import Footer from '@/components/layout/footer';
 const caseStudyData = {
   'food-production-growth': {
     industry: 'UK Food Producer',
-    title: '£468k \u2192 £1.248m in 12 months (+167%); founder halves time in ops',
+    title: '£468k → £1.248m in 12 months (+167%); founder halves time in ops',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/pexels-shvetsa-5953714.jpg',
     overview: {
       challenge: 'Thin margins (14% gross, 3% net) were limiting reinvestment, and the founder was a bottleneck, spending 60 hours per week in day-to-day operations.',
@@ -56,7 +56,31 @@ const caseStudyData = {
       author: 'Founder & CEO, Anonymised Services Business',
     },
   },
-  // Add other case studies here...
+  'exit-readiness-story': {
+    industry: 'Exit Readiness (UK)',
+    title: 'From £1.5m valuation to a £6m exit in 12 months',
+    subheadline: 'Broker-referred owner removed key-person risk, systemised operations, lifted revenue, and eliminated a 24-month consultancy requirement—unlocking a 4× higher sale price.',
+    imageUrl: 'https://picsum.photos/seed/exitdeal/1200/800',
+    overview: {
+      challenge: 'Initial valuation of ~£1.5m was contingent on the owner remaining for 24 months post-sale due to high key-person risk and undocumented processes.',
+      solution: 'Built a senior leadership layer, systemised core operations using the LPAD framework, created diligence-ready financial reporting, and strengthened customer contracts.',
+      results: [
+        'Achieved a £6m sale price, a 300% increase on the initial valuation.',
+        'Eliminated the 24-month post-sale consultancy requirement for the founder.',
+        'Increased revenue during the 12-month engagement period.',
+        'Transformed the business into a demonstrably “buy-and-run” asset.',
+      ],
+    },
+    narrative: {
+      challenge: 'A broker-referred business owner was exploring a sale but faced a low valuation of approximately £1.5m, which was heavily contingent on them remaining for a 24-month consultancy period. The business was critically dependent on the founder for sales, operations, and decision-making. With undocumented processes, no leadership bench, and inconsistent management information, the company posed a significant risk to potential buyers.',
+      solution: 'We implemented a focused exit-readiness plan. The first step was to build a senior leadership team, including an Operations Lead and a Financial Controller, with clear role scorecards to distribute responsibility. We then documented and de-bottlenecked all core processes using our Learn, Perfect, Automate, Delegate (LPAD) framework. A monthly management information pack was created to provide board-style, diligence-ready data. Commercially, we focused on renewing and extending key customer contracts while widening referral channels to create repeatable revenue. Finally, we assembled a clean data room with SOPs, an org chart, contracts, KPIs, and a transition runbook to make the business as transparent and transferable as possible for a buyer.',
+      results: 'The strategic initiatives led to a rapid and dramatic transformation. Within 12 months, the business was sold for £6m—a 300% increase from its initial valuation. The owner’s post-sale consultancy requirement was reduced from 24 months to a minimal handover period, giving them a clean exit. The new management team, documented SOPs, and clear performance metrics made the business a highly attractive “buy-and-run” opportunity, rather than a risky “buy-and-rebuild” project.',
+    },
+    testimonial: {
+      quote: 'Before mentoring, every road led back to me—buyers knew it. In twelve months we built the team, the systems, and clean numbers. I sold for £6m without being tied in for two years, and the business can thrive without me.',
+      author: 'Founder, Anonymised UK Business',
+    },
+  },
 };
 
 
@@ -81,6 +105,8 @@ export default function CaseStudyDetailPage({ params }: { params: { slug: string
 
               <p className="text-accent font-semibold">{study.industry}</p>
               <h1 className="text-4xl md:text-5xl font-bold text-primary mt-2">{study.title}</h1>
+              {'subheadline' in study && <p className="mt-4 text-lg text-muted-foreground">{study.subheadline}</p>}
+
 
               <div className="my-12">
                 <Image
@@ -89,6 +115,7 @@ export default function CaseStudyDetailPage({ params }: { params: { slug: string
                   width={1200}
                   height={800}
                   className="rounded-lg shadow-xl"
+                  data-ai-hint={study.slug === 'exit-readiness-story' ? 'business deal handshake' : ''}
                 />
               </div>
 

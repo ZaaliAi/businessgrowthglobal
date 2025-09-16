@@ -20,6 +20,13 @@ const caseStudies = [
     title: 'From £8m Plateau to £12m+ in 24 Months',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/pexels-kampus-8204363.jpg',
   },
+  {
+    slug: 'exit-readiness-story',
+    industry: 'Exit Readiness',
+    title: 'From £1.5m valuation to a £6m exit in 12 months',
+    imageUrl: 'https://picsum.photos/seed/exitdeal/1200/800',
+    aiHint: 'business deal handshake',
+  },
 ];
 
 export default function CaseStudiesPage() {
@@ -43,6 +50,7 @@ export default function CaseStudiesPage() {
                           alt={study.title}
                           fill
                           className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          data-ai-hint={study.aiHint}
                         />
                       </div>
                       <div className="p-8">
