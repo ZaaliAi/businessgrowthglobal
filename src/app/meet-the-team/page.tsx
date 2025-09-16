@@ -61,8 +61,8 @@ export default function MeetTheTeamPage() {
             <AnimatedSection>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {teamMembers.map((member) => (
-                  <Card key={member.name} className="flex flex-col overflow-hidden text-center">
-                    <div className="relative aspect-square">
+                  <Card key={member.name} className="flex flex-col overflow-hidden text-center items-center p-6">
+                    <div className="relative h-40 w-40 rounded-full overflow-hidden">
                       <Image
                         src={member.imageUrl}
                         alt={`Portrait of ${member.name}`}
