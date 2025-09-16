@@ -43,7 +43,7 @@ const teamMembers = [
     imageUrl: 'https://picsum.photos/seed/103/400/400',
     bio: 'Jason heads our business development on the East Coast of the USA, helping clients unlock their potential through our proven mentoring frameworks.',
     shortBio: 'Heads business development on the USA East Coast, helping clients unlock potential.',
-    aiHint: 'professional portrait',
+aiHint: 'professional portrait',
     linkedinUrl: '#',
   },
   {
@@ -82,8 +82,8 @@ export default function MeetTheTeamPage() {
             <AnimatedSection>
                <div className="max-w-4xl mx-auto space-y-8">
                 {/* Founder Card */}
-                <div className="group relative bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden border border-accent">
-                    <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 p-6">
+                <div className="bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden border border-accent flex items-center p-6">
+                    <div className="group relative flex-grow flex items-center space-x-6">
                       <div className="relative flex-shrink-0 h-32 w-32">
                         <Image
                           src={founder.imageUrl}
@@ -93,31 +93,29 @@ export default function MeetTheTeamPage() {
                           data-ai-hint={founder.aiHint}
                         />
                       </div>
-                      <div className="flex-1 text-center md:text-left">
-                        <div className="flex items-center justify-center md:justify-start gap-4">
-                            <h3 className="text-2xl font-bold text-primary">{founder.name}</h3>
-                            <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary">
-                                <Link href={founder.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label={`${founder.name}'s LinkedIn`}>
-                                    <Linkedin className="h-5 w-5" />
-                                </Link>
-                            </Button>
-                        </div>
+                      <div className="flex-1 text-left">
+                        <h3 className="text-2xl font-bold text-primary">{founder.name}</h3>
                         <p className="text-md font-semibold text-accent">{founder.title}</p>
                         <p className="mt-2 text-muted-foreground">{founder.shortBio}</p>
                          <Link href="/our-founder" className="mt-4 inline-block text-sm text-accent font-semibold hover:underline">
                             Learn more about Lee &rarr;
                         </Link>
                       </div>
+                      <div className="absolute inset-0 bg-primary/95 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer rounded-lg">
+                        <p className="text-primary-foreground text-lg">{founder.bio}</p>
+                      </div>
                     </div>
-                    <div className="absolute inset-0 bg-primary/95 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
-                      <p className="text-primary-foreground text-lg">{founder.bio}</p>
-                    </div>
+                    <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary ml-4 flex-shrink-0">
+                        <Link href={founder.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label={`${founder.name}'s LinkedIn`}>
+                            <Linkedin className="h-5 w-5" />
+                        </Link>
+                    </Button>
                 </div>
 
                 {/* Other Team Members */}
                 {teamMembers.map((member) => (
-                  <div key={member.name} className="group relative bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden border border-border">
-                    <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 p-6">
+                  <div key={member.name} className="bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden border border-border flex items-center p-6">
+                    <div className="group relative flex-grow flex items-center space-x-6">
                       <div className="relative flex-shrink-0 h-32 w-32">
                         <Image
                           src={member.imageUrl}
@@ -127,22 +125,20 @@ export default function MeetTheTeamPage() {
                           data-ai-hint={member.aiHint}
                         />
                       </div>
-                      <div className="flex-1 text-center md:text-left">
-                         <div className="flex items-center justify-center md:justify-start gap-4">
-                            <h3 className="text-2xl font-bold text-primary">{member.name}</h3>
-                             <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary">
-                                <Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label={`${member.name}'s LinkedIn`}>
-                                    <Linkedin className="h-5 w-5" />
-                                </Link>
-                            </Button>
-                        </div>
+                      <div className="flex-1 text-left">
+                        <h3 className="text-2xl font-bold text-primary">{member.name}</h3>
                         <p className="text-md font-semibold text-accent">{member.title}</p>
                         <p className="mt-2 text-muted-foreground">{member.shortBio}</p>
                       </div>
+                      <div className="absolute inset-0 bg-primary/95 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer rounded-lg">
+                        <p className="text-primary-foreground text-lg">{member.bio}</p>
+                      </div>
                     </div>
-                    <div className="absolute inset-0 bg-primary/95 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
-                      <p className="text-primary-foreground text-lg">{member.bio}</p>
-                    </div>
+                     <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary ml-4 flex-shrink-0">
+                        <Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label={`${member.name}'s LinkedIn`}>
+                            <Linkedin className="h-5 w-5" />
+                        </Link>
+                    </Button>
                   </div>
                 ))}
               </div>
