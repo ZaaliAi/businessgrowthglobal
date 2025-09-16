@@ -20,7 +20,7 @@ export default function Hero() {
     <section className="relative h-[80vh] min-h-[700px] w-full overflow-hidden">
       <Image
         src="https://images.unsplash.com/photo-1556761175-b413da4baf72"
-        alt="Business professionals collaborating on a project"
+        alt="Team of executives in a business mentoring session, planning for growth"
         fill
         className="object-cover"
         priority
@@ -33,7 +33,7 @@ export default function Hero() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Unlock Your Business's True Potential
+            Find Your Business Growth Mentor
           </h1>
           <p
             className={`mt-6 text-lg leading-8 text-primary-foreground/80 md:text-xl transition-all duration-700 ease-in-out delay-200 ${

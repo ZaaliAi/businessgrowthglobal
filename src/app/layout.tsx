@@ -5,8 +5,8 @@ import PageTransition from '@/components/page-transition';
 import CookieBanner from '@/components/cookie-banner';
 
 export const metadata: Metadata = {
-  title: 'Business Growth Global',
-  description: 'Elevate your business with expert mentorship and strategic guidance.',
+  title: 'Business Growth Mentor Programme | Business Growth Global',
+  description: 'Ready to scale? Our business mentor programmes, built on the proven AEROPS framework, provide the strategy and leadership guidance you need. For entrepreneurs in the UK, Europe & USA.',
 };
 
 export default function RootLayout({
@@ -17,7 +17,25 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/BGG%20icon.jpg" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Business Growth Global",
+            "url": "https://www.businessgrowth.global/",
+            "logo": "https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/BGG%20icon.jpg",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+44 1630 411313",
+              "contactType": "customer service"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/74039492/",
+              "https://www.facebook.com/BusinessGrowthGlobal/"
+            ]
+          }) }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />

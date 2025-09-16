@@ -1,15 +1,12 @@
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
-import Hero from '@/components/sections/hero';
-import Intro from '@/components/sections/intro';
-import Testimonials from '@/components/sections/testimonials';
-import About from '@/components/sections/about';
-import FinalCTA from '@/components/sections/final-cta';
-import AnimatedSection from '@/components/animated-section';
-import AeropsBlueprint from '@/components/sections/aerops-blueprint';
-import LogoCarousel from '@/components/sections/logo-carousel';
-import FAQ from '@/components/sections/faq';
-import Script from 'next/script';
+"use client";
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import AnimatedSection from "@/components/animated-section";
 
 const faqs = [
     {
@@ -46,47 +43,31 @@ const faqs = [
     }
 ];
 
-const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-        }
-    }))
-};
-
-export default function Home() {
+export default function FAQ() {
   return (
-    <div className="flex min-h-screen flex-col bg-background">
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <Header />
-      <main className="flex-1">
-        <Hero />
-        <LogoCarousel />
+    <section className="py-16 sm:py-24 bg-secondary">
+      <div className="container mx-auto px-4">
         <AnimatedSection>
-          <Intro />
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">Frequently Asked Questions about our Business Mentor Programmes</h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Have questions? We have answers. Here are some of the most common questions we get.
+            </p>
+          </div>
+          <div className="mt-12 max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem value={`item-${index + 1}`} key={index}>
+                  <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
+                  <AccordionContent>
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </AnimatedSection>
-        <AnimatedSection>
-          <Testimonials />
-        </AnimatedSection>
-        <AnimatedSection>
-          <About />
-        </AnimatedSection>
-        <AeropsBlueprint />
-        <FAQ />
-        <AnimatedSection>
-          <FinalCTA />
-        </AnimatedSection>
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </section>
   );
 }

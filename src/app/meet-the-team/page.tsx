@@ -17,8 +17,8 @@ const founder = {
   name: 'Lee Broders',
   title: 'Our Founder',
   imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/LPB-Business-Portrait-1-pnjknamjv5kzc4d2l63fwb7d7hzhuxlx0z4ce3j2no.webp',
-  bio: 'Lee is an International Business Mentor and Life Coach dedicated to helping individuals and businesses achieve clarity, confidence, and transformative growth. With a Masters in Business Mentoring and extensive experience, he combines strategic insight with empathy to deliver exceptional results for clients worldwide.',
-  shortBio: 'International Business Mentor and Life Coach dedicated to transformative growth.',
+  bio: 'Lee is an International Business Mentor and Executive Coach dedicated to helping individuals and businesses achieve clarity, confidence, and transformative growth. With a Masters in Business Mentoring and extensive experience, he combines strategic insight with empathy to deliver exceptional results for clients worldwide.',
+  shortBio: 'International Business Mentor and Executive Coach dedicated to transformative growth.',
   aiHint: 'professional portrait',
   linkedinUrl: 'https://www.linkedin.com/in/leebroders/',
 };
@@ -37,7 +37,9 @@ const teamMembers = [
     name: 'Olga Bak',
     title: 'Business Development Manager (UK and Europe)',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/olga.png',
-    bio: 'Olga is focused on expanding our reach across the UK and Europe, building relationships with clients and partners to drive regional growth.',
+    bio: `Olga leads business development across the UK and Europe, introducing our transformative growth strategies to entrepreneurs, executives, and visionary business leaders. As a key member of the Sales Team at Business Growth Global, Olga leverages her extensive background in B2B sales and education to forge meaningful connections and deliver high-impact opportunities to clients across diverse industries.
+
+With a master’s degree in Physical Education and a passion for movement and discipline, Olga brings energy, focus, and resilience to every interaction. Whether navigating complex sales cycles or climbing mountain trails in her free time, she approaches challenges with drive and purpose. Her blend of strategic insight, educational expertise, and active lifestyle gives her a grounded yet dynamic edge in understanding client needs and fostering long-term partnerships.`,
     shortBio: 'Expands our reach across the UK and Europe, building key client relationships.',
     aiHint: 'professional portrait',
     linkedinUrl: 'https://www.linkedin.com/in/olga-bak-88295235b/',
@@ -89,19 +91,19 @@ export default function MeetTheTeamPage() {
                 {/* Founder Card */}
                 <Collapsible asChild>
                 <div className="bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden border border-accent flex flex-col p-6">
-                    <div className="flex items-center w-full">
-                        <div className="flex-grow flex items-center space-x-6">
+                    <div className="flex flex-col items-center sm:flex-row sm:items-center w-full">
+                        <div className="flex-grow flex flex-col items-center text-center sm:flex-row sm:text-left sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
                             <div className="relative flex-shrink-0 h-32 w-32">
                                 <Image
                                 src={founder.imageUrl}
-                                alt={`Portrait of ${founder.name}`}
+                                alt={`Portrait of ${founder.name}, ${founder.title}`}
                                 fill
                                 className="object-cover rounded-full"
                                 data-ai-hint={founder.aiHint}
                                 style={{ objectPosition: 'top' }}
                                 />
                             </div>
-                            <div className="flex-1 text-left">
+                            <div className="flex-1">
                                 <h3 className="text-2xl font-bold text-primary">{founder.name}</h3>
                                 <p className="text-md font-semibold text-accent">{founder.title}</p>
                                 <p className="mt-2 text-muted-foreground">{founder.shortBio}</p>
@@ -112,7 +114,7 @@ export default function MeetTheTeamPage() {
                                 </CollapsibleTrigger>
                             </div>
                         </div>
-                        <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary ml-4 flex-shrink-0">
+                        <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary mt-4 sm:mt-0 sm:ml-4 flex-shrink-0">
                             <Link href={founder.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label={`${founder.name}'s LinkedIn`}>
                                 <Linkedin className="h-5 w-5" />
                             </Link>
@@ -137,19 +139,19 @@ export default function MeetTheTeamPage() {
                 {teamMembers.map((member) => (
                     <Collapsible asChild key={member.name}>
                         <div className="bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden border border-border flex flex-col p-6">
-                            <div className="flex items-center w-full">
-                                <div className="flex-grow flex items-center space-x-6">
+                            <div className="flex flex-col items-center sm:flex-row sm:items-center w-full">
+                                <div className="flex-grow flex flex-col items-center text-center sm:flex-row sm:text-left sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
                                 <div className="relative flex-shrink-0 h-32 w-32">
                                     <Image
                                     src={member.imageUrl}
-                                    alt={`Portrait of ${member.name}`}
+                                    alt={`Portrait of ${member.name}, ${member.title}`}
                                     fill
                                     className="object-cover rounded-full"
                                     data-ai-hint={member.aiHint}
                                     style={ (member.name === 'Olga Bak' || member.name === 'Ben Edge') ? { objectPosition: 'top' } : {} }
                                     />
                                 </div>
-                                <div className="flex-1 text-left">
+                                <div className="flex-1">
                                     <h3 className="text-2xl font-bold text-primary">{member.name}</h3>
                                     <p className="text-md font-semibold text-accent">{member.title}</p>
                                     <p className="mt-2 text-muted-foreground">{member.shortBio}</p>
@@ -160,7 +162,7 @@ export default function MeetTheTeamPage() {
                                     </CollapsibleTrigger>
                                 </div>
                                 </div>
-                                <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary ml-4 flex-shrink-0">
+                                <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary mt-4 sm:mt-0 sm:ml-4 flex-shrink-0">
                                     <Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label={`${member.name}'s LinkedIn`}>
                                         <Linkedin className="h-5 w-5" />
                                     </Link>

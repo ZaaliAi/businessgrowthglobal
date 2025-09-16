@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Script from 'next/script';
 
 const testimonials = [
   {
@@ -19,13 +20,40 @@ const testimonials = [
   },
 ];
 
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": testimonials.map((testimonial, index) => ({
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "Organization",
+      "name": "Business Growth Global"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": testimonial.name
+    },
+    "reviewBody": testimonial.quote,
+    "position": index + 1
+  }))
+};
+
 export default function Testimonials() {
   return (
     <section id="testimonials" className="w-full bg-secondary py-16 sm:py-24">
+       <Script
+        id="review-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            Trusted by Industry Leaders
+            What Our Clients Say
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Hear from clients who have transformed their businesses with us.

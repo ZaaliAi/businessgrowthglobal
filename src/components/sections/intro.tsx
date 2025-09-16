@@ -39,7 +39,7 @@ export default function Intro() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            You Are the Expert in Your Business. We Provide the Blueprint for Growth.
+            A Business Mentoring Programme Designed for Sustainable Growth
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             At Business Growth Global, we combine your expertise with our strategic mentoring to achieve exceptional results.
