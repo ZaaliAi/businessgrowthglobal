@@ -46,9 +46,9 @@ const teamMembers = [
     name: 'Jason Maxwell',
     title: 'Business Development Manager (USA East)',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/jason.png',
-    bio: 'Jason heads our business development on the East Coast of the USA, helping clients unlock their potential through our proven mentoring frameworks.',
-    shortBio: 'Heads business development on the USA East Coast, helping clients unlock potential.',
-aiHint: 'professional portrait',
+    bio: "Jason is a key member of the Sales Team at Business Growth Global, where he uses his exceptional communication skills and adaptable approach to connect US-based founders and CEOs with impactful growth opportunities. With a background in empathic closing techniques, complemented by experience as a therapist, teacher, and administrator, Jason excels at building rapport and understanding client needs. His ability to connect with individuals, combined with his passion for self-development through self-defense, martial arts, meditation, and mindfulness, allows him to bring a unique and insightful perspective to the sales process.",
+    shortBio: 'Connects US-based founders and CEOs with impactful growth opportunities using his unique and insightful perspective.',
+    aiHint: 'professional portrait',
     linkedinUrl: 'https://www.linkedin.com/in/jason-maxwell-b69252b0/',
   },
   {
