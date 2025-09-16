@@ -139,6 +139,7 @@ export default function MeetTheTeamPage() {
                                     fill
                                     className="object-cover rounded-full"
                                     data-ai-hint={member.aiHint}
+                                    style={{ objectPosition: 'top' }}
                                     />
                                 </div>
                                 <div className="flex-1 text-left">
