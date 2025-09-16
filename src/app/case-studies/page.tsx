@@ -14,6 +14,12 @@ const caseStudies = [
     title: 'Breaking £1 Million Turnover: A Food Production Success Story',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/pexels-shvetsa-5953714.jpg',
   },
+  {
+    slug: 'services-growth-story',
+    industry: 'Services',
+    title: 'From £8m Plateau to £12m+ in 24 Months',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/pexels-kampus-8204363.jpg',
+  },
 ];
 
 export default function CaseStudiesPage() {

@@ -10,7 +10,7 @@ import Footer from '@/components/layout/footer';
 const caseStudyData = {
   'food-production-growth': {
     industry: 'UK Food Producer',
-    title: '£468k → £1.248m in 12 months (+167%); founder halves time in ops',
+    title: '£468k \u2192 £1.248m in 12 months (+167%); founder halves time in ops',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/pexels-shvetsa-5953714.jpg',
     overview: {
       challenge: 'Thin margins (14% gross, 3% net) were limiting reinvestment, and the founder was a bottleneck, spending 60 hours per week in day-to-day operations.',
@@ -30,6 +30,30 @@ const caseStudyData = {
     testimonial: {
       quote: 'Mentoring with Business Growth Global gave me clarity and a cadence. We finally priced to our true cost, tightened changeovers, and built a team I could trust. We’ve gone from 300 to 800 units a day, revenue has leapt, and for the first time I’m leading the business instead of firefighting.',
       author: 'Founder, Anonymised UK Food Producer',
+    },
+  },
+  'services-growth-story': {
+    industry: 'UK Services Business',
+    title: 'From £8m plateau to £12m+ in 24 months; SMT built and owner shifts to growth',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/pexels-kampus-8204363.jpg',
+    overview: {
+      challenge: 'Growth stalled around £8m with delivery strain and inconsistent utilisation. The founder was a bottleneck with heavy day-to-day involvement.',
+      solution: 'Clarified ICPs and offers, built a Senior Management Team (SMT), and introduced a weekly leadership cadence with clear KPIs. A structured referrals engine was also created.',
+      results: [
+        'Revenue grew from £8m to £12m+ over 24 months (≥ +50%)',
+        'Senior Management Team established, improving accountability',
+        'Owner\'s role shifted from firefighting to strategic networking',
+        'A culture of expansion and innovation was fostered',
+      ],
+    },
+    narrative: {
+      challenge: 'The business had hit a ceiling around £8m in revenue. This was coupled with significant delivery strain, inconsistent team utilisation, and a founder who was too involved in daily operations to focus on market-facing growth activities. Leadership gaps and underdeveloped processes meant that valuable referral opportunities were being missed.',
+      solution: 'Using the AEROPS framework, we first diagnosed the core issues: a lack of strategic focus, no senior management rhythm, and weak delivery KPIs. The plan involved clarifying ideal customer profiles (ICPs), building a proper Senior Management Team (SMT) with clear role scorecards, and introducing a weekly leadership cadence. We also implemented crucial operational tracking for utilisation and project margins, and stood up a formal referrals engine to capitalise on existing relationships.',
+      results: 'Within 24 months, the changes produced significant results. Revenue broke the plateau, growing by at least 50% to over £12m. A fully functional SMT was in place, leading to clearer accountability and faster decision-making. The founder was able to step back from day-to-day firefighting to focus on networking and partnerships. This created a more open culture of expansion and innovation, supported by strategic new hires.',
+    },
+    testimonial: {
+      quote: 'After years stuck around £8m, mentoring forced us to think and act like a bigger firm. With the right leaders, cleaner ops, and a proper referrals engine, we pushed past £12m—and I finally had the space to win the next wave of clients.',
+      author: 'Founder & CEO, Anonymised Services Business',
     },
   },
   // Add other case studies here...

@@ -32,6 +32,7 @@ export default async function Header() {
           <Link href="/case-studies" className="transition-colors hover:text-primary/80">Case Studies</Link>
           <Link href="/media" className="transition-colors hover:text-primary/80">Media</Link>
           <Link href="/our-founder" className="transition-colors hover:text-primary/80">Our Founder</Link>
+          <Link href="/meet-the-team" className="transition-colors hover:text-primary/80">Meet the Team</Link>
           <Link href="/blog" className="transition-colors hover:text-primary/80">Blog</Link>
           <Link href="/contact" className="transition-colors hover:text-primary/80">Contact</Link>
           {session && (
@@ -71,6 +72,7 @@ export default async function Header() {
                     <Link href="/case-studies" className="block px-2 py-1 transition-colors hover:text-primary/80">Case Studies</Link>
                     <Link href="/media" className="block px-2 py-1 transition-colors hover:text-primary/80">Media</Link>
                     <Link href="/our-founder" className="block px-2 py-1 transition-colors hover:text-primary/80">Our Founder</Link>
+                    <Link href="/meet-the-team" className="block px-2 py-1 transition-colors hover:text-primary/80">Meet the Team</Link>
                     <Link href="/blog" className="block px-2 py-1 transition-colors hover:text-primary/80">Blog</Link>
                     <Link href="/contact" className="block px-2 py-1 transition-colors hover:text-primary/80">Contact</Link>
                     {session && (
