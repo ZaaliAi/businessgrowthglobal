@@ -28,7 +28,7 @@ const teamMembers = [
     name: 'Darrel Alison',
     title: 'Sales and Marketing Director',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/daz.jfif',
-    bio: 'Darrel leads our sales, marketing, and operations worldwide, developing strategies that connect our mentoring services with businesses ready to scale and succeed.',
+    bio: 'As the Sales and Marketing Director for Business Growth Global, Darrel is passionate about helping clients achieve sustainable growth. He is responsible for the strategic planning and execution of all sales and marketing activities, from lead generation to customer acquisition and retention. A firm believer in the power of data, Darrel utilizes a range of analytics tools—including Excel, SQL, Python, and Power BI—to inform strategy, measure success, and drive growth for the company and its clients through a data-centric approach.',
     shortBio: 'Leads sales, marketing, and operations worldwide to connect with businesses ready to scale.',
     aiHint: 'professional portrait',
     linkedinUrl: 'https://www.linkedin.com/in/darrel-alison-3919962a5/',
