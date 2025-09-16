@@ -60,7 +60,7 @@ const caseStudyData = {
     industry: 'Exit Readiness (UK)',
     title: 'From £1.5m valuation to a £6m exit in 12 months',
     subheadline: 'Broker-referred owner removed key-person risk, systemised operations, lifted revenue, and eliminated a 24-month consultancy requirement—unlocking a 4× higher sale price.',
-    imageUrl: 'https://picsum.photos/seed/exitdeal/1200/800',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/contract.jpg',
     overview: {
       challenge: 'Initial valuation of ~£1.5m was contingent on the owner remaining for 24 months post-sale due to high key-person risk and undocumented processes.',
       solution: 'Built a senior leadership layer, systemised core operations using the LPAD framework, created diligence-ready financial reporting, and strengthened customer contracts.',

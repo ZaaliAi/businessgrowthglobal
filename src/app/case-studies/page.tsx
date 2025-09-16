@@ -24,7 +24,7 @@ const caseStudies = [
     slug: 'exit-readiness-story',
     industry: 'Exit Readiness',
     title: 'From £1.5m valuation to a £6m exit in 12 months',
-    imageUrl: 'https://picsum.photos/seed/exitdeal/1200/800',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/contract.jpg',
     aiHint: 'business deal handshake',
   },
 ];
