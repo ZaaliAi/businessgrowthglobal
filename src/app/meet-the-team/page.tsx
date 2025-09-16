@@ -17,7 +17,7 @@ import {
 const founder = {
   name: 'Lee Broders',
   title: 'Our Founder',
-  imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/leeee.jpg',
+  imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/LPB-Business-Portrait-1-pnjknamjv5kzc4d2l63fwb7d7hzhuxlx0z4ce3j2no.webp',
   bio: 'Lee is an International Business Mentor and Life Coach dedicated to helping individuals and businesses achieve clarity, confidence, and transformative growth. With a Masters in Business Mentoring and extensive experience, he combines strategic insight with empathy to deliver exceptional results for clients worldwide.',
   shortBio: 'International Business Mentor and Life Coach dedicated to transformative growth.',
   aiHint: 'professional portrait',
