@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import PageTransition from '@/components/page-transition';
+import CookieBanner from '@/components/cookie-banner';
 
 export const metadata: Metadata = {
   title: 'Business Growth Global',
@@ -26,6 +27,7 @@ export default function RootLayout({
           {children}
         </PageTransition>
         <Toaster />
+        <CookieBanner />
       </body>
     </html>
   );
