@@ -105,9 +105,11 @@ export default function MeetTheTeamPage() {
                                 <h3 className="text-2xl font-bold text-primary">{founder.name}</h3>
                                 <p className="text-md font-semibold text-accent">{founder.title}</p>
                                 <p className="mt-2 text-muted-foreground">{founder.shortBio}</p>
-                                <Link href="/our-founder" className="mt-4 inline-block text-sm text-accent font-semibold hover:underline">
-                                    Learn more about Lee &rarr;
-                                </Link>
+                                <CollapsibleTrigger asChild>
+                                    <button className="mt-4 text-sm text-accent font-semibold hover:underline">
+                                        Learn more about {founder.name.split(' ')[0]} &rarr;
+                                    </button>
+                                </CollapsibleTrigger>
                             </div>
                         </div>
                         <Button variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary ml-4 flex-shrink-0">
@@ -116,6 +118,14 @@ export default function MeetTheTeamPage() {
                             </Link>
                         </Button>
                     </div>
+                     <CollapsibleContent>
+                        <div className="pt-4 mt-4 border-t">
+                            <p className="text-muted-foreground">{founder.bio}</p>
+                             <Link href="/our-founder" className="mt-4 inline-block text-sm text-accent font-semibold hover:underline">
+                                Read full biography &rarr;
+                            </Link>
+                        </div>
+                    </CollapsibleContent>
                 </div>
                 </Collapsible>
 
