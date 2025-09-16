@@ -45,7 +45,7 @@ const teamMembers = [
   {
     name: 'Jason Maxwell',
     title: 'Business Development Manager (USA East)',
-    imageUrl: 'https://picsum.photos/seed/103/400/400',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/jason.png',
     bio: 'Jason heads our business development on the East Coast of the USA, helping clients unlock their potential through our proven mentoring frameworks.',
     shortBio: 'Heads business development on the USA East Coast, helping clients unlock potential.',
 aiHint: 'professional portrait',
