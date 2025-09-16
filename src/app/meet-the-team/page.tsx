@@ -4,7 +4,7 @@ import Footer from '@/components/layout/footer';
 import Image from 'next/image';
 import AnimatedSection from '@/components/animated-section';
 import Link from 'next/link';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Collapsible,
@@ -121,6 +121,13 @@ export default function MeetTheTeamPage() {
                      <CollapsibleContent>
                         <div className="pt-4 mt-4 border-t">
                             <p className="text-muted-foreground">{founder.bio}</p>
+                            <div className="mt-4">
+                                <Button asChild variant="link" className="p-0 h-auto text-accent">
+                                    <Link href="/our-founder">
+                                        More about {founder.name.split(' ')[0]} <ArrowRight className="ml-2 h-4 w-4" />
+                                    </Link>
+                                </Button>
+                            </div>
                         </div>
                     </CollapsibleContent>
                 </div>

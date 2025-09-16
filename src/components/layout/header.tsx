@@ -6,7 +6,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from 'lucide-react';
+import { Menu, ArrowRight } from 'lucide-react';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 import SignOutButton from './sign-out-button';
 
