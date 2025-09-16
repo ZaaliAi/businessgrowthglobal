@@ -99,7 +99,6 @@ export default function MeetTheTeamPage() {
                                 fill
                                 className="object-cover rounded-full"
                                 data-ai-hint={founder.aiHint}
-                                style={{ objectPosition: 'top' }}
                                 />
                             </div>
                             <div className="flex-1 text-left">
