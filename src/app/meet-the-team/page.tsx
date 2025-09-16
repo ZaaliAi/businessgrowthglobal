@@ -3,15 +3,17 @@ import Footer from '@/components/layout/footer';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import AnimatedSection from '@/components/animated-section';
+import Link from 'next/link';
+
+const founder = {
+  name: 'Lee Broders',
+  title: 'Our Founder',
+  imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/LPB-Business-Portrait-1-pnjknamjv5kzc4d2l63fwb7d7hzhuxlx0z4ce3j2no.webp',
+  bio: 'Lee is an International Business Mentor and Life Coach dedicated to helping individuals and businesses achieve clarity, confidence, and transformative growth. With a Masters in Business Mentoring and extensive experience, he combines strategic insight with empathy to deliver exceptional results for clients worldwide.',
+  aiHint: 'professional portrait',
+};
 
 const teamMembers = [
-  {
-    name: 'Lee Broders',
-    title: 'Our Founder',
-    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/LPB-Business-Portrait-1-pnjknamjv5kzc4d2l63fwb7d7hzhuxlx0z4ce3j2no.webp',
-    bio: 'Lee is an International Business Mentor and Life Coach dedicated to helping individuals and businesses achieve clarity, confidence, and transformative growth.',
-    aiHint: 'professional portrait',
-  },
   {
     name: 'Darrel Alison',
     title: 'Sales and Marketing Director',
@@ -47,38 +49,71 @@ export default function MeetTheTeamPage() {
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Header />
       <main className="flex-grow">
-        <section className="py-16 sm:py-24">
+        {/* Page Header */}
+        <section className="py-16 sm:py-24 bg-secondary">
           <div className="container mx-auto px-4">
             <AnimatedSection>
-              <div className="text-center mb-16">
-                <h1 className="text-4xl md:text-5xl font-bold text-primary">Meet Our Team</h1>
+              <div className="text-center">
+                <h1 className="text-4xl md:text-5xl font-bold text-primary">Meet Our Leadership</h1>
                 <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
                   The experienced professionals dedicated to your business's growth and success.
                 </p>
               </div>
             </AnimatedSection>
-            
-            <AnimatedSection>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {teamMembers.map((member) => (
-                  <Card key={member.name} className="flex flex-col overflow-hidden text-center items-center p-6">
-                    <div className="relative h-40 w-40 rounded-full overflow-hidden">
-                      <Image
-                        src={member.imageUrl}
-                        alt={`Portrait of ${member.name}`}
-                        fill
-                        className="object-cover"
-                        data-ai-hint={member.aiHint}
-                      />
+          </div>
+        </section>
+
+        {/* Founder Section */}
+        <section className="py-16 sm:py-24">
+            <div className="container mx-auto px-4">
+                 <AnimatedSection>
+                    <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+                        <div className="md:col-span-2">
+                            <div className="relative aspect-square rounded-lg overflow-hidden shadow-2xl">
+                                <Image
+                                src={founder.imageUrl}
+                                alt={`Portrait of ${founder.name}`}
+                                fill
+                                className="object-cover"
+                                data-ai-hint={founder.aiHint}
+                                />
+                            </div>
+                        </div>
+                        <div className="md:col-span-3">
+                            <h2 className="text-3xl md:text-4xl font-bold text-primary">{founder.name}</h2>
+                            <p className="text-xl font-semibold text-accent mt-1">{founder.title}</p>
+                            <p className="mt-6 text-lg text-muted-foreground">{founder.bio}</p>
+                             <Link href="/our-founder" className="mt-6 inline-block text-accent font-semibold hover:underline">
+                                Learn more about Lee &rarr;
+                            </Link>
+                        </div>
                     </div>
-                    <CardHeader>
-                      <h3 className="text-2xl font-bold text-primary">{member.name}</h3>
-                      <p className="text-md font-semibold text-accent">{member.title}</p>
-                    </CardHeader>
-                    <CardContent className="flex-grow">
-                      <p className="text-muted-foreground">{member.bio}</p>
-                    </CardContent>
-                  </Card>
+                </AnimatedSection>
+            </div>
+        </section>
+
+        {/* Team Grid Section */}
+        <section className="py-16 sm:py-24 bg-secondary">
+          <div className="container mx-auto px-4">
+            <AnimatedSection>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {teamMembers.map((member) => (
+                  <div key={member.name} className="group relative aspect-square rounded-lg overflow-hidden shadow-lg">
+                    <Image
+                      src={member.imageUrl}
+                      alt={`Portrait of ${member.name}`}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      data-ai-hint={member.aiHint}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6">
+                       <h3 className="text-2xl font-bold text-white">{member.name}</h3>
+                       <p className="text-md font-semibold text-white/90">{member.title}</p>
+                    </div>
+                     <div className="absolute inset-0 bg-primary/90 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-primary-foreground">{member.bio}</p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </AnimatedSection>
