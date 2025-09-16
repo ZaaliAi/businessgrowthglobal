@@ -36,7 +36,7 @@ const teamMembers = [
   {
     name: 'Olga Bak',
     title: 'Business Development Manager (UK and Europe)',
-    imageUrl: 'https://picsum.photos/seed/102/400/400',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/olga.png',
     bio: 'Olga is focused on expanding our reach across the UK and Europe, building relationships with clients and partners to drive regional growth.',
     shortBio: 'Expands our reach across the UK and Europe, building key client relationships.',
     aiHint: 'professional portrait',
