@@ -19,6 +19,7 @@ const teamMembers = [
     title: 'Sales and Marketing Director',
     imageUrl: 'https://picsum.photos/seed/101/400/400',
     bio: 'Darrel leads our sales and marketing efforts, developing strategies that connect our mentoring services with businesses ready to scale and succeed.',
+    shortBio: 'Leads sales and marketing strategies to connect with businesses ready to scale.',
     aiHint: 'professional portrait',
   },
   {
@@ -26,6 +27,7 @@ const teamMembers = [
     title: 'Business Development Manager (UK and Europe)',
     imageUrl: 'https://picsum.photos/seed/102/400/400',
     bio: 'Olga is focused on expanding our reach across the UK and Europe, building relationships with clients and partners to drive regional growth.',
+    shortBio: 'Expands our reach across the UK and Europe, building key client relationships.',
     aiHint: 'professional portrait',
   },
   {
@@ -33,6 +35,7 @@ const teamMembers = [
     title: 'Business Development Manager (USA East)',
     imageUrl: 'https://picsum.photos/seed/103/400/400',
     bio: 'Jason heads our business development on the East Coast of the USA, helping clients unlock their potential through our proven mentoring frameworks.',
+    shortBio: 'Heads business development on the USA East Coast, helping clients unlock potential.',
     aiHint: 'professional portrait',
   },
   {
@@ -40,6 +43,7 @@ const teamMembers = [
     title: 'Business Development Manager (USA West)',
     imageUrl: 'https://picsum.photos/seed/104/400/400',
     bio: 'Based on the West Coast, Ben is dedicated to introducing our transformative business growth strategies to a new wave of entrepreneurs and leaders.',
+    shortBio: 'Introduces our transformative growth strategies to entrepreneurs on the USA West Coast.',
     aiHint: 'professional portrait',
   },
 ];
@@ -92,26 +96,31 @@ export default function MeetTheTeamPage() {
             </div>
         </section>
 
-        {/* Team Grid Section */}
+        {/* Team List Section */}
         <section className="py-16 sm:py-24 bg-secondary">
           <div className="container mx-auto px-4">
             <AnimatedSection>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+               <div className="max-w-4xl mx-auto space-y-8">
                 {teamMembers.map((member) => (
-                  <div key={member.name} className="group relative aspect-square rounded-lg overflow-hidden shadow-lg">
-                    <Image
-                      src={member.imageUrl}
-                      alt={`Portrait of ${member.name}`}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      data-ai-hint={member.aiHint}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6">
-                       <h3 className="text-2xl font-bold text-white">{member.name}</h3>
-                       <p className="text-md font-semibold text-white/90">{member.title}</p>
+                  <div key={member.name} className="group relative bg-card text-card-foreground rounded-lg shadow-lg overflow-hidden border border-border">
+                    <div className="flex items-center space-x-6 p-6">
+                      <div className="relative flex-shrink-0 h-32 w-32">
+                        <Image
+                          src={member.imageUrl}
+                          alt={`Portrait of ${member.name}`}
+                          fill
+                          className="object-cover rounded-full"
+                          data-ai-hint={member.aiHint}
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-primary">{member.name}</h3>
+                        <p className="text-md font-semibold text-accent">{member.title}</p>
+                        <p className="mt-2 text-muted-foreground">{member.shortBio}</p>
+                      </div>
                     </div>
-                     <div className="absolute inset-0 bg-primary/90 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-primary-foreground">{member.bio}</p>
+                    <div className="absolute inset-0 bg-primary/95 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                      <p className="text-primary-foreground text-lg">{member.bio}</p>
                     </div>
                   </div>
                 ))}
