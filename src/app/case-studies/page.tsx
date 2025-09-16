@@ -49,8 +49,8 @@ export default function CaseStudiesPage() {
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {caseStudies.map((study) => (
-                  <Link href={`/case-studies/${study.slug}`} key={study.slug}>
-                    <div className="group block bg-card border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <Link href={`/case-studies/${study.slug}`} key={study.slug} className="group block">
+                    <div className="bg-card border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                       <div className="relative h-64">
                         <Image
                           src={study.imageUrl}
@@ -60,9 +60,9 @@ export default function CaseStudiesPage() {
                           data-ai-hint={study.aiHint}
                         />
                       </div>
-                      <div className="p-8">
+                      <div className="p-8 flex flex-col flex-grow">
                         <p className="text-sm font-semibold text-accent mb-2">{study.industry}</p>
-                        <h3 className="text-2xl font-bold text-primary group-hover:text-accent transition-colors duration-300">
+                        <h3 className="text-2xl font-bold text-primary group-hover:text-accent transition-colors duration-300 flex-grow">
                           {study.title}
                         </h3>
                       </div>
@@ -117,5 +117,3 @@ export default function CaseStudiesPage() {
     </div>
   );
 }
-
-    
