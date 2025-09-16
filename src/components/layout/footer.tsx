@@ -50,13 +50,17 @@ export default function Footer() {
           <h3 className="text-md font-semibold text-primary">Contact Us</h3>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <Mail className="h-4 w-4" />
-            <a href="mailto:info@businessgrowthglobal.com" className="hover:text-primary">
-              info@businessgrowthglobal.com
+            <a href="mailto:hello@businessgrowth.global" className="hover:text-primary">
+              hello@businessgrowth.global
             </a>
           </div>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <Phone className="h-4 w-4" />
-            <span>+44 1234 567890</span>
+            <span>UK: +44 1630 411313</span>
+          </div>
+           <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <Phone className="h-4 w-4" />
+            <span>USA: +1 386 388 4277</span>
           </div>
            <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <LogIn className="h-4 w-4" />
