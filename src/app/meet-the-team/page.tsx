@@ -41,7 +41,7 @@ const teamMembers = [
     bio: 'Olga is focused on expanding our reach across the UK and Europe, building relationships with clients and partners to drive regional growth.',
     shortBio: 'Expands our reach across the UK and Europe, building key client relationships.',
     aiHint: 'professional portrait',
-    linkedinUrl: 'https://www.linkedin.com/in/olga-bak-88295235/',
+    linkedinUrl: 'https://www.linkedin.com/in/olga-bak-88295235b/',
   },
   {
     name: 'Jason Maxwell',
@@ -50,7 +50,7 @@ const teamMembers = [
     bio: 'Jason heads our business development on the East Coast of the USA, helping clients unlock their potential through our proven mentoring frameworks.',
     shortBio: 'Heads business development on the USA East Coast, helping clients unlock potential.',
 aiHint: 'professional portrait',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/jason-maxwell-b69252b0/',
   },
   {
     name: 'Ben Edge',
@@ -121,9 +121,6 @@ export default function MeetTheTeamPage() {
                      <CollapsibleContent>
                         <div className="pt-4 mt-4 border-t">
                             <p className="text-muted-foreground">{founder.bio}</p>
-                             <Link href="/our-founder" className="mt-4 inline-block text-sm text-accent font-semibold hover:underline">
-                                Read full biography &rarr;
-                            </Link>
                         </div>
                     </CollapsibleContent>
                 </div>
