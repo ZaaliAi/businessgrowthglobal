@@ -1,6 +1,6 @@
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import { Mail, Phone, Linkedin } from 'lucide-react';
+import { Mail, Phone, Linkedin, Facebook } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function ContactPage() {
@@ -53,10 +53,14 @@ export default function ContactPage() {
                   <CardTitle className="text-center text-xl">Connect with Us</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex justify-center">
-                     <a href="https://www.linkedin.com/company/74039492/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-lg font-semibold text-accent hover:underline">
+                  <div className="flex justify-center gap-4">
+                     <a href="https://www.linkedin.com/company/74039492/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80">
                       <Linkedin className="h-8 w-8" />
-                      Follow us on LinkedIn
+                       <span className="sr-only">LinkedIn</span>
+                    </a>
+                     <a href="https://www.facebook.com/BusinessGrowthGlobal/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80">
+                      <Facebook className="h-8 w-8" />
+                       <span className="sr-only">Facebook</span>
                     </a>
                   </div>
                 </CardContent>

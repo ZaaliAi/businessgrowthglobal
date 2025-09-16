@@ -1,4 +1,4 @@
-import { Linkedin, Mail, Phone, LogIn, Users } from 'lucide-react';
+import { Linkedin, Mail, Phone, LogIn, Users, Facebook } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -79,6 +79,11 @@ export default function Footer() {
           <Button variant="ghost" size="icon" asChild>
             <a href="https://www.linkedin.com/company/74039492/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="h-5 w-5" />
+            </a>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <a href="https://www.facebook.com/BusinessGrowthGlobal/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <Facebook className="h-5 w-5" />
             </a>
           </Button>
         </div>
