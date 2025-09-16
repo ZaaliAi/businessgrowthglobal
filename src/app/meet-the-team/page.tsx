@@ -55,7 +55,7 @@ const teamMembers = [
     name: 'Ben Edge',
     title: 'Business Development Manager (USA West)',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/benn.jpg',
-    bio: 'Heads business development on the USA West, Ben introduces our transformative business growth strategies to entrepreneurs and leaders.',
+    bio: 'With a background spanning technical support, leadership, and client relations, I combine professionalism with strong communication skills to build meaningful connections and deliver results. My career has given me the opportunity to work within both large corporate environments and small family-run businesses, equipping me with the adaptability and people skills needed to succeed across industries. Currently, I serve as a key member of the U.S. Sales Team for Business Growth Global, where I contribute to the company’s international success. I am trained and certified in empathic closing techniques, which allows me to guide clients with understanding and integrity while driving business growth. Highly motivated and results-driven, I am passionate not only about achieving my own goals but also about helping others succeed alongside me.',
     shortBio: 'Heads business development on the USA West, introducing our transformative business growth strategies to entrepreneurs and leaders.',
     aiHint: 'professional portrait',
     linkedinUrl: 'https://www.linkedin.com/in/ben-edge-b7194334b/',
