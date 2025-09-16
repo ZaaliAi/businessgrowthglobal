@@ -59,7 +59,7 @@ aiHint: 'professional portrait',
     bio: 'Based on the West Coast, Ben is dedicated to introducing our transformative business growth strategies to a new wave of entrepreneurs and leaders.',
     shortBio: 'Introduces our transformative growth strategies to entrepreneurs on the USA West Coast.',
     aiHint: 'professional portrait',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/ben-edge-b7194334b/',
   },
 ];
 
