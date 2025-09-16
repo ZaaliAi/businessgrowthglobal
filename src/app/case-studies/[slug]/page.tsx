@@ -85,7 +85,7 @@ const caseStudyData = {
     industry: 'Executive Coaching (C-Suite, UK)',
     title: 'Six months to visible, confident leadership: from imposter syndrome to expanded remit',
     subheadline: 'Executive coaching focused on self-promotion, strategic communication up and down the organisation, and authentic leadership presence—leading to greater responsibility and role confidence.',
-    imageUrl: 'https://picsum.photos/seed/executive/1200/800',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/executive.jpg',
     overview: {
       challenge: 'Persistent imposter syndrome was undermining confidence and visibility. The executive was under-communicating achievements and was uncomfortable advocating for resources.',
       solution: 'A 6-month coaching program focused on building a leadership narrative, creating a visibility rhythm, mapping stakeholders, and improving communication strategies with mindset work.',
@@ -142,8 +142,8 @@ export default function CaseStudyDetailPage({ params }: { params: { slug: string
                   height={800}
                   className="rounded-lg shadow-xl"
                   data-ai-hint={
-                    study.slug === 'exit-readiness-story' ? 'business deal handshake' : 
-                    study.slug === 'executive-coaching-confidence' ? 'confident executive presentation' : ''
+                    params.slug === 'exit-readiness-story' ? 'business deal handshake' : 
+                    params.slug === 'executive-coaching-confidence' ? 'confident executive presentation' : ''
                   }
                 />
               </div>
