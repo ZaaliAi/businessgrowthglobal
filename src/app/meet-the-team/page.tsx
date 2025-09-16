@@ -1,3 +1,4 @@
+
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Image from 'next/image';
@@ -21,11 +22,11 @@ const teamMembers = [
   {
     name: 'Darrel Alison',
     title: 'Sales and Marketing Director',
-    imageUrl: 'https://picsum.photos/seed/101/400/400',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/daz.jfif',
     bio: 'Darrel leads our sales and marketing efforts, developing strategies that connect our mentoring services with businesses ready to scale and succeed.',
     shortBio: 'Leads sales and marketing strategies to connect with businesses ready to scale.',
     aiHint: 'professional portrait',
-    linkedinUrl: '#',
+    linkedinUrl: 'https://www.linkedin.com/in/darrel-alison-3919962a5/',
   },
   {
     name: 'Olga Bak',
