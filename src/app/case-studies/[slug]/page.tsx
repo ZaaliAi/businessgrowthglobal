@@ -81,6 +81,32 @@ const caseStudyData = {
       author: 'Founder, Anonymised UK Business',
     },
   },
+  'executive-coaching-confidence': {
+    industry: 'Executive Coaching (C-Suite, UK)',
+    title: 'Six months to visible, confident leadership: from imposter syndrome to expanded remit',
+    subheadline: 'Executive coaching focused on self-promotion, strategic communication up and down the organisation, and authentic leadership presence—leading to greater responsibility and role confidence.',
+    imageUrl: 'https://picsum.photos/seed/executive/1200/800',
+    overview: {
+      challenge: 'Persistent imposter syndrome was undermining confidence and visibility. The executive was under-communicating achievements and was uncomfortable advocating for resources.',
+      solution: 'A 6-month coaching program focused on building a leadership narrative, creating a visibility rhythm, mapping stakeholders, and improving communication strategies with mindset work.',
+      results: [
+        'Role and scope expanded with additional responsibility granted.',
+        'Increased confidence and credibility in the C-suite role.',
+        'Clearer upward communication and more empathetic downward leadership.',
+        'Stronger team engagement noted by key stakeholders.',
+      ],
+    },
+    narrative: {
+      challenge: 'Referred for coaching to improve leadership visibility, the C-suite executive was struggling with persistent imposter syndrome. This led to under-communicating achievements and discomfort in advocating for resources and impact. Communication effectiveness was mixed, both upwards with the executive team and downwards with direct reports.',
+      solution: 'Through intake sessions and reflective exercises, we diagnosed unhelpful beliefs (“I’ve been lucky”) and a lack of a cohesive leadership narrative. The 6-month plan involved crafting a personal value proposition, maintaining a weekly wins journal, and establishing a visibility rhythm for updates. We mapped key sponsors and stakeholders to create purposeful touchpoints. Communication was improved with tools for concise executive updates (5-15-5 updates) and team feedback (SBI+), alongside mindset work to normalize imposter feelings and build presence.',
+      implementation: 'The program consisted of fortnightly coaching sessions and monthly 90-minute deep dives, with experiments and reflection prompts between sessions. A 3-story leadership narrative (origin, impact, horizon) was created. We practiced executive briefings and "ask" language. A repeatable agenda for team 1:1s and all-hands was introduced, and a feedback loop was established with three key stakeholders.',
+      results: 'The coaching led to improved visibility and the executive was granted additional responsibility. They reported feeling more comfortable and credible in their role, with greater ease in advocating for resources. Stakeholders noted clearer upward updates and more empathetic downward leadership, resulting in stronger team engagement.',
+    },
+    testimonial: {
+      quote: 'Coaching helped me name the imposter voice and turn it down. I now communicate impact with clarity, lead both upwards and downwards with confidence, and I’ve been trusted with more responsibility. Most importantly, I actually feel comfortable in the role.',
+      author: 'C-Suite Executive',
+    },
+  },
 };
 
 
@@ -115,7 +141,10 @@ export default function CaseStudyDetailPage({ params }: { params: { slug: string
                   width={1200}
                   height={800}
                   className="rounded-lg shadow-xl"
-                  data-ai-hint={study.slug === 'exit-readiness-story' ? 'business deal handshake' : ''}
+                  data-ai-hint={
+                    study.slug === 'exit-readiness-story' ? 'business deal handshake' : 
+                    study.slug === 'executive-coaching-confidence' ? 'confident executive presentation' : ''
+                  }
                 />
               </div>
 
@@ -142,11 +171,17 @@ export default function CaseStudyDetailPage({ params }: { params: { slug: string
               {/* Narrative */}
               <div className="prose prose-lg max-w-none">
                 <h2 className="text-3xl font-bold text-primary">The Challenge</h2>
-                <p>{study.narrative.challenge}</p>
+                <p>{'narrative' in study && 'challenge' in study.narrative ? study.narrative.challenge : study.overview.challenge}</p>
                 <h2 className="text-3xl font-bold text-primary">Our Solution</h2>
-                <p>{study.narrative.solution}</p>
+                <p>{'narrative' in study && 'solution' in study.narrative ? study.narrative.solution : study.overview.solution}</p>
+                 {'narrative' in study && 'implementation' in study.narrative && (
+                  <>
+                    <h2 className="text-3xl font-bold text-primary">Implementation</h2>
+                    <p>{study.narrative.implementation}</p>
+                  </>
+                )}
                 <h2 className="text-3xl font-bold text-primary">The Results</h2>
-                <p>{study.narrative.results}</p>
+                <p>{'narrative' in study && 'results' in study.narrative ? study.narrative.results : study.overview.results.join(' ')}</p>
               </div>
 
               {/* Testimonial */}

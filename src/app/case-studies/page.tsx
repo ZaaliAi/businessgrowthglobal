@@ -27,6 +27,13 @@ const caseStudies = [
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/contract.jpg',
     aiHint: 'business deal handshake',
   },
+  {
+    slug: 'executive-coaching-confidence',
+    industry: 'Executive Coaching',
+    title: 'From Imposter Syndrome to Confident Leadership in Six Months',
+    imageUrl: 'https://picsum.photos/seed/executive/1200/800',
+    aiHint: 'confident executive presentation',
+  },
 ];
 
 export default function CaseStudiesPage() {
