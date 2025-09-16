@@ -2,7 +2,6 @@
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Image from 'next/image';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import AnimatedSection from '@/components/animated-section';
 import Link from 'next/link';
 import { Linkedin } from 'lucide-react';
@@ -99,6 +98,7 @@ export default function MeetTheTeamPage() {
                                 fill
                                 className="object-cover rounded-full"
                                 data-ai-hint={founder.aiHint}
+                                style={{ objectPosition: 'top' }}
                                 />
                             </div>
                             <div className="flex-1 text-left">

@@ -19,6 +19,7 @@ export default function AboutLeeBrodersPage() {
                   height={600}
                   className="rounded-lg shadow-xl"
                   data-ai-hint="professional portrait"
+                  style={{ objectPosition: 'top' }}
                 />
               </div>
               <div className="md:col-span-2">
