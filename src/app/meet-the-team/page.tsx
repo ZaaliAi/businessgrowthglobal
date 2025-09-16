@@ -28,7 +28,7 @@ const teamMembers = [
     name: 'Darrel Alison',
     title: 'Sales and Marketing Director',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/daz.jfif',
-    bio: 'As the Sales and Marketing Director for Business Growth Global, Darrel is passionate about helping clients achieve sustainable growth. He is responsible for the strategic planning and execution of all sales and marketing activities, from lead generation to customer acquisition and retention. A firm believer in the power of data, Darrel utilizes a range of analytics tools—including Excel, SQL, Python, and Power BI—to inform strategy, measure success, and drive growth for the company and its clients through a data-centric approach.',
+    bio: 'As the Sales and Marketing Director for Business Growth Global, Darrel is passionate about helping clients achieve sustainable growth. He is responsible for the strategic planning and execution of all sales and marketing activities, from lead generation to customer acquisition and retention. A firm believer in the power of data, Darrel utilizes a range of analytics tools. Including Excel, SQL, Python, and Power BI to inform strategy, measure success, and drive growth for the company and its clients through a data centric approach.',
     shortBio: 'Leads sales, marketing, and operations worldwide to connect with businesses ready to scale.',
     aiHint: 'professional portrait',
     linkedinUrl: 'https://www.linkedin.com/in/darrel-alison-3919962a5/',
@@ -39,7 +39,7 @@ const teamMembers = [
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/olga.png',
     bio: `Olga leads business development across the UK and Europe, introducing our transformative growth strategies to entrepreneurs, executives, and visionary business leaders. As a key member of the Sales Team at Business Growth Global, Olga leverages her extensive background in B2B sales and education to forge meaningful connections and deliver high-impact opportunities to clients across diverse industries.
 
-With a master’s degree in Physical Education and a passion for movement and discipline, Olga brings energy, focus, and resilience to every interaction. Whether navigating complex sales cycles or climbing mountain trails in her free time, she approaches challenges with drive and purpose. Her blend of strategic insight, educational expertise, and active lifestyle gives her a grounded yet dynamic edge in understanding client needs and fostering long-term partnerships.`,
+With a master’s degree in Physical Education and a passion for movement and discipline, Olga brings energy, focus, and resilience to every interaction. Whether navigating complex sales cycles or climbing mountain trails in her free time, she approaches challenges with drive and purpose. Her blend of strategic insight, educational expertise, and active lifestyle gives her a grounded yet dynamic edge in understanding client needs and fostering long term partnerships.`,
     shortBio: 'Expands our reach across the UK and Europe, building key client relationships.',
     aiHint: 'professional portrait',
     linkedinUrl: 'https://www.linkedin.com/in/olga-bak-88295235b/',
