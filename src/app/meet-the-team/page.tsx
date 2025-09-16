@@ -21,7 +21,7 @@ const founder = {
   bio: 'Lee is an International Business Mentor and Life Coach dedicated to helping individuals and businesses achieve clarity, confidence, and transformative growth. With a Masters in Business Mentoring and extensive experience, he combines strategic insight with empathy to deliver exceptional results for clients worldwide.',
   shortBio: 'International Business Mentor and Life Coach dedicated to transformative growth.',
   aiHint: 'professional portrait',
-  linkedinUrl: '#',
+  linkedinUrl: 'https://www.linkedin.com/in/leebroders/',
 };
 
 const teamMembers = [
