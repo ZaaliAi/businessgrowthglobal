@@ -77,12 +77,12 @@ export default function Footer() {
         </div>
         <div className="flex items-center space-x-2">
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://www.linkedin.com/company/74039492/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/74039492/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-primary hover:text-primary/80">
               <Linkedin className="h-5 w-5" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://www.facebook.com/BusinessGrowthGlobal/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://www.facebook.com/BusinessGrowthGlobal/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-primary hover:text-primary/80">
               <Facebook className="h-5 w-5" />
             </a>
           </Button>

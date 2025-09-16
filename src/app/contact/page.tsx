@@ -54,11 +54,11 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="flex justify-center gap-4">
-                     <a href="https://www.linkedin.com/company/74039492/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80">
+                     <a href="https://www.linkedin.com/company/74039492/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80">
                       <Linkedin className="h-8 w-8" />
                        <span className="sr-only">LinkedIn</span>
                     </a>
-                     <a href="https://www.facebook.com/BusinessGrowthGlobal/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80">
+                     <a href="https://www.facebook.com/BusinessGrowthGlobal/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80">
                       <Facebook className="h-8 w-8" />
                        <span className="sr-only">Facebook</span>
                     </a>
