@@ -7,7 +7,6 @@ import Link from "next/link";
 const programs = [
   {
     name: "Elevate",
-    price: "£1,500/month",
     description: "Your Gateway to Sustainable Business Growth. Crafted for business owners and entrepreneurs ready to take control of their growth journey.",
     features: [
       "24 × 45-min sessions per year",
@@ -21,7 +20,6 @@ const programs = [
   },
   {
     name: "Intensive",
-    price: "£2,500/month",
     description: "Fast-Track Your Business Growth. Designed for ambitious business owners ready to prioritize strategic growth and achieve accelerated results.",
     features: [
       "48 × 45-min sessions per year",
@@ -36,7 +34,6 @@ const programs = [
   },
   {
     name: "Boardroom",
-    price: "£5,000/month",
     description: "Elite boardroom-level advisory for established enterprises seeking strategic market leadership and global expansion.",
     features: [
       "24 1-to-1 & 24 group sessions per year",
@@ -70,7 +67,6 @@ export default function Programs() {
               )}
               <CardHeader className="flex-grow-0">
                 <CardTitle>{pkg.name}</CardTitle>
-                <p className="text-2xl font-bold pt-2">{pkg.price}</p>
                 <CardDescription className="pt-2">{pkg.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col">
