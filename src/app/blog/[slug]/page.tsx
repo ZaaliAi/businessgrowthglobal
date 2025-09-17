@@ -62,7 +62,7 @@ export default async function BlogPostPage({ params: paramsPromise }: { params: 
                 src={post.image_url} 
                 alt={post.title} 
                 fill 
-                className="object-cover rounded-lg"
+                className="object-contain rounded-lg"
                 priority
               />
             </div>
@@ -89,7 +89,7 @@ export default async function BlogPostPage({ params: paramsPromise }: { params: 
                                 src={src}
                                 alt={alt || 'Blog post image'}
                                 fill
-                                className="object-cover rounded-lg"
+                                className="object-contain rounded-lg"
                              />
                         </div>
                     )

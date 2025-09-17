@@ -237,7 +237,7 @@ export function PostForm({ title, onSubmit, initialData, submitButtonText = 'Sub
                             <input type="file" ref={featuredImageInputRef} onChange={(e) => handleImageUpload(e, true)} className="hidden" accept="image/*" />
                             {featuredImageUrl && (
                                 <div className="mt-4 relative aspect-video w-full max-w-sm rounded-lg overflow-hidden border">
-                                    <Image src={featuredImageUrl} alt="Featured image preview" fill className="object-cover" />
+                                    <Image src={featuredImageUrl} alt="Featured image preview" fill className="object-contain" />
                                 </div>
                             )}
                         </div>
