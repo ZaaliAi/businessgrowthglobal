@@ -7,7 +7,7 @@ import { format } from 'date-fns';
 import Image from 'next/image';
 
 async function getPost(slug: string) {
-  const supabase = createSupabaseServerClient();
+  const supabase = await createSupabaseServerClient();
   const { data, error } = await supabase
     .from('posts')
     .select('*')

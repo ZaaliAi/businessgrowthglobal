@@ -12,7 +12,7 @@ import DeletePostButton from './delete-post-button';
 
 
 async function getPosts() {
-  const supabase = createSupabaseServerClient();
+  const supabase = await createSupabaseServerClient();
   const { data, error } = await supabase
     .from('posts')
     .select('*')
