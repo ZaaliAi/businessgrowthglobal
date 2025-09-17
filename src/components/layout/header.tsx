@@ -11,7 +11,7 @@ import { createSupabaseServerClient } from '@/lib/supabase/server';
 import SignOutButton from './sign-out-button';
 
 export default async function Header() {
-  const supabase = createSupabaseServerClient();
+  const supabase = await createSupabaseServerClient();
   const { data: { session } } = await supabase.auth.getSession();
   
   return (
