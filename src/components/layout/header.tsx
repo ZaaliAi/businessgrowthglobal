@@ -29,6 +29,7 @@ export default async function Header() {
         </Link>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
           <Link href="/programs" className="transition-colors hover:text-primary/80">Programs</Link>
+          <Link href="/aerops-framework" className="transition-colors hover:text-primary/80">AEROPS Framework</Link>
           <Link href="/vc-backed" className="transition-colors hover:text-primary/80">VC-Backed</Link>
           <Link href="/case-studies" className="transition-colors hover:text-primary/80">Case Studies</Link>
           <Link href="/media" className="transition-colors hover:text-primary/80">Media</Link>
@@ -69,6 +70,7 @@ export default async function Header() {
                 </Link>
                   <nav className="grid gap-2 text-lg font-medium">
                     <Link href="/programs" className="block px-2 py-1 transition-colors hover:text-primary/80">Programs</Link>
+                    <Link href="/aerops-framework" className="block px-2 py-1 transition-colors hover:text-primary/80">AEROPS Framework</Link>
                     <Link href="/vc-backed" className="block px-2 py-1 transition-colors hover:text-primary/80">VC-Backed</Link>
                     <Link href="/case-studies" className="block px-2 py-1 transition-colors hover:text-primary/80">Case Studies</Link>
                     <Link href="/media" className="block px-2 py-1 transition-colors hover:text-primary/80">Media</Link>

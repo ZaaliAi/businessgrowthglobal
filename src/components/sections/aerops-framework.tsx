@@ -7,6 +7,9 @@ import {
 } from '@/components/ui/popover';
 import { Eye, TrendingUp, Banknote, Settings, Users, Award } from 'lucide-react';
 
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+
 const aeropsData = [
   {
     letter: 'A',
@@ -69,6 +72,11 @@ export default function AeropsFramework() {
           <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
             Derived from international best practices and refined from over two decades of consulting experience, our blueprint is comprehensive. Our overarching aim is clear: Equip business owners with robust strategies to ensure a steady customer base and structure their businesses for sustained growth.
           </p>
+          <div className="mt-8">
+            <Button asChild>
+              <Link href="/aerops-framework">Learn More About the Framework</Link>
+            </Button>
+          </div>
         </div>
 
         <div className="flex items-center justify-center gap-4 flex-wrap">
