@@ -11,14 +11,14 @@ export default function About() {
             About Business Growth Global
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            At Business Growth Global, we dedicate ourselves to empowering business owners, entrepreneurs, and executives to achieve strategic business growth and unlock their full potential. Founded by <Link href="/our-founder" className="font-semibold text-accent hover:underline">Lee Broders</Link>, an experienced business mentor, our mission is to provide tailored business mentoring programs that help you focus on scaling your business, improving operations, and achieving sustainable success.
+            At Business Growth Global, we dedicate ourselves to empowering business owners, entrepreneurs, and executives to achieve strategic business growth and unlock their full potential. Founded by <Link href="/our-team" className="font-semibold text-accent hover:underline">Lee Broders</Link>, an experienced business mentor, our mission is to provide tailored business mentoring programs that help you focus on scaling your business, improving operations, and achieving sustainable success.
           </p>
           <p className="mt-4 text-lg leading-8 text-muted-foreground">
             Through our signature framework, AEROPS, we deliver bespoke solutions to transform businesses. We specialise in helping clients increase profitability, build high-performance teams, and develop actionable plans for long-term growth. Whether you’re a startup founder, small business owner, or corporate executive, we create strategies designed to meet your unique challenges and goals.
           </p>
           <div className="mt-8">
             <Button asChild>
-              <Link href="/our-founder">
+              <Link href="/our-team">
                 Our Founder
                 <MoveRight className="ml-2" />
               </Link>

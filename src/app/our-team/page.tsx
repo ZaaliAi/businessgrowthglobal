@@ -78,7 +78,7 @@ export default function OurTeamPage() {
                 </h1>
                 <div className="mt-6 space-y-6 text-lg text-muted-foreground">
                   <p>
-                    Lee Broders is an International Business Mentor, Life Coach, and Professional Speaker dedicated to helping individuals and businesses achieve clarity, confidence, and transformative growth. With a Masters in Business Mentoring, British Army experience, and a proven track record across diverse sectors, Lee combines discipline, strategic insight, and empathy to deliver exceptional results.
+                    Lee Broders is an International Business Mentor, Executive Coach, and Professional Speaker dedicated to helping individuals and businesses achieve clarity, confidence, and transformative growth. With Masters in both Business Mentoring and Law coupled with British Army Special Forces experience, and a proven track record across diverse sectors, Lee combines discipline, strategic insight, and empathy to deliver exceptional results.
                   </p>
                   <p>
                     Lee is a Fellow of the Association of Business Mentors (ABM), a Master Practitioner with the European Mentoring and Coaching Council (EMCC), and a Member of the Institute of Leadership and Management (ILM). He actively engages in Continuing Professional Development (CPD) to stay at the forefront of mentoring and business trends, ensuring his clients benefit from the latest insights and strategies.
