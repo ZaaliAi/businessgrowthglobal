@@ -112,7 +112,7 @@ export default function OurTeamPage() {
               <Link href="https://www.emccglobal.org/" target="_blank" rel="noopener noreferrer" className="transition-transform transform hover:scale-105">
                 <div className="relative h-32 w-64">
                   <Image
-                    src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/cropped-emcc-uk-member-logo-transparent.png"
+                    src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/emmcc%20global.png"
                     alt="EMCC UK Member Logo"
                     fill
                     className="object-contain"
