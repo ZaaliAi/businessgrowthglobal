@@ -58,13 +58,13 @@ const aeropsData = [
   },
 ];
 
-export default function AeropsBlueprint() {
+export default function AeropsFramework() {
   return (
     <section id="aerops-blueprint" className="w-full py-16 sm:py-24 bg-gray-900 text-white">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            The AEROPS Blueprint
+            The AEROPS Framework
           </h2>
           <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
             Derived from international best practices and refined from over two decades of consulting experience, our blueprint is comprehensive. Our overarching aim is clear: Equip business owners with robust strategies to ensure a steady customer base and structure their businesses for sustained growth.

@@ -42,7 +42,7 @@ The website serves as the online presence for **Business Growth Global**, a ment
 - **Homepage (`/`)**: The main landing page, composed of several distinct sections:
   - `Hero`: A full-screen introduction with a professional static image, compelling headline, and dual calls-to-action.
   - `Intro`: Highlights the core benefits of the service using an icon-based layout.
-  - `AEROPS Blueprint`: An interactive section with hover-activated popovers detailing the signature framework.
+  - `AEROPS Framework`: An interactive section with hover-activated popovers detailing the signature framework.
   - `Packages`: Details the "Regular" and "Intensive" mentorship packages.
   - `Testimonials`: A carousel showcasing client feedback.
   - `About`: A brief introduction to the company.

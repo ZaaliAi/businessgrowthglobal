@@ -6,10 +6,14 @@ import Testimonials from '@/components/sections/testimonials';
 import About from '@/components/sections/about';
 import FinalCTA from '@/components/sections/final-cta';
 import AnimatedSection from '@/components/animated-section';
-import AeropsBlueprint from '@/components/sections/aerops-blueprint';
+import AeropsFramework from '@/components/sections/aerops-framework';
 import LogoCarousel from '@/components/sections/logo-carousel';
 import FAQ from '@/components/sections/faq';
 import Script from 'next/script';
+
+import { Button } from '@/components/ui/button';
+import { Rocket, Scaling, Target } from 'lucide-react';
+import Link from 'next/link';
 
 const faqs = [
     {
@@ -80,7 +84,70 @@ export default function Home() {
         <AnimatedSection>
           <About />
         </AnimatedSection>
-        <AeropsBlueprint />
+        <AeropsFramework />
+        <AnimatedSection>
+          <section className="py-16 sm:py-20">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+                  Propel Your Early-Stage Enterprise to New Heights
+                </h2>
+                <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+                  Our growth strategies are specifically designed to address the unique challenges faced by early-stage and VC-backed enterprises, turning potential into market leadership.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <img 
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2798&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                    alt="Business team in a meeting" 
+                    className="rounded-lg shadow-lg"
+                  />
+                </div>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="bg-primary text-primary-foreground rounded-full p-3">
+                        <Target className="w-6 h-6" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold">Strategic Clarity</h3>
+                      <p className="text-muted-foreground mt-1">Define a clear, actionable roadmap for growth. Our process ensures your strategy aligns with investor expectations and market opportunities, preventing costly pivots and maximizing your potential for success.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="bg-primary text-primary-foreground rounded-full p-3">
+                        <Rocket className="w-6 h-6" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold">Accelerated Traction</h3>
+                      <p className="text-muted-foreground mt-1">Our proven frameworks fast-track your go-to-market strategy. We focus on identifying and capturing your target audience efficiently, helping you gain meaningful market traction faster than the competition.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <div className="bg-primary text-primary-foreground rounded-full p-3">
+                        <Scaling className="w-6 h-6" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold">Scalable Operations</h3>
+                      <p className="text-muted-foreground mt-1">Build robust, scalable systems and processes that form the backbone of your enterprise. This ensures you are primed for sustainable, long-term growth and ready for the next phase of expansion.</p>
+                    </div>
+                  </div>
+                  <div className="mt-6">
+                    <Button asChild>
+                      <Link href="/vc-backed">Learn More for VC-Backed Enterprises</Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </AnimatedSection>
         <FAQ />
         <AnimatedSection>
           <FinalCTA />
