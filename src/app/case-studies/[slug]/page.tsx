@@ -110,8 +110,9 @@ const caseStudyData = {
 };
 
 
-export default function CaseStudyDetailPage({ params }: { params: { slug: string } }) {
-  const study = caseStudyData[params.slug as keyof typeof caseStudyData];
+export default async function CaseStudyDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const study = caseStudyData[slug as keyof typeof caseStudyData];
 
   if (!study) {
     return <div>Case study not found.</div>;
@@ -142,8 +143,8 @@ export default function CaseStudyDetailPage({ params }: { params: { slug: string
                   height={800}
                   className="rounded-lg shadow-xl"
                   data-ai-hint={
-                    params.slug === 'exit-readiness-story' ? 'business deal handshake' : 
-                    params.slug === 'executive-coaching-confidence' ? 'confident executive presentation' : ''
+                    slug === 'exit-readiness-story' ? 'business deal handshake' : 
+                    slug === 'executive-coaching-confidence' ? 'confident executive presentation' : ''
                   }
                 />
               </div>

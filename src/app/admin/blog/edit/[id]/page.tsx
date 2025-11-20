@@ -6,18 +6,25 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { PostForm, PostFormValues } from '../../../post-form';
 
-export default function EditPostPage({ params }: { params: { id: string } }) {
+export default function EditPostPage({ params }: { params: Promise<{ id: string }> }) {
   const { toast } = useToast();
   const router = useRouter();
   const [post, setPost] = useState<PostFormValues | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [id, setId] = useState<string | null>(null);
 
   useEffect(() => {
+    params.then((p) => setId(p.id));
+  }, [params]);
+
+  useEffect(() => {
+    if (!id) return;
+
     async function fetchPost() {
       const { data, error } = await supabase
         .from('posts')
         .select('*')
-        .eq('id', params.id)
+        .eq('id', id)
         .single();
         
       if (error || !data) {
@@ -29,9 +36,11 @@ export default function EditPostPage({ params }: { params: { id: string } }) {
       setIsLoading(false);
     }
     fetchPost();
-  }, [params.id, router, toast]);
+  }, [id, router, toast]);
 
   const handleSubmit = async (values: PostFormValues) => {
+    if (!id) return false;
+
     const { error } = await supabase
       .from('posts')
       .update({ 
@@ -40,7 +49,7 @@ export default function EditPostPage({ params }: { params: { id: string } }) {
         content: values.content,
         image_url: values.image_url,
       })
-      .eq('id', params.id);
+      .eq('id', id);
 
     if (error) {
       toast({

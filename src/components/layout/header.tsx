@@ -6,7 +6,13 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu, ArrowRight } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Menu, ArrowRight, ChevronDown } from 'lucide-react';
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 import SignOutButton from './sign-out-button';
 
@@ -29,12 +35,42 @@ export default async function Header() {
         </Link>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
           <Link href="/programs" className="transition-colors hover:text-primary/80">Programs</Link>
-          <Link href="/aerops-framework" className="transition-colors hover:text-primary/80">AEROPS Framework</Link>
-          <Link href="/vc-backed" className="transition-colors hover:text-primary/80">VC-Backed</Link>
-          <Link href="/case-studies" className="transition-colors hover:text-primary/80">Case Studies</Link>
-          <Link href="/media" className="transition-colors hover:text-primary/80">Media</Link>
-          <Link href="/our-team" className="transition-colors hover:text-primary/80">Our Team</Link>
-          <Link href="/blog" className="transition-colors hover:text-primary/80">Blog</Link>
+          <Link href="/aerops-framework" className="transition-colors hover:text-primary/80">AEROPS</Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 transition-colors hover:text-primary/80 focus:outline-none">
+              Organizations <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem asChild>
+                <Link href="/for-profits" className="cursor-pointer w-full">For-Profits</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/non-profits" className="cursor-pointer w-full">Non-Profits</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/vc-backed" className="cursor-pointer w-full">VC-Backed</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 transition-colors hover:text-primary/80 focus:outline-none">
+              About Us <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem asChild>
+                <Link href="/case-studies" className="cursor-pointer w-full">Case Studies</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/our-team" className="cursor-pointer w-full">Our Team</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/media" className="cursor-pointer w-full">Media</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/blog" className="cursor-pointer w-full">Blog</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link href="/contact" className="transition-colors hover:text-primary/80">Contact</Link>
           {session && (
              <Link href="/admin" className="transition-colors hover:text-primary/80">Admin</Link>
@@ -70,12 +106,20 @@ export default async function Header() {
                 </Link>
                   <nav className="grid gap-2 text-lg font-medium">
                     <Link href="/programs" className="block px-2 py-1 transition-colors hover:text-primary/80">Programs</Link>
-                    <Link href="/aerops-framework" className="block px-2 py-1 transition-colors hover:text-primary/80">AEROPS Framework</Link>
-                    <Link href="/vc-backed" className="block px-2 py-1 transition-colors hover:text-primary/80">VC-Backed</Link>
-                    <Link href="/case-studies" className="block px-2 py-1 transition-colors hover:text-primary/80">Case Studies</Link>
-                    <Link href="/media" className="block px-2 py-1 transition-colors hover:text-primary/80">Media</Link>
-                    <Link href="/our-team" className="block px-2 py-1 transition-colors hover:text-primary/80">Our Team</Link>
-                    <Link href="/blog" className="block px-2 py-1 transition-colors hover:text-primary/80">Blog</Link>
+                    <Link href="/aerops-framework" className="block px-2 py-1 transition-colors hover:text-primary/80">AEROPS</Link>
+                    <div className="block px-2 py-1 font-medium">Organizations</div>
+                    <div className="pl-6 grid gap-2 text-base">
+                      <Link href="/for-profits" className="block py-1 transition-colors hover:text-primary/80">For-Profits</Link>
+                      <Link href="/non-profits" className="block py-1 transition-colors hover:text-primary/80">Non-Profits</Link>
+                      <Link href="/vc-backed" className="block py-1 transition-colors hover:text-primary/80">VC-Backed</Link>
+                    </div>
+                    <div className="block px-2 py-1 font-medium">About Us</div>
+                    <div className="pl-6 grid gap-2 text-base">
+                      <Link href="/case-studies" className="block py-1 transition-colors hover:text-primary/80">Case Studies</Link>
+                      <Link href="/our-team" className="block py-1 transition-colors hover:text-primary/80">Our Team</Link>
+                      <Link href="/media" className="block py-1 transition-colors hover:text-primary/80">Media</Link>
+                      <Link href="/blog" className="block py-1 transition-colors hover:text-primary/80">Blog</Link>
+                    </div>
                     <Link href="/contact" className="block px-2 py-1 transition-colors hover:text-primary/80">Contact</Link>
                     {session && (
                       <Link href="/admin" className="block px-2 py-1 transition-colors hover:text-primary/80">Admin</Link>

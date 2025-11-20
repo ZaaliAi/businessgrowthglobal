@@ -4,7 +4,7 @@ import { createSupabaseServerClient } from '@/lib/supabase/server';
 import { revalidatePath } from 'next/cache';
 
 export async function deletePost(postId: number): Promise<{ success: boolean; message: string }> {
-  const supabase = createSupabaseServerClient();
+  const supabase = await createSupabaseServerClient();
 
   // First, get the post to find the image URL
   const { data: post, error: fetchError } = await supabase
