@@ -7,7 +7,7 @@
 - Testimonial Carousel: Develop a testimonials carousel to showcase client success stories, building trust and credibility.
 - Sticky CTAs: Implement sticky CTA buttons ("Book a Discovery Call" and "Get Started") that remain visible on key sections to encourage user engagement.
 - Responsive Design: Ensure the website is fully responsive and functional across mobile, tablet, and desktop devices.
-- AI-Driven CTA Optimization: Employ a tool to dynamically adjust the call to action wording and visual prominence of page elements to better tailor them to returning site visitors.
+- AI-Driven CTA Optimisation: Employ a tool to dynamically adjust the call to action wording and visual prominence of page elements to better tailor them to returning site visitors.
 
 ## Style Guidelines:
 

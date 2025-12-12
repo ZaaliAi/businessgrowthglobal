@@ -20,7 +20,7 @@ const programs = [
   },
   {
     name: "Intensive",
-    description: "Fast-Track Your Business Growth. Designed for ambitious business owners ready to prioritize strategic growth and achieve accelerated results.",
+    description: "Fast-Track Your Business Growth. Designed for ambitious business owners ready to prioritise strategic growth and achieve accelerated results.",
     features: [
       "48 × 45-min sessions per year",
       "2 Crisis Calls per week (15 min)",

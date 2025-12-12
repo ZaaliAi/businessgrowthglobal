@@ -32,7 +32,7 @@ const articles = [
   {
     url: 'https://fortune.com/2025/02/28/gen-z-task-masking-work-trend-career-advice/',
     title: 'Gen Z is ‘task masking’ to make their jobs more bearable. It’s the latest sign of a workforce in distress',
-    description: 'The youngest generation of workers are finding ways to cope with a less-than-ideal labor market.',
+    description: 'The youngest generation of workers are finding ways to cope with a less-than-ideal labour market.',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/fortune-logo-2016-840x485.webp',
     publication: 'Fortune'
   },

@@ -138,7 +138,7 @@ ${values.challenge}
               <FormItem>
                 <FormLabel>Phone Number</FormLabel>
                 <FormControl>
-                  <Input placeholder="+1 (555) 000-0000" {...field} />
+                  <Input placeholder="+44 7700 900000" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -189,11 +189,11 @@ ${values.challenge}
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="< $500k">Less than $500k</SelectItem>
-                  <SelectItem value="$500k - $1M">$500k - $1M</SelectItem>
-                  <SelectItem value="$1M - $5M">$1M - $5M</SelectItem>
-                  <SelectItem value="$5M - $10M">$5M - $10M</SelectItem>
-                  <SelectItem value="$10M+">$10M+</SelectItem>
+                  <SelectItem value="< £500k">Less than £500k</SelectItem>
+                  <SelectItem value="£500k - £1M">£500k - £1M</SelectItem>
+                  <SelectItem value="£1M - £5M">£1M - £5M</SelectItem>
+                  <SelectItem value="£5M - £10M">£5M - £10M</SelectItem>
+                  <SelectItem value="£10M+">£10M+</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />

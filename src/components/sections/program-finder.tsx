@@ -37,7 +37,7 @@ const quizQuestions = [
 
 const programDetails = {
     elevate: { name: "Elevate", description: "Perfect for establishing a strong foundation and accelerating early-stage growth." },
-    intensive: { name: "Intensive", description: "Ideal for optimizing operations and achieving sustainable, accelerated growth." },
+    intensive: { name: "Intensive", description: "Ideal for optimising operations and achieving sustainable, accelerated growth." },
     boardroom: { name: "Boardroom", description: "Designed for enhancing leadership transformation and building high-performance teams." },
 }
 
@@ -86,7 +86,7 @@ export default function ProgramFinder() {
             Find Your Ideal Program
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Answer a few short questions to get a personalized recommendation.
+            Answer a few short questions to get a personalised recommendation.
           </p>
         </div>
         

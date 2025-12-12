@@ -1,5 +1,7 @@
 'use client';
 
+import { TrendingDown, AlertTriangle, FileX } from 'lucide-react';
+
 export default function CircleClubProblemSolution() {
   return (
     <section className="py-20 sm:py-32">
@@ -12,6 +14,35 @@ export default function CircleClubProblemSolution() {
           <p className="text-lg text-muted-foreground leading-relaxed">
             Growing a business is rewarding, but it can also be isolating. Without a sounding board, decision-making becomes harder, and growth can stall. You don't have to navigate the complexities of scaling alone.
           </p>
+        </div>
+
+        {/* New Section: Reality Check */}
+        <div className="container mx-auto px-4 mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="bg-card p-8 rounded-xl shadow-sm border border-border/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+              <div className="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#D4AF37]/10 group-hover:bg-[#D4AF37]/20 transition-colors">
+                <TrendingDown className="h-8 w-8 text-[#D4AF37]" />
+              </div>
+              <h3 className="text-4xl font-bold text-[#D4AF37] mb-3">83%</h3>
+              <p className="text-muted-foreground leading-relaxed">of SMEs report barriers holding back growth, the highest level in 5 years.</p>
+            </div>
+            
+            <div className="bg-card p-8 rounded-xl shadow-sm border border-border/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+              <div className="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#D4AF37]/10 group-hover:bg-[#D4AF37]/20 transition-colors">
+                <AlertTriangle className="h-8 w-8 text-[#D4AF37]" />
+              </div>
+              <h3 className="text-4xl font-bold text-[#D4AF37] mb-3">60%</h3>
+              <p className="text-muted-foreground leading-relaxed">of startups fail in their first 5 years, primarily due to cash flow problems.</p>
+            </div>
+
+            <div className="bg-card p-8 rounded-xl shadow-sm border border-border/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+              <div className="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#D4AF37]/10 group-hover:bg-[#D4AF37]/20 transition-colors">
+                <FileX className="h-8 w-8 text-[#D4AF37]" />
+              </div>
+              <h3 className="text-4xl font-bold text-[#D4AF37] mb-3">42%</h3>
+              <p className="text-muted-foreground leading-relaxed">of businesses lack a formal marketing plan, hindering customer growth and revenue expansion.</p>
+            </div>
+          </div>
         </div>
 
         {/* Section C: The Solution */}

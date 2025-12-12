@@ -57,7 +57,7 @@ export default function VcRoi() {
                 <p className="text-sm text-muted-foreground font-medium mt-1">Average runway extension</p>
               </div>
               <p className="text-orange-800/80 text-sm leading-relaxed">
-                By optimizing operational efficiency and reducing "growth drag," we often help companies extend their runway without raising additional capital, preserving founder equity.
+                By optimising operational efficiency and reducing "growth drag," we often help companies extend their runway without raising additional capital, preserving founder equity.
               </p>
             </CardContent>
           </Card>

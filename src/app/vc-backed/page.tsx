@@ -29,7 +29,7 @@ const vcAeropsPillars = [
     title: "ARR Quality & Valuation",
     original: "Revenue",
     icon: Coins,
-    description: "Reducing churn and optimizing pricing models to maximize valuation multiples.",
+    description: "Reducing churn and optimising pricing models to maximise valuation multiples.",
   },
   {
     title: "Systems for Scale",
@@ -41,7 +41,7 @@ const vcAeropsPillars = [
     title: "Executive Hiring",
     original: "People",
     icon: Users2,
-    description: "Transitioning from 'generalist startup' to a specialized, high-performance org.",
+    description: "Transitioning from 'generalist startup' to a specialised, high-performance organisation.",
   },
   {
     title: "Liquidity & Exit",
@@ -183,7 +183,7 @@ export default function VcBackedPage() {
                     <Scaling className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Post-Investment</h3>
-                  <p className="text-muted-foreground">Guidance geared towards achieving Series A/B milestones and maximizing investor confidence.</p>
+                    <p className="text-muted-foreground mt-1">Guidance geared towards achieving Series A/B milestones and maximising investor confidence.</p>
                 </div>
               </div>
             </div>

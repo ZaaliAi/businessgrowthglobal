@@ -18,7 +18,7 @@ export default function NonProfitQualifier() {
               <ul className="space-y-3">
                 <li className="flex gap-3 items-start">
                   <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 shrink-0" />
-                  <span className="text-muted-foreground">You are a <strong>CEO or Founder</strong> actively running the organization.</span>
+                  <span className="text-muted-foreground">You are a <strong>CEO or Founder</strong> actively running the organisation.</span>
                 </li>
                 <li className="flex gap-3 items-start">
                   <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 shrink-0" />

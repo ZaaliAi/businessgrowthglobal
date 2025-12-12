@@ -58,7 +58,7 @@ export default function NonProfitROI() {
                 <p className="text-sm text-muted-foreground font-medium mt-1">Potential revenue uplift</p>
               </div>
               <p className="text-green-800/80 text-sm leading-relaxed">
-                Billions in Gift Aid (UK) and Corporate Matching (US) go unclaimed. Optimizing your donation flow and data systems often pays for our engagement in the first 90 days.
+                Billions in Gift Aid (UK) and Corporate Matching (US) go unclaimed. Optimising your donation flow and data systems often pays for our engagement in the first 90 days.
               </p>
             </CardContent>
           </Card>
@@ -79,7 +79,7 @@ export default function NonProfitROI() {
                 <p className="text-sm text-muted-foreground font-medium mt-1">Average ROI of Executive Coaching</p>
               </div>
               <p className="text-blue-800/80 text-sm leading-relaxed">
-                Studies show that for every $1 invested in executive coaching, organizations see a $7 return through improved productivity, strategy, and donor retention.
+                Studies show that for every $1 invested in executive coaching, organisations see a $7 return through improved productivity, strategy, and donor retention.
               </p>
             </CardContent>
           </Card>

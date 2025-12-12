@@ -29,7 +29,7 @@ import { MoveRight } from 'lucide-react';
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email address.' }),
-  orgName: z.string().min(2, { message: 'Organization Name must be at least 2 characters.' }),
+  orgName: z.string().min(2, { message: 'Organisation Name must be at least 2 characters.' }),
   website: z.string().url({ message: 'Please enter a valid URL (include http:// or https://).' }).optional().or(z.literal('')),
   annualIncome: z.string({ required_error: "Please select an income range." }),
   primaryChallenge: z.string().min(10, { message: 'Challenge description must be at least 10 characters.' }),
@@ -54,7 +54,7 @@ export default function NonProfitForm() {
     setIsSubmitting(true);
     try {
       const structuredMessage = `
-Organization Name: ${values.orgName}
+Organisation Name: ${values.orgName}
 Website: ${values.website || 'N/A'}
 Annual Income: ${values.annualIncome}
 
@@ -135,7 +135,7 @@ ${values.primaryChallenge}
                 name="orgName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Organization Name</FormLabel>
+                    <FormLabel>Organisation Name</FormLabel>
                     <FormControl>
                       <Input placeholder="Community First" {...field} />
                     </FormControl>

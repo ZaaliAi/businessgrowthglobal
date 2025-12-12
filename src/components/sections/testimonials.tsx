@@ -14,7 +14,7 @@ const testimonials = [
     title: "KCJ Executive Talent",
   },
   {
-    quote: "The mentoring I received at Business Growth Global was transformative. Every session was a deep dive into areas of my business I’d overlooked. Their holistic approach ensured we optimized every aspect of our business model. I can confidently say we’ve grown more in the last six months than we had in the previous two years!",
+    quote: "The mentoring I received at Business Growth Global was transformative. Every session was a deep dive into areas of my business I’d overlooked. Their holistic approach ensured we optimised every aspect of our business model. I can confidently say we’ve grown more in the last six months than we had in the previous two years!",
     name: "Carla C",
     title: "Paperock Creative",
   },
@@ -26,7 +26,7 @@ const reviewSchema = {
   "itemListElement": testimonials.map((testimonial, index) => ({
     "@type": "Review",
     "itemReviewed": {
-      "@type": "Organization",
+      "@type": "Organisation",
       "name": "Business Growth Global"
     },
     "reviewRating": {

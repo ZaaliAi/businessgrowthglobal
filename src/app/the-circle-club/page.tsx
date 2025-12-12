@@ -11,7 +11,7 @@ import CircleClubSocialProof from '@/components/sections/circle-club/social-proo
 import CircleClubCTA from '@/components/sections/circle-club/cta';
 
 export const metadata: Metadata = {
-  title: 'The Boardroom | Exclusive Peer-to-Peer Business Growth Group',
+  title: 'The Circle Club | Exclusive Peer-to-Peer Business Growth Group',
   description: 'Join The Circle Club: A small group for ambitious entrepreneurs. Monthly meetings, expert speakers, and actionable strategies for sustainable growth. Apply now.',
 };
 

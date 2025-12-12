@@ -36,7 +36,7 @@ export default function ForProfitRoi() {
                 <p className="text-sm text-muted-foreground font-medium mt-1">Avg. EBITDA Improvement</p>
               </div>
               <p className="text-emerald-800/80 text-sm leading-relaxed">
-                By eliminating operational waste, optimizing pricing, and focusing on high-margin niches, our clients typically see a double-digit increase in net profit within 12 months.
+                By eliminating operational waste, optimising pricing, and focusing on high-margin niches, our clients typically see a double-digit increase in net profit within 12 months.
               </p>
             </CardContent>
           </Card>

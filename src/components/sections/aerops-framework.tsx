@@ -31,9 +31,9 @@ const aeropsData = [
     letter: 'R',
     title: 'Revenue',
     icon: <Banknote className="h-8 w-8" />,
-    description: 'Understand your income streams to optimize your earnings.',
+    description: 'Understand your income streams to optimise your earnings.',
     details:
-      'Fully grasp and optimize your revenue channels. Our mentors guide you in structuring your business for sustained, predictable income.',
+      'Fully grasp and optimise your revenue channels. Our mentors guide you in structuring your business for sustained, predictable income.',
   },
   {
     letter: 'O',
@@ -49,7 +49,7 @@ const aeropsData = [
     icon: <Users className="h-8 w-8" />,
     description: 'Invest in your team to drive productivity and innovation.',
     details:
-      'Prioritize and invest in your people. A strong team is the backbone of a successful business. We guide you in building and nurturing a high-performance team.',
+      'Prioritise and invest in your people. A strong team is the backbone of a successful business. We guide you in building and nurturing a high-performance team.',
   },
   {
     letter: 'S',

@@ -29,7 +29,7 @@ const forProfitAeropsPillars = [
     title: "Profit & Cashflow",
     original: "Revenue",
     icon: Coins,
-    description: "Optimizing pricing and margins to ensure you keep more of what you make.",
+    description: "Optimising pricing and margins to ensure you keep more of what you make.",
   },
   {
     title: "Systems & Process",
@@ -134,7 +134,7 @@ export default function ForProfitPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <p className="flex items-start gap-3 text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" /><span>Org chart redesign for future scale (not just current needs).</span></p>
+                    <p className="flex items-start gap-3 text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" /><span>Organisation chart redesign for future scale (not just current needs).</span></p>
                     <p className="flex items-start gap-3 text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" /><span>Hiring support to find leaders who take ownership.</span></p>
                     <p className="flex items-start gap-3 text-muted-foreground"><CheckCircle2 className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" /><span>Building a culture of performance and accountability.</span></p>
                   </CardContent>

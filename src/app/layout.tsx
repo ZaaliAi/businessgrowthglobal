@@ -34,7 +34,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": "Organisation",
             "name": "Business Growth Global",
             "url": "https://www.businessgrowth.global/",
             "logo": "https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/BGG%20icon.jpg",

@@ -22,13 +22,13 @@ const pillars = [
     icon: <TrendingUp className="w-8 h-8 text-primary" />,
     name: "Expand",
     description: "This pillar is about growing the business by finding a clear niche, increasing leads, and improving conversions.",
-    benefit: "Achieve sustainable growth and market expansion by focusing on your most profitable niche and optimizing your sales funnel."
+    benefit: "Achieve sustainable growth and market expansion by focusing on your most profitable niche and optimising your sales funnel."
   },
   {
     icon: <DollarSign className="w-8 h-8 text-primary" />,
     name: "Revenue",
     description: "This pillar focuses on generating high revenue and maintaining healthy margins. It addresses issues like hidden costs or low repeat purchases.",
-    benefit: "Optimize your revenue streams and boost profitability by ensuring healthy margins and maximizing customer lifetime value."
+    benefit: "Optimise your revenue streams and boost profitability by ensuring healthy margins and maximising customer lifetime value."
   },
   {
     icon: <Settings className="w-8 h-8 text-primary" />,

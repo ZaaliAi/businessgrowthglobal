@@ -45,7 +45,7 @@ const aeropsPillars = [
   },
   {
     letter: "O",
-    title: "Resource Maximization",
+    title: "Resource Maximisation",
     original: "Operation",
     icon: Settings2,
     description: "Ensuring more 'cents on the dollar' reaches the frontline.",
@@ -176,7 +176,7 @@ export default function NonProfitsPage() {
                     Expert Mentorship, Not Expensive Consulting.
                   </h2>
                   <p className="text-lg text-primary-foreground/90 mb-8 leading-relaxed">
-                    You don't need a 100-page report. You need hands-on guidance. Our Growth Mentors are seasoned operators who have scaled organizations before. They work alongside you to fix specific bottlenecks. This is true 'Capacity Building'—investing in the engine so the car can go further.
+                    You don't need a 100-page report. You need hands-on guidance. Our Growth Mentors are seasoned operators who have scaled organisations before. They work alongside you to fix specific bottlenecks. This is true 'Capacity Building'—investing in the engine so the car can go further.
                   </p>
                   <div className="bg-white/10 p-8 rounded-xl border border-white/20 backdrop-blur-sm">
                     <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
