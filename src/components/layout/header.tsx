@@ -50,7 +50,7 @@ export default async function Header() {
           <Link href="/aerops-framework" className="transition-colors hover:text-primary/80">AEROPS</Link>
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 transition-colors hover:text-primary/80 focus:outline-none">
-              Organizations <ChevronDown className="h-4 w-4" />
+              Organisations <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
               <DropdownMenuItem asChild>
