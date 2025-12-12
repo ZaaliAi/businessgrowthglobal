@@ -15,6 +15,7 @@ const faqs = [
   {
     question: "Can we use grant funding to pay for this?",
     answer: "Yes. Most of our non-profit partners use 'Organisational Development' or 'Capacity Building' grants to fund our work. We can even help you frame the application to funders, demonstrating how this investment will lead to long-term sustainability and reduced reliance on future grants."
+  },
   {
     question: "What if our Board is skeptical?",
     answer: "Boards are rightly protective of reserves. We speak their language: Risk mitigation, governance, and financial sustainability. We often present directly to Boards to explain how operational efficiency isn't an 'overhead cost' but a 'risk reduction investment' that protects the charity's future."
