@@ -9,6 +9,7 @@ import AnimatedSection from '@/components/animated-section';
 import AeropsFramework from '@/components/sections/aerops-framework';
 import LogoCarousel from '@/components/sections/logo-carousel';
 import FAQ from '@/components/sections/faq';
+import CircleClubHomepageSection from '@/components/sections/circle-club/homepage-section';
 import Script from 'next/script';
 
 import { Button } from '@/components/ui/button';
@@ -85,6 +86,9 @@ export default function Home() {
           <About />
         </AnimatedSection>
         <AeropsFramework />
+        <AnimatedSection>
+          <CircleClubHomepageSection />
+        </AnimatedSection>
         <AnimatedSection>
           <section className="py-16 sm:py-20">
             <div className="container mx-auto px-4">

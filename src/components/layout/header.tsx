@@ -34,7 +34,19 @@ export default async function Header() {
           />
         </Link>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-          <Link href="/programs" className="transition-colors hover:text-primary/80">Programs</Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 transition-colors hover:text-primary/80 focus:outline-none">
+              Programs <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem asChild>
+                <Link href="/programs" className="cursor-pointer w-full">1-2-1 Programs</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/the-circle-club" className="cursor-pointer w-full">The Circle Club</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Link href="/aerops-framework" className="transition-colors hover:text-primary/80">AEROPS</Link>
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1 transition-colors hover:text-primary/80 focus:outline-none">
@@ -105,7 +117,11 @@ export default async function Header() {
                   />
                 </Link>
                   <nav className="grid gap-2 text-lg font-medium">
-                    <Link href="/programs" className="block px-2 py-1 transition-colors hover:text-primary/80">Programs</Link>
+                    <div className="block px-2 py-1 font-medium">Programs</div>
+                    <div className="pl-6 grid gap-2 text-base">
+                      <Link href="/programs" className="block py-1 transition-colors hover:text-primary/80">1-2-1 Programs</Link>
+                      <Link href="/the-circle-club" className="block py-1 transition-colors hover:text-primary/80">The Circle Club</Link>
+                    </div>
                     <Link href="/aerops-framework" className="block px-2 py-1 transition-colors hover:text-primary/80">AEROPS</Link>
                     <div className="block px-2 py-1 font-medium">Organizations</div>
                     <div className="pl-6 grid gap-2 text-base">
