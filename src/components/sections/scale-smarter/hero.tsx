@@ -47,7 +47,7 @@ export default function ScaleSmarterHero() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" className="h-14 px-8 text-lg bg-accent hover:bg-accent/90 shadow-xl shadow-accent/20" asChild>
                 <Link href="https://www.linkedin.com/events/scalesmarter-aeropsintroduction7412872055219458050/" target="_blank">
-                  Secure Your Seat
+                  Secure Your Seat for the Series
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -67,16 +67,16 @@ export default function ScaleSmarterHero() {
           {/* Right Column: Image */}
           <div className="relative">
             {/* Main Image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white bg-slate-200">
                 <div className="aspect-[4/3] relative">
                     <Image 
-                        src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2000&auto=format&fit=crop" 
-                        alt="Business seminar presentation"
+                        src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/Lee/6aea2c6c-137f-4f1e-a7ad-8509e25bda22%20(1).JPG" 
+                        alt="Scale Smarter Webinar Series"
                         fill
                         className="object-cover"
                     />
                      {/* Overlay Gradient for depth */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none" />
                 </div>
             </div>
 
