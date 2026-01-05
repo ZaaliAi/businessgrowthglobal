@@ -75,7 +75,7 @@ export default function ScaleSmarterHero() {
                 <div className="aspect-[4/3] relative">
                     <Image 
                         src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/Lee/6aea2c6c-137f-4f1e-a7ad-8509e25bda22%20(1).JPG" 
-                        alt="Scale Smarter Webinar Series"
+                        alt="Lee Broders - Scale Smarter Webinar Series"
                         fill
                         className="object-cover"
                     />
@@ -85,14 +85,14 @@ export default function ScaleSmarterHero() {
             </div>
 
             {/* Floating Card Element */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 hidden md:block animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <div className="absolute -bottom-4 left-4 md:-bottom-6 md:-left-6 bg-white p-3 md:p-4 rounded-xl shadow-xl border border-slate-100 flex animate-in fade-in slide-in-from-bottom-4 duration-1000">
                 <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold">
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-xs md:text-base">
                         LB
                     </div>
                     <div>
-                        <p className="text-sm font-bold text-slate-900">Lee Broders</p>
-                        <p className="text-xs text-slate-500">Your Host & Mentor</p>
+                        <p className="text-xs md:text-sm font-bold text-slate-900">Lee Broders</p>
+                        <p className="text-[10px] md:text-xs text-slate-500">Your Host & Mentor</p>
                     </div>
                 </div>
             </div>

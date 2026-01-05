@@ -4,12 +4,12 @@ import Script from 'next/script';
 
 const testimonials = [
   {
-    quote: "Joining Business Growth Global’s mentoring program is easily one of the best decisions I’ve made as a CEO. Their expertise, paired with a genuine commitment to our success, has revolutionized how we approach challenges and capitalize on opportunities. Our profit margins have seen a consistent upward trend, all thanks to the invaluable guidance we received.",
+    quote: "Joining Business Growth Global’s mentoring programme is easily one of the best decisions I’ve made as a CEO. Their expertise, paired with a genuine commitment to our success, has revolutionised how we approach challenges and capitalise on opportunities. Our profit margins have seen a consistent upward trend, all thanks to the invaluable guidance we received.",
     name: "Matt D",
     title: "Orsa Housing",
   },
   {
-    quote: "After joining the Business Growth Global Coaching program, my company has experienced a paradigm shift in its operations and growth trajectory. The hands-on mentoring and actionable strategies provided have not only sharpened our business acumen but also paved the way for unprecedented growth. A heartfelt thank you to the entire team!",
+    quote: "After joining the Business Growth Global Coaching programme, my company has experienced a paradigm shift in its operations and growth trajectory. The hands-on mentoring and actionable strategies provided have not only sharpened our business acumen but also paved the way for unprecedented growth. A heartfelt thank you to the entire team!",
     name: "Joe G",
     title: "KCJ Executive Talent",
   },
