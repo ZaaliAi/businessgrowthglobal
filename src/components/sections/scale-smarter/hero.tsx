@@ -20,13 +20,17 @@ export default function ScaleSmarterHero() {
 
             <div className="space-y-6">
               <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl xl:text-6xl leading-[1.1]">
-                You&apos;re doing all the right things...
-                <span className="block text-primary mt-2">So why has growth stalled?</span>
+                Has growth <span className="text-destructive relative inline-block">stalled?<span className="absolute bottom-1 left-0 w-full h-2 bg-destructive/10 -z-10 skew-x-12"></span></span>
               </h1>
               
-              <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
-                Your revenue looks the same as it did 6 months ago. You're investing time and money, but the dial isn't moving.
-              </p>
+              <div className="space-y-4 max-w-lg">
+                <p className="text-xl text-slate-600 font-medium italic border-l-4 border-slate-300 pl-4 py-1">
+                  "Your revenue looks the same as it did 6 months ago. You&apos;re investing time and money, but the dial isn&apos;t moving."
+                </p>
+                <p className="text-lg text-slate-700">
+                  Our <span className="font-bold text-accent bg-accent/5 px-1 rounded">8-part Free webinar series</span> will show you exactly how to break through those growth barriers.
+                </p>
+              </div>
 
               <div className="space-y-3">
                  <div className="flex items-center gap-3">
