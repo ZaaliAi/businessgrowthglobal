@@ -1,6 +1,7 @@
 import LandingHeader from '@/components/layout/landing-header';
 import Footer from '@/components/layout/footer';
 import ScaleSmarterHero from '@/components/sections/scale-smarter/hero';
+import LogoCarousel from '@/components/sections/logo-carousel';
 import ScaleSmarterPainPoints from '@/components/sections/scale-smarter/pain-points';
 import ScaleSmarterWhoShouldAttend from '@/components/sections/scale-smarter/who-should-attend';
 import ScaleSmarterFounderCredibility from '@/components/sections/scale-smarter/founder-credibility';
@@ -37,6 +38,7 @@ export default function ScaleSmarterPage() {
       <LandingHeader />
       <main className="flex-1">
         <ScaleSmarterHero />
+        <LogoCarousel />
         <ScaleSmarterPainPoints />
         <ScaleSmarterWhoShouldAttend />
         

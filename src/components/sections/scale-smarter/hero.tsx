@@ -1,9 +1,21 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Calendar, Users, CheckCircle2 } from 'lucide-react';
-import Image from 'next/image';
+import { ArrowRight, Calendar, Users, CheckCircle2, Play } from 'lucide-react';
+import { useRef, useState } from 'react';
 
 export default function ScaleSmarterHero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
   return (
     <section className="relative w-full py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100">
       <div className="container relative z-10 mx-auto px-4">
@@ -71,21 +83,38 @@ export default function ScaleSmarterHero() {
           {/* Right Column: Image */}
           <div className="relative">
             {/* Main Image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white bg-slate-200">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white bg-slate-200 group">
                 <div className="aspect-[4/3] relative">
-                    <Image 
-                        src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/Lee/6aea2c6c-137f-4f1e-a7ad-8509e25bda22%20(1).JPG" 
-                        alt="Lee Broders - Scale Smarter Webinar Series"
-                        fill
-                        className="object-cover"
-                    />
-                     {/* Overlay Gradient for depth */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none" />
+                    <video 
+                        ref={videoRef}
+                        src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/Lee/webinar%20intro.mp4"
+                        poster="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/Lee/6aea2c6c-137f-4f1e-a7ad-8509e25bda22%20(1).JPG"
+                        controls={isPlaying}
+                        playsInline
+                        className="w-full h-full object-cover"
+                        onPlay={() => setIsPlaying(true)}
+                        onPause={() => setIsPlaying(false)}
+                        onEnded={() => setIsPlaying(false)}
+                    >
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    {/* Custom Play Button Overlay */}
+                    {!isPlaying && (
+                        <div 
+                            className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-all cursor-pointer z-20"
+                            onClick={handlePlay}
+                        >
+                            <div className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center pl-1 shadow-2xl scale-100 group-hover:scale-110 transition-transform duration-300">
+                                <Play className="w-8 h-8 text-accent fill-accent" />
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
 
             {/* Floating Card Element */}
-            <div className="absolute -bottom-4 left-4 md:-bottom-6 md:-left-6 bg-white p-3 md:p-4 rounded-xl shadow-xl border border-slate-100 flex animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <div className="absolute -bottom-4 left-4 md:-bottom-6 md:-left-6 bg-white p-3 md:p-4 rounded-xl shadow-xl border border-slate-100 flex animate-in fade-in slide-in-from-bottom-4 duration-1000 z-30">
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-xs md:text-base">
                         LB
