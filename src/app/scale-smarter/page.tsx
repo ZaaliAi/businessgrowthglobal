@@ -1,4 +1,4 @@
-import Header from '@/components/layout/header';
+import LandingHeader from '@/components/layout/landing-header';
 import Footer from '@/components/layout/footer';
 import ScaleSmarterHero from '@/components/sections/scale-smarter/hero';
 import ScaleSmarterPainPoints from '@/components/sections/scale-smarter/pain-points';
@@ -34,7 +34,7 @@ const sessions = [
 export default function ScaleSmarterPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
-      <Header />
+      <LandingHeader />
       <main className="flex-1">
         <ScaleSmarterHero />
         <ScaleSmarterPainPoints />
