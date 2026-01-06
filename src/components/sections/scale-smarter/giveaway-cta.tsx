@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import { Gift, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ScaleSmarterGiveawayCTA() {
   return (
@@ -55,8 +55,8 @@ export default function ScaleSmarterGiveawayCTA() {
                 Spaces are limited. Secure your spot now to learn how to scale smarter and get a chance to win.
               </p>
               <Button size="lg" className="w-full h-14 text-lg font-bold bg-accent hover:bg-accent/90 shadow-lg shadow-accent/20" asChild>
-                <Link href="https://www.linkedin.com/events/scalesmarter-aeropsintroduction7412872055219458050/" target="_blank">
-                  Register Now on LinkedIn
+                <Link href="#register">
+                  Register Now for the Series
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>

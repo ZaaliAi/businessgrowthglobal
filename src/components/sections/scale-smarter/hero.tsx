@@ -62,7 +62,7 @@ export default function ScaleSmarterHero() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" className="h-14 px-8 text-lg bg-accent hover:bg-accent/90 shadow-xl shadow-accent/20" asChild>
-                <Link href="https://www.linkedin.com/events/scalesmarter-aeropsintroduction7412872055219458050/" target="_blank">
+                <Link href="#register">
                   Secure Your Seat for the Series
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>

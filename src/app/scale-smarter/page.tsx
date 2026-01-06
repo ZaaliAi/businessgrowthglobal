@@ -8,6 +8,7 @@ import ScaleSmarterFounderCredibility from '@/components/sections/scale-smarter/
 import Testimonials from '@/components/sections/testimonials';
 import ScaleSmarterMarketStats from '@/components/sections/scale-smarter/market-stats';
 import ScaleSmarterGiveawayCTA from '@/components/sections/scale-smarter/giveaway-cta';
+import ScaleSmarterRegistrationSection from '@/components/sections/scale-smarter/registration-section';
 import { Badge } from '@/components/ui/badge';
 import { 
     LayoutDashboard, 
@@ -83,6 +84,7 @@ export default function ScaleSmarterPage() {
             </div>
         </section>
 
+        <ScaleSmarterRegistrationSection />
         <ScaleSmarterFounderCredibility />
         <Testimonials />
         <ScaleSmarterMarketStats />
