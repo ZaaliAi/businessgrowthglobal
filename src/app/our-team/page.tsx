@@ -22,6 +22,15 @@ const teamMembers = [
     linkedinUrl: 'https://www.linkedin.com/in/darrel-alison-3919962a5/',
   },
   {
+    name: 'Nikki Ayton',
+    title: 'Business Development Manager (UK)',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/nikki.jpg',
+    bio: 'I have been working in the field of Business Development for over a decade which has seen me work with hundreds of businesses in the digital and healthtech sectors across the West Midlands. Since gaining my Coaching qualification, I have become more focussed in this area and working with Business Growth Global is the perfect fit. I have a holistic approach to my work and I like to work both strategically yet out of the box. I look forward to supporting you whilst you are on your journey with Business Growth Global.',
+    shortBio: 'Leverages over a decade of experience in digital and healthtech to support business growth across the UK.',
+    aiHint: 'professional portrait',
+    linkedinUrl: 'https://www.linkedin.com/in/nikkiayton/',
+  },
+  {
     name: 'Olga Bak',
     title: 'Business Development Manager (UK and Europe)',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/olga.png',
@@ -146,7 +155,7 @@ export default function OurTeamPage() {
                                     fill
                                     className="object-cover rounded-full"
                                     data-ai-hint={member.aiHint}
-                                    style={ (member.name === 'Olga Bak' || member.name === 'Ben Edge') ? { objectPosition: 'top' } : {} }
+                                    style={ (member.name === 'Olga Bak' || member.name === 'Ben Edge' || member.name === 'Nikki Ayton') ? { objectPosition: 'top' } : {} }
                                     />
                                 </div>
                                 <div className="flex-1">

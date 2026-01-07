@@ -1,4 +1,4 @@
-import { Linkedin, Mail, Phone, LogIn, Users, Facebook } from 'lucide-react';
+import { Linkedin, Mail, Phone, LogIn, Facebook } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -66,12 +66,6 @@ export default function Footer() {
             <LogIn className="h-4 w-4" />
             <Link href="/login" className="hover:text-primary">
               Admin Login
-            </Link>
-          </div>
-           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <Users className="h-4 w-4" />
-            <Link href="/meet-the-team" className="hover:text-primary">
-              Meet the Team
             </Link>
           </div>
         </div>
