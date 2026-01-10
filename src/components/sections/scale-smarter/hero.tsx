@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Calendar, Users, CheckCircle2, Play } from 'lucide-react';
+import { ArrowRight, Calendar, Users, CheckCircle2, Play, Gift } from 'lucide-react';
 import { useRef, useState } from 'react';
 
 export default function ScaleSmarterHero() {
@@ -27,35 +27,47 @@ export default function ScaleSmarterHero() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full border border-accent/20">
                 <Calendar className="w-4 h-4" />
-                <span className="text-sm font-bold uppercase tracking-wide">Starts Jan 8th • 8-Part Series</span>
+                <span className="text-sm font-bold uppercase tracking-wide">Starts Jan 8th • FREE 8-Part Series</span>
             </div>
 
             <div className="space-y-6">
               <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl xl:text-6xl leading-[1.1]">
-                Has growth <span className="text-destructive relative inline-block">stalled?<span className="absolute bottom-1 left-0 w-full h-2 bg-destructive/10 -z-10 skew-x-12"></span></span>
+                Stop Surviving. <span className="text-accent relative inline-block">Start Scaling.<span className="absolute bottom-1 left-0 w-full h-2 bg-accent/10 -z-10 skew-x-12"></span></span>
               </h1>
               
               <div className="space-y-4 max-w-lg">
                 <p className="text-xl text-slate-600 font-medium italic border-l-4 border-slate-300 pl-4 py-1">
-                  "Your revenue looks the same as it did 6 months ago. You&apos;re investing time and money, but the dial isn&apos;t moving."
+                  "Your revenue stalled and margins getting thinner. You&apos;re investing time and money, but the dial isn&apos;t moving."
                 </p>
                 <p className="text-lg text-slate-700">
-                  Our <span className="font-bold text-accent bg-accent/5 px-1 rounded">8-part Free webinar series</span> will show you exactly how to break through those growth barriers.
+                  Join our <span className="font-bold text-accent bg-accent/5 px-1 rounded">FREE 8-part webinar series</span> (Value: £5,000) and learn the exact AEROPS framework used to scale 8-figure businesses.
                 </p>
               </div>
 
               <div className="space-y-3">
                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-600" />
-                    <span className="text-slate-700 font-medium">Break the "Revenue Plateau"</span>
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 font-medium">Break the "Revenue Plateau" with proven strategies</span>
                  </div>
                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-600" />
-                    <span className="text-slate-700 font-medium">Stop Daily Firefighting</span>
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 font-medium">Stop Daily Firefighting & Reclaim Your Time</span>
                  </div>
                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-600" />
-                    <span className="text-slate-700 font-medium">Build a Saleable Asset</span>
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 font-medium">Build a Saleable Asset (Exit Strategy Included)</span>
+                 </div>
+                 <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 font-medium">Live Q&A with Industry Experts every session</span>
+                 </div>
+                 <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    <span className="text-slate-700 font-medium">Exclusive Worksheets & Templates for attendees</span>
+                 </div>
+                 <div className="flex items-center gap-3 p-3 bg-accent/5 rounded-lg border border-accent/20">
+                    <Gift className="w-5 h-5 text-accent flex-shrink-0" />
+                    <span className="text-slate-900 font-bold">BONUS: Win 3 Months of Mentoring (Giveaway after EVERY webinar!)</span>
                  </div>
               </div>
             </div>
@@ -63,7 +75,7 @@ export default function ScaleSmarterHero() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" className="h-14 px-8 text-lg bg-accent hover:bg-accent/90 shadow-xl shadow-accent/20" asChild>
                 <Link href="#register">
-                  Secure Your Seat for the Series
+                  Secure Your FREE Seat for the Series
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

@@ -41,6 +41,7 @@ export default function ScaleSmarterPage() {
       <main className="flex-1">
         <ScaleSmarterHero />
         <LogoCarousel />
+        <ScaleSmarterRegistrationSection />
         <ScaleSmarterPainPoints />
         <ScaleSmarterWhoShouldAttend />
         
@@ -91,7 +92,6 @@ export default function ScaleSmarterPage() {
             </div>
         </section>
 
-        <ScaleSmarterRegistrationSection />
         <ScaleSmarterFounderCredibility />
         <Testimonials />
         <ScaleSmarterMarketStats />
