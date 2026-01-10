@@ -16,10 +16,10 @@ const teamMembers = [
     name: 'Darrel Alison',
     title: 'Sales and Marketing Director',
     imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/daz.jfif',
-    bio: 'As the Sales and Marketing Director for Business Growth Global, Darrel is passionate about helping clients achieve sustainable growth. He is responsible for the strategic planning and execution of all sales and marketing activities, from lead generation to customer acquisition and retention. A firm believer in the power of data, Darrel utilizes a range of analytics tools. Including Excel, SQL, Python, and Power BI to inform strategy, measure success, and drive growth for the company and its clients through a data centric approach.',
+    bio: 'As the Sales and Marketing Director for Business Growth Global, Darrel is passionate about helping clients achieve sustainable growth. He is responsible for the strategic planning and execution of all sales and marketing activities, from lead generation to customer acquisition and retention. A firm believer in the power of data, Darrel utilises a range of analytics tools. Including Excel, SQL, Python, and Power BI to inform strategy, measure success, and drive growth for the company and its clients through a data centric approach.',
     shortBio: 'Leads sales, marketing, and operations worldwide to connect with businesses ready to scale.',
     aiHint: 'professional portrait',
-    linkedinUrl: 'https://www.linkedin.com/in/darrel-alison-3919962a5/',
+    linkedinUrl: 'https://www.linkedin.com/in/darrel-alison/',
   },
   {
     name: 'Nikki Ayton',
@@ -29,6 +29,15 @@ const teamMembers = [
     shortBio: 'Leverages over a decade of experience in digital and healthtech to support business growth across the UK.',
     aiHint: 'professional portrait',
     linkedinUrl: 'https://www.linkedin.com/in/nikkiayton/',
+  },
+  {
+    name: 'Ravi Kumar',
+    title: 'Business Development Manager (UK)',
+    imageUrl: 'https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/thumbnail_Ravi.jpg',
+    bio: 'Ravi leads business development across the UK, bringing over 20 years’ experience helping organisations grow in complex, fast-moving environments. His career spans business growth, innovation, economic development and partnership-led programmes, giving him a commercially grounded perspective shaped by real-world delivery. At Business Growth Global, Ravi works closely with founders, executives and leadership teams to explore opportunities, build meaningful partnerships and unlock long-term value. Alongside his commercial work, he has extensive experience in social impact, governance and community leadership, which informs a values-led, collaborative approach. Ravi is passionate about supporting organisations to grow with purpose, clarity and confidence.',
+    shortBio: 'Leads business development across the UK with over 20 years of experience in business growth and innovation.',
+    aiHint: 'professional portrait',
+    linkedinUrl: 'https://www.linkedin.com/in/ravi-kumar-706189/',
   },
   {
     name: 'Olga Bak',
@@ -155,7 +164,7 @@ export default function OurTeamPage() {
                                     fill
                                     className="object-cover rounded-full"
                                     data-ai-hint={member.aiHint}
-                                    style={ (member.name === 'Olga Bak' || member.name === 'Ben Edge' || member.name === 'Nikki Ayton') ? { objectPosition: 'top' } : {} }
+                                    style={ (member.name === 'Olga Bak' || member.name === 'Ben Edge' || member.name === 'Nikki Ayton' || member.name === 'Ravi Kumar') ? { objectPosition: 'top' } : {} }
                                     />
                                 </div>
                                 <div className="flex-1">
