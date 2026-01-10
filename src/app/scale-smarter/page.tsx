@@ -20,11 +20,12 @@ import {
     Trophy, 
     Zap,
     Calendar,
-    Clock
+    Clock,
+    Youtube
 } from 'lucide-react';
 
 const sessions = [
-    { number: 1, date: "8th Jan", time: "12:00pm - 12:30pm", title: "Introduction", desc: "Introduction to the Business Growth Blueprint and why most strategies fail.", icon: LayoutDashboard },
+    { number: 1, date: "8th Jan", time: "12:00pm - 12:30pm", title: "Introduction", desc: "Introduction to the Business Growth Blueprint and why most strategies fail.", icon: LayoutDashboard, youtubeLink: "https://www.youtube.com/watch?v=vacYI57qu98" },
     { number: 2, date: "13th Jan", time: "12:00pm - 12:30pm", title: "Analyse", desc: "Deep dive into understanding your business's true strengths and weaknesses.", icon: Search },
     { number: 3, date: "15th Jan", time: "12:00pm - 12:30pm", title: "Expand", desc: "Strategies to grow your customer base and increase market share.", icon: TrendingUp },
     { number: 4, date: "20th Jan", time: "12:00pm - 12:30pm", title: "Revenue", desc: "Optimising income streams and pricing models for maximum profitability.", icon: Banknote },
@@ -61,7 +62,7 @@ export default function ScaleSmarterPage() {
                     {sessions.map((session) => (
                         <div 
                             key={session.number} 
-                            className={`relative bg-card border p-6 rounded-lg shadow-sm hover:shadow-md transition-all ${session.highlight ? 'ring-2 ring-accent border-accent/50 lg:scale-105 z-10' : ''}`}
+                            className={`relative bg-card border p-6 rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col ${session.highlight ? 'ring-2 ring-accent border-accent/50 lg:scale-105 z-10' : ''}`}
                         >
                             <div className="flex justify-between items-start mb-4">
                                 <div className={`p-2 rounded-lg ${session.highlight ? 'bg-accent text-white' : 'bg-primary/10 text-primary'}`}>
@@ -80,7 +81,20 @@ export default function ScaleSmarterPage() {
                                 </div>
                             </div>
                             <h3 className="text-xl font-bold text-primary mb-2">{session.title}</h3>
-                            <p className="text-sm text-muted-foreground leading-relaxed">{session.desc}</p>
+                            <p className="text-sm text-muted-foreground leading-relaxed flex-grow">{session.desc}</p>
+                            
+                            {session.youtubeLink && (
+                                <a 
+                                    href={session.youtubeLink} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="mt-4 inline-flex items-center justify-center gap-2 text-sm font-semibold text-red-600 bg-red-50 hover:bg-red-100 p-2 rounded-md transition-colors"
+                                >
+                                    <Youtube className="w-4 h-4" />
+                                    Watch Recording
+                                </a>
+                            )}
+                            
                             {session.highlight && (
                                 <div className="mt-4">
                                     <Badge className="bg-accent hover:bg-accent text-[10px] uppercase">Special Session</Badge>
