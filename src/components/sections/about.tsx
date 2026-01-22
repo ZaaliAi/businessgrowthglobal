@@ -1,6 +1,3 @@
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { MoveRight } from 'lucide-react';
 import Image from 'next/image';
 
 export default function About() {
@@ -17,14 +14,6 @@ export default function About() {
           <p className="mt-4 text-lg leading-8 text-muted-foreground">
             Through our signature framework, AEROPS, we deliver bespoke solutions to transform businesses. We specialise in helping clients increase profitability, build high-performance teams, and develop actionable plans for long-term growth. Whether you’re a startup founder, small business owner, or corporate executive, we create strategies designed to meet your unique challenges and goals.
           </p>
-          <div className="mt-8">
-            <Button asChild>
-              <Link href="/our-team">
-                Meet the Team
-                <MoveRight className="ml-2" />
-              </Link>
-            </Button>
-          </div>
         </div>
         <div className="order-1 relative aspect-video w-full overflow-hidden rounded-lg shadow-xl md:order-2">
           <Image
