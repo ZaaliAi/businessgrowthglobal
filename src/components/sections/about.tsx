@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { MoveRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -25,14 +26,13 @@ export default function About() {
             </Button>
           </div>
         </div>
-        <div className="order-1 aspect-video w-full overflow-hidden rounded-lg shadow-xl md:order-2">
-          <iframe
-            className="h-full w-full"
-            src="https://www.youtube.com/embed/ModFEvmGbw0"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
+        <div className="order-1 relative aspect-video w-full overflow-hidden rounded-lg shadow-xl md:order-2">
+          <Image
+            src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/executive.jpg"
+            alt="Business Executive"
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
     </section>
