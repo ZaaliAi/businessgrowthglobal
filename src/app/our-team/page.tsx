@@ -75,6 +75,33 @@ export default function OurTeamPage() {
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Header />
       <main className="flex-grow">
+        {/* Accreditations Section */}
+        <section className="w-full py-16 sm:py-24 bg-muted">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold tracking-tight text-primary text-center mb-12">
+              Our Accreditations
+            </h2>
+            <div className="flex justify-center items-center gap-12 flex-wrap">
+              <div className="relative h-32 w-64">
+                <Image
+                  src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/abm.png"
+                  alt="Association of Business Mentors Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="relative h-32 w-64">
+                <Image
+                  src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/emmcc%20global.png"
+                  alt="EMCC UK Member Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <AnimatedSection>
