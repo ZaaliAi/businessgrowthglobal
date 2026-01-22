@@ -76,9 +76,6 @@ export default async function Header() {
                 <Link href="/our-team" className="cursor-pointer w-full">Our Team</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/media" className="cursor-pointer w-full">Media</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
                 <Link href="/blog" className="cursor-pointer w-full">Blog</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -133,7 +130,6 @@ export default async function Header() {
                     <div className="pl-6 grid gap-2 text-base">
                       <Link href="/case-studies" className="block py-1 transition-colors hover:text-primary/80">Case Studies</Link>
                       <Link href="/our-team" className="block py-1 transition-colors hover:text-primary/80">Our Team</Link>
-                      <Link href="/media" className="block py-1 transition-colors hover:text-primary/80">Media</Link>
                       <Link href="/blog" className="block py-1 transition-colors hover:text-primary/80">Blog</Link>
                     </div>
                     <Link href="/contact" className="block px-2 py-1 transition-colors hover:text-primary/80">Contact</Link>

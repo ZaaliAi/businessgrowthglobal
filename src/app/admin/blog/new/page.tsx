@@ -16,7 +16,7 @@ export default function NewPostPage() {
         slug: values.slug, 
         content: values.content,
         image_url: values.image_url,
-        author: 'Lee Broders' // Or dynamically set author
+        author: 'Business Growth Global Team' // Or dynamically set author
       }
     ]);
 

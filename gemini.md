@@ -19,7 +19,7 @@ To make the contact form fully functional, the following steps need to be comple
 
 ## 1. Project Purpose
 
-The website serves as the online presence for **Business Growth Global**, a mentorship and coaching service founded by Lee Broders. Its primary goals are:
+The website serves as the online presence for **Business Growth Global**, a mentorship and coaching service. Its primary goals are:
 - To clearly articulate the value proposition of the business mentoring services.
 - To generate leads through a contact form and calls-to-action.
 - To build authority and credibility through a professional design, testimonials, and a blog.
@@ -48,15 +48,11 @@ The website serves as the online presence for **Business Growth Global**, a ment
   - `About`: A brief introduction to the company.
   - `Final CTA`: A final prompt for users to book a discovery call.
 
-- **Our Founder (`/our-founder`)**: A dedicated page providing a detailed biography of the founder, Lee Broders, including his credentials, experience, and accreditations.
+- **Our Team (`/our-team`)**: Profiles of the leadership and sales team.
 
 - **Case Studies (`/case-studies`)**: A hub for success stories.
   - **Listing Page**: A gallery of case studies with a professional hero section and key metrics banner.
   - **Detail Page (`/case-studies/[slug]`)**: A detailed breakdown of individual client challenges, solutions, and results.
-
-- **Media & Insights (`/media`)**: Showcases Lee Broders' expertise.
-  - **Featured In**: A grid of articles linking to external publications, with publication logos.
-  - **Video Insights**: An interactive carousel of embedded YouTube videos.
 
 - **Blog (`/blog`)**:
   - **Listing Page**: Displays a grid of all published blog posts.

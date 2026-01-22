@@ -12,28 +12,6 @@ export default function Footer() {
           <p className="mt-2 text-sm text-muted-foreground">
             © {new Date().getFullYear()} Business Growth Global LTD. All rights reserved.
           </p>
-          <div className="mt-4 flex items-center justify-center sm:justify-start gap-6">
-            <a href="https://associationofbusinessmentors.org/find-a-mentor/user/15588/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
-              <div className="relative h-12 w-24">
-                <Image
-                  src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/abm.png"
-                  alt="Association of Business Mentors Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </a>
-            <a href="https://www.emccglobal.org/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
-              <div className="relative h-12 w-24">
-                <Image
-                  src="https://loirhexauyamqihgphsu.supabase.co/storage/v1/object/public/site-images/cropped-emcc-uk-member-logo-transparent.png"
-                  alt="EMCC UK Member Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </a>
-          </div>
         </div>
         <div className="flex-shrink-0">
           <a href="https://www.armedforcescovenant.gov.uk/" target="_blank" rel="noopener noreferrer">
